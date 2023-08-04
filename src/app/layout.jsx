@@ -15,10 +15,10 @@ const quicksand = Quicksand({
   variable: '--font-quicksand'
 })
 
-export const metadata = {
-  title: 'Praticamos russo',
-  description: 'Aprendemos russo. Praticamos russo. Vocabulário, verbos, casos!',
-}
+// export const metadata = {
+//   title: 'Praticamos russo',
+//   description: 'Aprendemos russo. Praticamos russo. Vocabulário, verbos, casos!',
+// }
 
 export default function RootLayout({children}) {
 
