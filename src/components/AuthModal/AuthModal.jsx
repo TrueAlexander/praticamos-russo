@@ -1,12 +1,15 @@
 'use client'
 import Login from "../Login/Login"
 import Register from "../Register/Register"
-import { FaRegWindowClose } from "react-icons/fa"
+import { IoClose } from "react-icons/io5"
 import "animate.css"
 import Link from "next/navigation"
+import { useEffect, useState } from "react"
 
 
 const AuthModal = ({showModal, setShowModal}) => {
+
+  const [modeLogin, setModeLogin] = useState(true)
 
   return (
     <div 
@@ -14,21 +17,19 @@ const AuthModal = ({showModal, setShowModal}) => {
       onClick={() => setShowModal(false)}
     >
       <div 
-        className="absolute left-10 right-10 top-20 bottom-20 pb-20 rounded-lg my-0 mx-auto max-w-[400px] border-2 border-[#9f50ac]  scale-100 ease-in duration-1000 text-center flex flex-col justify-center"
+        className="absolute left-10 right-10 top-10 bottom-10 pb-20 rounded-lg my-0 mx-auto max-w-[400px] border-2 border-[#9f50ac]  scale-100 ease-in duration-1000 text-center flex flex-col justify-center"
         onClick={e => e.stopPropagation()}
       >
         <h2 className="text-white p-4 font-bold text-[18px]">Prezado usuario!</h2>
         <button
           onClick={() => setShowModal(false)}
-          className="text-white text-[22px] absolute right-3 top-3"
-        >
-          <FaRegWindowClose/></button>
+          className="text-white text-[22px] absolute right-3 top-3 scale-125"
+        >  
+          <IoClose/></button>
         <div className="">   
-            <h3 className="text-[#9f50ac] pt-4 pb-4 text-[15px] font-bold">Faz Login:</h3>
-            <Login setShowModal={setShowModal} />
-            <h3 className="text-[#9f50ac] pt-4 pb-2 text-[15px] font-bold">ou crie um perfil:</h3>
-            <h3 className="text-white text-[15px] underline cursor-pointer">criar</h3>
-            {/* <Register setShowModal={setShowModal} /> */}
+          {modeLogin 
+          ? <Login setShowModal={setShowModal} setModeLogin={setModeLogin}/> 
+          : <Register setShowModal={setShowModal} setModeLogin={setModeLogin}/>}
         </div>
       </div>
     </div>
