@@ -7,7 +7,7 @@ import Link from "next/navigation"
 import { useEffect, useState } from "react"
 
 
-const AuthModal = ({showModal, setShowModal}) => {
+const AuthModal = ({showModal, setShowModal, setIsLoading}) => {
 
   const [modeLogin, setModeLogin] = useState(true)
 
@@ -28,8 +28,8 @@ const AuthModal = ({showModal, setShowModal}) => {
           <IoClose/></button>
         <div className="">   
           {modeLogin 
-          ? <Login setShowModal={setShowModal} setModeLogin={setModeLogin}/> 
-          : <Register setShowModal={setShowModal} setModeLogin={setModeLogin}/>}
+          ? <Login setShowModal={setShowModal} setModeLogin={setModeLogin} setIsLoading={setIsLoading}/> 
+          : <Register setShowModal={setShowModal} setModeLogin={setModeLogin} setIsLoading={setIsLoading}/>}
         </div>
       </div>
     </div>

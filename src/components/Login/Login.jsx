@@ -1,12 +1,21 @@
+"use client"
 import { useState, useEffect } from 'react'
+import { signIn } from 'next-auth/react'  
 
-const Login = ({setShowModal, setModeLogin}) => {
+const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
 
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+
+    const email = e.target[0].value
+    const password = e.target[1].value
+    setIsLoading(true)
+    signIn("credentials", {
+      email,
+      password,
+    })
+
     setShowModal(false)
     //send email and password to server
     // try {
@@ -44,7 +53,6 @@ const Login = ({setShowModal, setModeLogin}) => {
             name="email" 
             autoComplete="on"
             placeholder="email" 
-            onChange={(e) => setEmail(e.target.value)} 
             required 
           />
         </div>
@@ -56,7 +64,6 @@ const Login = ({setShowModal, setModeLogin}) => {
             minLength={5}
             autoComplete="on" 
             placeholder="senha" 
-            onChange={(e) => setPassword(e.target.value)} 
             required 
           />
         </div>
