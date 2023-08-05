@@ -17,10 +17,10 @@ const AuthModal = ({showModal, setShowModal}) => {
       onClick={() => setShowModal(false)}
     >
       <div 
-        className="absolute left-10 right-10 top-10 bottom-10 pb-20 rounded-lg my-0 mx-auto max-w-[400px] border-2 border-[#9f50ac]  scale-100 ease-in duration-1000 text-center flex flex-col justify-center"
+        className="absolute left-10 right-10 top-10 bottom-10 rounded-lg my-0 mx-auto max-w-[400px] border-2 border-[#9f50ac] scale-100 ease-in duration-1000 text-center flex flex-col justify-center items-center overflow-hidden"
         onClick={e => e.stopPropagation()}
       >
-        <h2 className="text-white p-4 font-bold text-[18px]">Prezado usuario!</h2>
+        <h2 className="text-white p-4 font-bold text-[18px] block">Prezado usuario!</h2>
         <button
           onClick={() => setShowModal(false)}
           className="text-white text-[22px] absolute right-3 top-3 scale-125"
