@@ -14,6 +14,7 @@ const quicksand = Quicksand({
 export const metadata = {
   title: 'Praticamos russo',
   description: 'Aprendemos russo. Praticamos russo. Vocabulário, verbos, casos!',
+  themeColor: '#2b2737',
 }
 
 export default function RootLayout({children}) { 
