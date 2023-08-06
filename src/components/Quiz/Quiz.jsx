@@ -2,11 +2,12 @@
 
 import React, { useEffect, useState } from "react"
 import { useRouter } from 'next/navigation'
-
+import { useSession } from 'next-auth/react'
 //Components
 import Button from "@/components/Button/Button"
 import QuestionCard from "@/components/QuestionCard/QuestionCard"
 import Loading from "@/app/loading"
+import OnlyNameShow from "../OnlyNameShow/OnlyNameShow"
 
 const Quiz = ({questions, totalQuestions, category}) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
@@ -18,6 +19,8 @@ const Quiz = ({questions, totalQuestions, category}) => {
   const isQuestionAnswered = userAnswers[currentQuestionIndex] ? true : false
 
   const router = useRouter()
+  const session = useSession()
+  const nameShow = session.data?.user?.name
 
   const handleOnAnswerClick = (answer, currentQuestionIndex) => {
     //if user has already answered, do nothing
@@ -52,46 +55,60 @@ const Quiz = ({questions, totalQuestions, category}) => {
     if(currentQuestionIndex === totalQuestions - 1) {
       // const queryParams: resultProps = { result: score }
      
-      router.push(`/categories/${category}/result?cat=${category}&res=${score}&total=${totalQuestions}`)
+      router.push(`/categories/${category}/result?user=${nameShow}&cat=${category}&res=${score}&total=${totalQuestions}`)
     } else {
       handleChangeQuestion(1)
     }
   }
-
-  return (
-    <>
-      {isLoading 
-      ? <div className="flex-auto flex flex-col justify-center">
-          <Loading/> 
-        </div>  
-      : <div className="text-white text-center mt-5 grow-0 flex flex-col justify-center">
-          {/* <p className="p-6 pb-4 font-bold text-[20px]">Resultado: {score}</p> */}
-          <p className="text-[#9f50ac] font-bold pb-2 text-[16px]">
-            Pergunta {currentQuestionIndex + 1} de {totalQuestions}
-          </p>
-          <QuestionCard 
-            currentQuestionIndex={currentQuestionIndex}
-            question={questions[currentQuestionIndex].question}
-            answers={questions[currentQuestionIndex].answers}
-            userAnswer={userAnswers[currentQuestionIndex]}
-            correctAnswer={questions[currentQuestionIndex].correct_answer}
-            onClick={handleOnAnswerClick}
-          />
-          <div className="flex justify-center mt-6">
-            {visible && <Button 
-              text="Anterior"
-              disabled={false}
-              onClick={() => handleChangeQuestion(-1)} 
-            />}
-            <Button
-              disabled={false}
-              text={currentQuestionIndex === totalQuestions - 1 ? 'Fim' : 'Próxima'}
-              onClick={handleClickForward}
+  if (session.status === "loading") {
+    return (
+      <div className="flex-auto flex flex-col justify-center">
+        <Loading/> 
+      </div>
+    )
+  }
+  if (session.status === "authenticated") {
+    return (
+      <>
+        {isLoading 
+        ? <div className="flex-auto flex flex-col justify-center">
+            <Loading/> 
+          </div>  
+        : <div className="text-white text-center mt-5 grow-0 flex flex-col justify-center">
+            <OnlyNameShow nameShow={nameShow}/>
+            <p className="text-[#9f50ac] font-bold pb-2 text-[16px]">
+              Pergunta {currentQuestionIndex + 1} de {totalQuestions}
+            </p>
+            <QuestionCard 
+              currentQuestionIndex={currentQuestionIndex}
+              question={questions[currentQuestionIndex].question}
+              answers={questions[currentQuestionIndex].answers}
+              userAnswer={userAnswers[currentQuestionIndex]}
+              correctAnswer={questions[currentQuestionIndex].correct_answer}
+              onClick={handleOnAnswerClick}
             />
-          </div>
-        </div>}
-    </>   
-  )
+            <div className="flex justify-center mt-6">
+              {visible && <Button 
+                text="Anterior"
+                disabled={false}
+                onClick={() => handleChangeQuestion(-1)} 
+              />}
+              <Button
+                disabled={false}
+                text={currentQuestionIndex === totalQuestions - 1 ? 'Fim' : 'Próxima'}
+                onClick={handleClickForward}
+              />
+            </div>
+          </div>}
+      </>   
+    )
+  } else {
+    return (
+      <div className='text-center flex flex-col justify-center'>     
+        <p className='text-white p-4 mt-6 font-bold text-[22px]'>404. A página solicitada não existe!</p>    
+      </div>)
+  }
 }
 
 export default Quiz
+

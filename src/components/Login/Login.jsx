@@ -1,9 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react'
-import { signIn } from 'next-auth/react'
-import { useSearchParams } from 'next/navigation'
-import { useSession } from 'next-auth/react'
-import { useRouter } from "next/navigation"
+import { signIn, useSession } from 'next-auth/react'
+import { useSearchParams, useRouter } from 'next/navigation'
 
 const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
   const session = useSession()
@@ -13,19 +11,16 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
     const email = e.target[0].value
     const password = e.target[1].value
     await signIn("credentials", {
       email,
       password,
-    })
-    
+    })  
   }
 
   useEffect(() => {
     setError(params.get("error"))
-    console.log(session)
     if (session.status === 'authenticated') {
       router.push('/')
       setShowModal(false)

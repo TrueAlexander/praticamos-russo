@@ -24,8 +24,10 @@ export const POST = async (request) => {
     })
     
   } catch (error) {
+   
     return new NextResponse(error.message, {
       status: 500,
     })
+    // throw new Error("Deu errado. Será que o usuário ja existe? Faz login ou tente outra vez!")
   }
 }

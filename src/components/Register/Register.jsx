@@ -1,9 +1,6 @@
 "use client"
-import React, { useState } from 'react'
 
 const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
-
-  const [error, setError] = useState(null)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -24,15 +21,16 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
           password,
         }),
       })
-      res.status === 201 && alert(`Prezado ${name}, seu Usuário foi criado!`)
-      // setShowModal(false)
+      if (res.status === 201) {
+        alert(`Prezado ${name}, seu Usuário foi criado! Faz por favor login!`)
+      } else {
+        alert("Deu errado. Será que o usuário ja existe? Faz login ou tente outra vez!")     
+      }
       setIsLoading(false)
       setModeLogin(true)
-    } catch (err) {
-      console.log(err, "caramba")
-      setError(err)
+    } catch (err) {   
+      console.log(err, "Erro do lado de servidor!")
     }
-
   }
 
   return (
@@ -81,7 +79,6 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
           Enviar
         </button>
       </form>
-      {error && <p className='text-white'>Shit happens!</p>}
       <h3 className="text-[#9f50ac] pt-6 pb-2 text-[15px] font-bold">ou identifique-se:</h3>
         <button 
           title="Criar Usuário" 

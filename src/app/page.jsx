@@ -1,16 +1,13 @@
 'use client'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 //Components
 import Button from '@/components/Button/Button'
 import AuthModal from '@/components/AuthModal/AuthModal'
 import ButtonAuth from "@/components/ButtonAuth/ButtonAuth"
-import { useSession } from 'next-auth/react'
-import { signOut } from 'next-auth/react' 
+import { useSession, signOut } from 'next-auth/react' 
 import Loading from './loading'
-import { useSearchParams } from 'next/navigation'
-
 //Homepage Image
 import HomepageImage from '@/assets/home-pic.jpg'
 
@@ -19,15 +16,11 @@ export default function Home() {
   const session = useSession()
   const params = useSearchParams()
 
-
   const [showModal, setShowModal] = useState(params.get("error") || false)
   const [nameShow, setNameShow] = useState("Desconhecido")
   const [isLoading, setIsLoading] = useState(session.status === 'loading')
 
-
   const name = session.data?.user?.name || null
-  // console.log(session)
-  // console.log(session.status)
 
   useEffect(() => {
     setIsLoading(session.status === 'loading')
@@ -42,6 +35,8 @@ export default function Home() {
     }
   }, [session])
 
+  const handleClick = () => session.status === "authenticated" ? router.push('/categories') : setShowModal(true)
+
   return (
     <div className='text-center flex flex-col justify-center'>
       {isLoading 
@@ -53,7 +48,11 @@ export default function Home() {
             <p className='text-[#9f50ac] pt-4 pb-4 text-[18px] '>
               Clique abaixo
             </p>
-            <Button text='Começar!' disabled={false} onClick={() => router.push('/categories')} />
+            <Button 
+              text={session.status === "authenticated" ? "Começar!" : "Entrar"} 
+              disabled={false} 
+              onClick={handleClick} 
+            />
             {showModal && <AuthModal showModal={showModal} setShowModal={setShowModal} setIsLoading={setIsLoading}/>}
           </>
       }    

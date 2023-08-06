@@ -4,9 +4,7 @@ const ButtonAuth = ({setShowModal, name, signOut, nameShow, setIsLoading}) => {
 
   const handleClick = () => {
     if(!name) {
-      // setIsLoading(true)
       setShowModal(true)
-
     } else {
       const areYouSure = confirm(`${nameShow}, está seguro que quer sair?`)
       if (areYouSure) {
