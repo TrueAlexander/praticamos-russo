@@ -1,16 +1,29 @@
 import { ImExit, ImEnter } from 'react-icons/im'
+import { confirmAlert } from 'react-confirm-alert'
+import '@/utils/react-confirm-alert.css'
 
 const ButtonAuth = ({setShowModal, name, signOut, nameShow, setIsLoading}) => {
 
   const handleClick = () => {
     if(!name) {
       setShowModal(true)
-    } else {
-      const areYouSure = confirm(`${nameShow}, está seguro que quer sair?`)
-      if (areYouSure) {
-        setIsLoading(true)
-        signOut()
-      }
+    } else {     
+      confirmAlert({
+        message: `${nameShow}, está seguro que quer sair?`,
+        buttons: [
+          {
+            label: 'Sim',
+            onClick: () => {
+              setIsLoading(true)
+              signOut()
+            }
+          },
+          {
+            label: 'Não',
+            onClick: () => console.log('Click No')
+          }
+        ]
+      })
     }
   }
 

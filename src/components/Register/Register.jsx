@@ -1,4 +1,6 @@
 "use client"
+import { confirmAlert } from 'react-confirm-alert'
+import '@/utils/react-confirm-alert.css'
 
 const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
 
@@ -22,9 +24,25 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
         }),
       })
       if (res.status === 201) {
-        alert(`Prezado ${name}, seu Usuário foi criado! Faz por favor login!`)
+        confirmAlert({
+          message: `Prezado ${name}, seu usuário foi criado! Faz por favor login!`,
+          buttons: [
+            {
+              label: 'Ok',
+              // onClick: () => {}
+            }
+          ]
+        })
       } else {
-        alert("Deu errado. Será que o usuário ja existe? Faz login ou tente outra vez!")     
+        confirmAlert({
+          message: "Deu errado! Será que o usuário ja existe? Faz login ou tente outra vez!",
+          buttons: [
+            {
+              label: 'Ok',
+              // onClick: () => {}
+            }
+          ]
+        })  
       }
       setIsLoading(false)
       setModeLogin(true)

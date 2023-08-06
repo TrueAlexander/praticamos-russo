@@ -23,7 +23,7 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
     setError(params.get("error"))
     if (session.status === 'authenticated') {
       router.push('/')
-      setShowModal(false)
+      setShowModal(false)    
     }
     
   }, [params])
