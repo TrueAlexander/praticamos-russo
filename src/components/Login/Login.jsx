@@ -1,43 +1,37 @@
 "use client"
 import { useState, useEffect } from 'react'
-import { signIn } from 'next-auth/react'  
+import { signIn } from 'next-auth/react'
+import { useSearchParams } from 'next/navigation'
+import { useSession } from 'next-auth/react'
+import { useRouter } from "next/navigation"
 
 const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
-
+  const session = useSession()
+  const router = useRouter()
+  const params = useSearchParams()
+  const [error, setError] = useState(null)
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
     const email = e.target[0].value
     const password = e.target[1].value
-    setIsLoading(true)
-    signIn("credentials", {
+    await signIn("credentials", {
       email,
       password,
     })
-
-    setShowModal(false)
-    //send email and password to server
-    // try {
-    //   const data = await dispatch(fetchAuth({email, password}))
-    //   if (!data.payload) {
-    //     alert("O login e/ou a senha estão errados!")
-    //   } else {
-    //     alert(data.payload.message)
-    //     setShowModal(false)
-    //     //send username and token to localstorage
-    //     if (data.payload.userData) {
-    //       localStorage.setItem("user", data.payload.userData.username)
-    //       localStorage.setItem("token", data.payload.token)
-    //     } else {
-    //     ////send email verify
-    //       dispatch(fetchVerify({email}))
-    //     }
-    //   }   
-    // } catch (error) {
-    //   console.log('error!!')
-    // }     
+    
   }
+
+  useEffect(() => {
+    setError(params.get("error"))
+    console.log(session)
+    if (session.status === 'authenticated') {
+      router.push('/')
+      setShowModal(false)
+    }
+    
+  }, [params])
   
   return (
     <div className="my-7 animate__animated animate__fadeIn">
@@ -48,7 +42,7 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
       >
         <div className="mt-5">
           <input
-            className='px-3 py-1 bg-transparent text-white rounded-md w-3/4 text-[18px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
+            className='px-3 py-1 bg-transparent text-white rounded-md max-w-[600px] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
             type="email" 
             name="email" 
             autoComplete="on"
@@ -58,7 +52,7 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
         </div>
         <div className="mt-7 mb-9">
           <input
-            className='px-3 py-1 bg-transparent text-white rounded-md w-3/4 text-[18px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
+            className='px-3 py-1 bg-transparent text-white rounded-md max-w-[600px] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
             type="password" 
             name="password"
             minLength={5}
@@ -75,7 +69,8 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
           Enviar
         </button>
       </form>
-      <h3 className="text-[#9f50ac] pt-6 pb-2 text-[15px] font-bold">ou crie um perfil:</h3>
+      <p className='text-white mt-3 font-bold'>{error?.slice(6)}</p>
+      <h3 className="text-[#9f50ac] pt-3 pb-2 text-[15px] font-bold">ou crie um perfil:</h3>
         <button 
           title="Criar Usuário" 
           className="text-white text-[15px] underline cursor-pointer"

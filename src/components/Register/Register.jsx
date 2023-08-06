@@ -44,7 +44,7 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
       >
         <div className="mt-5">
           <input
-            className='px-3 py-1 bg-transparent text-white rounded-md w-3/4 text-[18px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
+            className='px-3 py-1 bg-transparent text-white rounded-md max-w-[600px] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
             type="text" 
             name="name" 
             autoComplete="on"
@@ -54,7 +54,7 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
         </div>
         <div className="my-7">
           <input
-            className='px-3 py-1 bg-transparent text-white rounded-md w-3/4 text-[18px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
+            className='px-3 py-1 bg-transparent text-white rounded-md max-w-[600px] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
             type="email" 
             name="email" 
             autoComplete="on"
@@ -64,7 +64,7 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
         </div>
         <div className="mb-9">
           <input
-            className='px-3 py-1 bg-transparent text-white rounded-md w-3/4 text-[18px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
+            className='px-3 py-1 bg-transparent text-white rounded-md max-w-[600px] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
             type="password" 
             name="password"
             minLength={5}

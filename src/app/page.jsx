@@ -9,6 +9,7 @@ import ButtonAuth from "@/components/ButtonAuth/ButtonAuth"
 import { useSession } from 'next-auth/react'
 import { signOut } from 'next-auth/react' 
 import Loading from './loading'
+import { useSearchParams } from 'next/navigation'
 
 //Homepage Image
 import HomepageImage from '@/assets/home-pic.jpg'
@@ -16,12 +17,13 @@ import HomepageImage from '@/assets/home-pic.jpg'
 export default function Home() {
   const router = useRouter()
   const session = useSession()
+  const params = useSearchParams()
 
-  const [showModal, setShowModal] = useState(false)
+
+  const [showModal, setShowModal] = useState(params.get("error") || false)
   const [nameShow, setNameShow] = useState("Desconhecido")
   const [isLoading, setIsLoading] = useState(session.status === 'loading')
 
-  console.log(isLoading)
 
   const name = session.data?.user?.name || null
   // console.log(session)
