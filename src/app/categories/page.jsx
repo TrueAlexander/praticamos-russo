@@ -27,7 +27,7 @@ const Categories = () => {
        <OnlyNameShow nameShow={nameShow}/>
        <p className='text-white p-4 font-bold text-[22px]'>Praticamos russo!</p>
         <p className='text-[#9f50ac] pt-4 pb-4 text-[18px] '>
-          Escolhe a categoria de perguntas:
+          Escolhe uma categoria de perguntas:
         </p>
         <Button name='vocabulario' text='Vocabulário' disabled={false} onClick={handleClick} />
         <br />

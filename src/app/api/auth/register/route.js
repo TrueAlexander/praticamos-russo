@@ -14,7 +14,7 @@ export const POST = async (request) => {
   const newUser = new User({
     name,
     email,
-    password: hashedPassword
+    password: hashedPassword,
   })
 
   try {
@@ -28,6 +28,5 @@ export const POST = async (request) => {
     return new NextResponse(error.message, {
       status: 500,
     })
-    // throw new Error("Deu errado. Será que o usuário ja existe? Faz login ou tente outra vez!")
   }
 }
