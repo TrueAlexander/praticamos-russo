@@ -10,11 +10,11 @@ body.react-confirm-alert-body-element {
 
 .react-confirm-alert-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 0 !important;
+  left: 0 !important;
   padding: 10px;
-  right: 0;
-  bottom: 0;
+  right: 0 !important;
+  bottom: 0 !important;
   z-index: 99;
   background: #8a77c3b2;
   display: -webkit-flex;
@@ -22,9 +22,9 @@ body.react-confirm-alert-body-element {
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-  justify-content: center;
-  -ms-align-items: center;
-  align-items: center;
+  justify-content: center !important;
+  -ms-align-items: center !important;
+  align-items: center !important;
   opacity: 0;
   -webkit-animation: react-confirm-alert-fadeIn 0.5s 0.2s forwards;
   -moz-animation: react-confirm-alert-fadeIn 0.5s 0.2s forwards;

@@ -11,7 +11,7 @@ import OnlyNameShow from "../OnlyNameShow/OnlyNameShow"
 
 const Quiz = ({questions, totalQuestions, category}) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
-  const [score, setScore] = useState(0)
+  const [result, setResult] = useState(0)
   const [userAnswers, setUserAnswers] = useState({})
   const [visible, setVisible] = useState(false)
   const [isLoading, setIsLoading] = useState(true)
@@ -21,14 +21,15 @@ const Quiz = ({questions, totalQuestions, category}) => {
   const router = useRouter()
   const session = useSession()
   const nameShow = session.data?.user?.name
+  const email = session.data?.user?.email
 
   const handleOnAnswerClick = (answer, currentQuestionIndex) => {
     //if user has already answered, do nothing
     if (isQuestionAnswered) return
     //check answer against correct answer
     const isCorrect = questions[currentQuestionIndex].correct_answer === answer
-    //add score if answer is correct
-    if (isCorrect) setScore(prev => prev + 1)
+    //add result + 1 if answer is correct
+    if (isCorrect) setResult(prev => prev + 1)
     //save the answer in the object for user answer
     setUserAnswers(prev => ({...prev, [currentQuestionIndex]: answer}))
   }
@@ -50,12 +51,32 @@ const Quiz = ({questions, totalQuestions, category}) => {
     setIsLoading(false)
   }, [questions])
 
-  const handleClickForward = () => {
+  const handleClickForward = async () => {
 
     if(currentQuestionIndex === totalQuestions - 1) {
-      // const queryParams: resultProps = { result: score }
+   
+      try {
+        const res = await fetch("/api/update", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            category,
+            result,
+          }),
+        })
+  
+        if (res.status === 201 || 200) {
+          console.log("Seu resultado foi guardado")        
+        }
+        
+      } catch (err) {   
+        console.log(err, "Erro do lado de servidor!")
+      }   
      
-      router.push(`/categories/${category}/result?user=${nameShow}&cat=${category}&res=${score}&total=${totalQuestions}`)
+      router.push(`/categories/${category}/result?user=${nameShow}&cat=${category}&res=${result}&total=${totalQuestions}`)
     } else {
       handleChangeQuestion(1)
     }
