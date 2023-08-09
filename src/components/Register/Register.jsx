@@ -29,7 +29,10 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
           buttons: [
             {
               label: 'Ok',
-              // onClick: () => {}
+              onClick: () => {
+                setModeLogin(true)
+                setIsLoading(false)
+              }
             }
           ]
         })
@@ -39,13 +42,16 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
           buttons: [
             {
               label: 'Ok',
-              // onClick: () => {}
+              onClick: () => {
+                setModeLogin(true)
+                setIsLoading(false)
+              }
             }
           ]
         })  
       }
-      setIsLoading(false)
-      await setModeLogin(true)
+      
+      
     } catch (err) {   
       console.log(err, "Erro do lado de servidor!")
     }
