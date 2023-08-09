@@ -21,7 +21,7 @@ body.react-confirm-alert-body-element {
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
-  display: flex;
+  display: flex !important;
   justify-content: center !important;
   -ms-align-items: center !important;
   align-items: center !important;
@@ -33,6 +33,10 @@ body.react-confirm-alert-body-element {
 }
 
 .react-confirm-alert-body {
+  /* position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important; */
   max-width: 420px;
   padding: 20px 15px;
   text-align: left;

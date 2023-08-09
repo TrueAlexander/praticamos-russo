@@ -45,7 +45,7 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
         })  
       }
       setIsLoading(false)
-      setModeLogin(true)
+      await setModeLogin(true)
     } catch (err) {   
       console.log(err, "Erro do lado de servidor!")
     }
