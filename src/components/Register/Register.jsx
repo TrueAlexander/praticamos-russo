@@ -58,8 +58,8 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
   }
 
   return (
-    <div className="my-7 animate__animated animate__fadeIn">
-      <h3 className="text-[#9f50ac] pb-4 text-[15px] font-bold">Crie um novo Usuário:</h3>
+    <div className="my-3 animate__animated animate__fadeIn">
+      <h3 className="text-[#9f50ac]  text-[17px] font-bold">Crie um novo Usuário:</h3>
       <form 
         className="form" 
         onSubmit={handleSubmit}
@@ -103,10 +103,10 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
           Enviar
         </button>
       </form>
-      <h3 className="text-[#9f50ac] pt-6 pb-2 text-[15px] font-bold">ou identifique-se:</h3>
+      <h3 className="text-[#9f50ac] py-4 mt-2 text-[17px] font-bold">ou identifique-se:</h3>
         <button 
           title="Criar Usuário" 
-          className="text-white text-[15px] underline cursor-pointer"
+          className="text-white text-[13px] underline cursor-pointer"
           onClick={() => setModeLogin(true)}
         >
           fazer login

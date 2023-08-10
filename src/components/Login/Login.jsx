@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react'
 import { signIn, useSession } from 'next-auth/react'
 import { useSearchParams, useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
   const session = useSession()
@@ -29,8 +30,8 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
   }, [params])
   
   return (
-    <div className="my-7 animate__animated animate__fadeIn">
-      <h3 className="text-[#9f50ac] pb-4 text-[15px] font-bold">Faz Login:</h3>
+    <div className="my-3 animate__animated animate__fadeIn">
+      <h3 className="text-[#9f50ac] text-[17px] font-bold">Faz Login:</h3>
       <form 
         className="form" 
         onSubmit={handleSubmit}
@@ -64,11 +65,18 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
           Enviar
         </button>
       </form>
-      <p className='text-white mt-3 font-bold'>{error?.slice(6)}</p>
-      <h3 className="text-[#9f50ac] pt-3 pb-2 text-[15px] font-bold">ou crie um perfil:</h3>
+      <p className='text-white mt-6 font-bold'>{error?.slice(6)}</p>
+      <Link href="/password-recover">
+        <p
+          title="Recuperar a senha" 
+          className="text-white text-[13px] underline cursor-pointer"
+        >
+          esqueceu a senha?</p>
+      </Link>
+      <h3 className="text-[#9f50ac] py-4 text-[17px] font-bold">ou crie um perfil:</h3>
         <button 
           title="Criar Usuário" 
-          className="text-white text-[15px] underline cursor-pointer"
+          className="text-white text-[13px] underline cursor-pointer"
           onClick={() => setModeLogin(false)}
         >
           criar usuário
