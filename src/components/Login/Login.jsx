@@ -58,14 +58,14 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
           />
         </div>
         <button 
-          className="bg-[#9f50ac] select-none font-bold h-[30px] min-w-[100px] rounded-[10px] text-white mr-2 ml-2" 
+          className="bg-[#9f50ac] select-none font-bold h-[30px] min-w-[100px] rounded-[10px] text-white mr-2 ml-2 mb-3" 
           type="submit"
           title='Entrar'
         >
           Enviar
         </button>
       </form>
-      <p className='text-white mt-6 font-bold'>{error?.slice(6)}</p>
+      <p className='text-white my-3 font-bold'>{error?.slice(6)}</p>
       <Link href="/password-recover">
         <p
           title="Recuperar a senha" 

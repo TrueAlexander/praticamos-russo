@@ -46,6 +46,15 @@ const PasswordRecover = ({}) => {
       }  
     } catch (err) {   
       console.log(err, "Erro do lado de servidor!")
+      confirmAlert({
+          message: "Infelizmente não há resposta de servidor! Por favor tente novamente mais tarde!",
+          buttons: [
+            {
+              label: 'Ok',
+              onClick: () => router.push("/")
+            }
+          ]
+        }) 
     }
 
   }

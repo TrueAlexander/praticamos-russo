@@ -17,6 +17,16 @@ const userSchema = new Schema(
       type: String,
       required: true,
     },
+    isAdmin: {
+      type: Boolean,
+      default: false,
+      required: true,
+    },
+    emailVerified: {
+      type: Boolean,
+      default: false,
+      required: true,
+    },
     results: {
       type: Array,
       default: [],

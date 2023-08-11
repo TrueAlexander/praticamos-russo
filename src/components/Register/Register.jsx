@@ -21,16 +21,18 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
           name,
           email,
           password,
+          isAdmin: false,
+          emailVerified: false
         }),
       })
       if (res.status === 201) {
         confirmAlert({
-          message: `Prezado ${name}, seu usuário foi criado! Faz por favor login!`,
+          message: `Prezado ${name}, seu usuário foi criado! Para ativa-lo confira seu email: ${email}!`,
           buttons: [
             {
               label: 'Ok',
               onClick: () => {
-                setModeLogin(true)
+                setShowModal(false)
                 setIsLoading(false)
               }
             }

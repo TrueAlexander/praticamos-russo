@@ -25,6 +25,14 @@ const handler = NextAuth({
             )
 
             if (isPasswordCorrect) {
+              /////
+              //check if user is verified
+              //if (not verified) {
+              //
+              /// send new verification request to email
+              ///throw new Error("not verified. please go to email and finish the verification")
+              ////
+              ///else { return user }
               return user
             } else {
               throw new Error("E-mail e/ou senha errados!")
