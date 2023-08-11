@@ -39,7 +39,7 @@ export const POST = async (request) => {
       email: user.email,
       isAdmin: user.isAdmin
       },
-    'aleksandr',
+      process.env.JWT_KEY,
      {expiresIn: 60 * 60})
 
     ///
