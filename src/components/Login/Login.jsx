@@ -14,12 +14,11 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
     e.preventDefault()
     const email = e.target[0].value
     const password = e.target[1].value
-    await signIn("credentials", {
-      email,
-      password,
-    })  
+      await signIn("credentials", {
+        email,
+        password,
+      })        
   }
-
   useEffect(() => {
     setError(params.get("error"))
     if (session.status === 'authenticated') {
@@ -66,7 +65,7 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
         </button>
       </form>
       <p className='text-white my-3 font-bold'>{error?.slice(6)}</p>
-      <Link href="/password-recover">
+      <Link href="/recover-access">
         <p
           title="Recuperar a senha" 
           className="text-white text-[13px] underline cursor-pointer"

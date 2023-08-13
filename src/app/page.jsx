@@ -10,6 +10,8 @@ import { useSession, signOut } from 'next-auth/react'
 import Loading from './loading'
 //Homepage Image
 import HomepageImage from '@/assets/home-pic.jpg'
+// import { confirmAlert } from 'react-confirm-alert'
+// import '@/utils/react-confirm-alert.css'
 
 export default function Home() {
   const router = useRouter()
@@ -19,6 +21,7 @@ export default function Home() {
   const [showModal, setShowModal] = useState(params.get("error") || false)
   const [nameShow, setNameShow] = useState("Desconhecido")
   const [isLoading, setIsLoading] = useState(session.status === 'loading')
+ 
 
   const name = session.data?.user?.name || null
 
@@ -29,7 +32,23 @@ export default function Home() {
 
   useEffect(() => {
     if (session.data?.user?.name) {
-      setNameShow(session.data?.user?.name)
+
+     
+        // confirmAlert({
+        //   message: `Prezado ${session.data.user.name}, bem-vindo/a a nossa plataforma! Bora praticar!`,
+        //   buttons: [
+        //     {
+        //       label: 'Ok',
+        //       onClick: () => {            
+        //         router.push('/')
+        //         setNameShow(session.data?.user?.name)
+        //         setIsLoading(false)
+        //         setShowModal(false)   
+        //       }
+        //     }
+        //   ]
+        // })
+        setNameShow(session.data?.user?.name)
     } else {
       setNameShow("Desconhecido")
     }
