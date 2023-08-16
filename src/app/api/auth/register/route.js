@@ -50,7 +50,7 @@ export const POST = async (request) => {
       html: `
       <h2>Prezado ${name}! Obrigado pelo cadastro no Praticamos russo!</h2>
       <h4>Por favor verifique seu email para ativar seu perfil</h4>
-      <a href="http://localhost:3000/api/auth/verify-email?token=${token}">Clique aqui!</a>
+      <a href="${process.env.URL_BASE}/api/auth/verify-email?token=${token}">Clique aqui!</a>
       <h4> Se você não é ${name}, e não se cadastrou no Praticamos russo, por favor ignore esta mensagem.
       </h4>`}
 
