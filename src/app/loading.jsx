@@ -5,7 +5,7 @@ const Loading = () => {
   return (
     <div>
        <Image 
-          className="scale-50" 
+          className="scale-75" 
           src={Spinner} 
           alt="loading"
         />
