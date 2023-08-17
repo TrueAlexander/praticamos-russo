@@ -48,14 +48,29 @@ export const POST = async (request) => {
       <a href="${process.env.URL_BASE}/api/auth/request-change?token=${token}">Recuperar</a>
       <h4> Se você não é ${user.name}, e não se cadastrou no Praticamos russo, por favor ignore esta mensagem.
       </h4>`}
+    //
 
-    transporter.sendMail(mailOptions, function(error, info) {
-      if (error) {
-        console.log(error)
-      } else {
-        console.log('Email with request is sent to your email account')
-      }
+    await new Promise((resolve, reject) => {
+      transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+          console.error(err)
+          reject(err)
+        } else {
+          resolve(info)
+          console.log('Email with request is sent to your email account')
+        }
+      })
     })
+
+    //
+    // transporter.sendMail(mailOptions, function(error, info) {
+    //   if (error) {
+    //     console.log(error)
+    //   } else {
+    //     console.log('Email with request is sent to your email account')
+    //   }
+    // })
+    ///
 
     return new NextResponse(`Para recuperar o acesso por favor confira seu email: ${email}`, {
       status: 201,
