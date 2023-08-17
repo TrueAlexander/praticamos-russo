@@ -61,13 +61,19 @@ const handler = NextAuth({
                 <h4> Se você não é ${user.name}, e não se cadastrou no Praticamos russo, por favor ignore esta mensagem.
                 </h4>`}
 
-              transporter.sendMail(mailOptions, function(error, info) {
-                if (error) {
-                  console.log(error)
-                } else {
-                  console.log('Verification email is sent to your email account')
-                }
+              await new Promise((resolve, reject) => {
+                transporter.sendMail(mailOptions, (err, info) => {
+                  if (err) {
+                    console.error(err)
+                    reject(err)
+                  } else {
+                    resolve(info)
+                    console.log('Verification email is sent to your email account')
+                  }
+                })
               })
+
+
               throw new Error("O usuário não ativado! Confira por favor seu email")
               }
             } else {

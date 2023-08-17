@@ -47,8 +47,8 @@ export const POST = async (request) => {
       <h4>Para recuperar o seu acesso a Praticamos russo, por favor clique em baixo: </h4>
       <a href="${process.env.URL_BASE}/api/auth/request-change?token=${token}">Recuperar</a>
       <h4> Se você não é ${user.name}, e não se cadastrou no Praticamos russo, por favor ignore esta mensagem.
-      </h4>`}
-    //
+      </h4>`
+    }
 
     await new Promise((resolve, reject) => {
       transporter.sendMail(mailOptions, (err, info) => {
@@ -61,16 +61,6 @@ export const POST = async (request) => {
         }
       })
     })
-
-    //
-    // transporter.sendMail(mailOptions, function(error, info) {
-    //   if (error) {
-    //     console.log(error)
-    //   } else {
-    //     console.log('Email with request is sent to your email account')
-    //   }
-    // })
-    ///
 
     return new NextResponse(`Para recuperar o acesso por favor confira seu email: ${email}`, {
       status: 201,
