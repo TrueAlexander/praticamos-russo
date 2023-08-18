@@ -58,8 +58,8 @@ const handler = NextAuth({
                 <h2>Prezado ${user.name}! Obrigado pelo cadastro no Praticamos russo!</h2>
                 <h4>Por favor verifique seu email para ativar seu perfil</h4>
                 <a href="${process.env.URL_BASE}/api/auth/verify-email?token=${token}">Clique aqui!</a>
-                <h4> Se você não é ${user.name}, e não se cadastrou no Praticamos russo, por favor ignore esta mensagem.
-                </h4>`}
+                <p> Se você não é ${user.name}, e não se cadastrou no Praticamos russo, por favor ignore esta mensagem.
+                </p>`}
 
               await new Promise((resolve, reject) => {
                 transporter.sendMail(mailOptions, (err, info) => {

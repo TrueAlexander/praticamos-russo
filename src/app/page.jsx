@@ -33,21 +33,6 @@ export default function Home() {
   useEffect(() => {
     if (session.data?.user?.name) {
 
-     
-        // confirmAlert({
-        //   message: `Prezado ${session.data.user.name}, bem-vindo/a a nossa plataforma! Bora praticar!`,
-        //   buttons: [
-        //     {
-        //       label: 'Ok',
-        //       onClick: () => {            
-        //         router.push('/')
-        //         setNameShow(session.data?.user?.name)
-        //         setIsLoading(false)
-        //         setShowModal(false)   
-        //       }
-        //     }
-        //   ]
-        // })
         setNameShow(session.data?.user?.name)
     } else {
       setNameShow("Desconhecido")

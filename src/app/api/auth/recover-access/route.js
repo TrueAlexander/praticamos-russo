@@ -46,8 +46,8 @@ export const POST = async (request) => {
       <h2>Prezado ${user.name}!</h2>
       <h4>Para recuperar o seu acesso a Praticamos russo, por favor clique em baixo: </h4>
       <a href="${process.env.URL_BASE}/api/auth/request-change?token=${token}">Recuperar</a>
-      <h4> Se você não é ${user.name}, e não se cadastrou no Praticamos russo, por favor ignore esta mensagem.
-      </h4>`
+      <p> Se você não é ${user.name}, e não se cadastrou no Praticamos russo, por favor ignore esta mensagem.
+      </p>`
     }
 
     await new Promise((resolve, reject) => {

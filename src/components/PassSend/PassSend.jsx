@@ -1,9 +1,12 @@
 import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 import { useSearchParams, useRouter } from "next/navigation"
+import { useState } from "react"
+import Loading from "@/app/loading"
 
-const PassSend = ({setModeAsk}) => {
+const PassSend = () => {
 
+  const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
   const searchParams = useSearchParams()
   const id = searchParams.get("id")
@@ -28,7 +31,7 @@ const PassSend = ({setModeAsk}) => {
         ]
       }) 
     } else {
-      console.log(id)
+      setIsLoading(true)
       //
       try {
         const res = await fetch("/api/auth/new-password", {
@@ -49,6 +52,7 @@ const PassSend = ({setModeAsk}) => {
               {
                 label: 'Ok',
                 onClick: () => {
+                  setIsLoading(false)
                   router.push("/")
                 }
               }
@@ -61,6 +65,7 @@ const PassSend = ({setModeAsk}) => {
               {
                 label: 'Ok',
                 onClick: () => {
+                  setIsLoading(false)
                   router.push("/recover-access")
                 }
               }
@@ -75,45 +80,53 @@ const PassSend = ({setModeAsk}) => {
 
   return (
     <>
-      <h2 className="text-white p-4 font-bold text-[18px] block">Prezado Usuário!</h2>
-      <div className="my-3 animate__animated animate__fadeIn">
-        <h3 className="text-[#9f50ac] text-[17px] font-bold">Crie uma senha nova para recuperar o acesso ao seu perfil:</h3>
-        <form 
-          className="form" 
-          onSubmit={handleSubmit}
-        >
-          <div className="my-9">
-            <input
-              className='px-3 py-1 bg-transparent text-white rounded-md max-w-[600px] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
-              type="password" 
-              name="password"
-              minLength={5}
-              autoComplete="on" 
-              placeholder="senha nova" 
-              required 
-            />
-          </div>
-          <div className="my-9">
-            <input
-              className='px-3 py-1 bg-transparent text-white rounded-md max-w-[600px] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
-              type="password" 
-              name="password"
-              minLength={5}
-              autoComplete="on" 
-              placeholder="senha nova" 
-              required 
-            />
-          </div>
-          <button 
-            className="bg-[#9f50ac] select-none font-bold h-[30px] min-w-[100px] rounded-[10px] text-white mr-2 ml-2" 
-            type="submit"
-            title='Enviar'
-          >
-            Enviar
-          </button>
-        </form>
-      </div>
+      {!isLoading ?
+          <>
+            <h2 className="text-white p-4 font-bold text-[18px] block">Prezado Usuário!</h2>
+            <div className="my-3 animate__animated animate__fadeIn">
+              <h3 className="text-[#9f50ac] text-[17px] font-bold">Crie uma senha nova para recuperar o acesso ao seu perfil:</h3>
+              <form 
+                className="form" 
+                onSubmit={handleSubmit}
+              >
+                <div className="my-9">
+                  <input
+                    className='px-3 py-1 bg-transparent text-white rounded-md max-w-[600px] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
+                    type="password" 
+                    name="password"
+                    minLength={5}
+                    autoComplete="on" 
+                    placeholder="senha nova" 
+                    required 
+                  />
+                </div>
+                <div className="my-9">
+                  <input
+                    className='px-3 py-1 bg-transparent text-white rounded-md max-w-[600px] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
+                    type="password" 
+                    name="password"
+                    minLength={5}
+                    autoComplete="on" 
+                    placeholder="senha nova" 
+                    required 
+                  />
+                </div>
+                <button 
+                  className="bg-[#9f50ac] select-none font-bold h-[30px] min-w-[100px] rounded-[10px] text-white mr-2 ml-2" 
+                  type="submit"
+                  title='Enviar'
+                >
+                  Enviar
+                </button>
+              </form>
+            </div>
+          </> :
+          <>
+            <Loading/>
+          </>
+        }
     </>
+
   )
 }
 
