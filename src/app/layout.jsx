@@ -33,10 +33,10 @@ export default function RootLayout({children}) {
                   />
                 </div>     
               </Link>
-              <div className="pt-[30px] bg-blue-500">
+              <div className="pt-[30px]">
                 {children} 
               </div>                   
-              <p className='fixed bottom-0 text-white my-2 p-4 text-[10px] bg-yellow-500'>
+              <p className='fixed bottom-0 text-white my-3 text-[10px]'>
                 Criado por <a href="https://www.eformaliza.com/" target="_blank" >e-Formaliza</a>
               </p>
             </main>  
