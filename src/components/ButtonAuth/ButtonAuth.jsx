@@ -15,7 +15,7 @@ const ButtonAuth = ({setShowModal, name, signOut, nameShow, setIsLoading}) => {
             label: 'Sim',
             onClick: () => {
               setIsLoading(true)
-              signOut()
+              signOut()    
             }
           },
           {
