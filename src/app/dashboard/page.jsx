@@ -48,11 +48,12 @@ export default function Dashboard() {
     )
   } else if (session.status === "authenticated") {
     return (
-      <div className='text-center flex flex-col justify-center w-[350px] max-w-[80%] mx-auto' >
+      // <div className='text-center flex flex-col justify-center w-[350px] max-w-[80%] mx-auto' >
+      <div className='text-center flex flex-col justify-center' >
         <ButtonAuth name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
         <p className='text-white p-4 py-6 font-bold text-[22px]'>Praticamos russo!</p>
         <p className='text-white text-[18px]'>{name}, seus melhores resultados:</p>
-        <ul className='text-[#9f50ac] text-[20px] font-bold text-left my-5'>
+        <ul className='text-[#9f50ac] text-[20px] font-bold text-left my-5 w-[350px] max-w-[80%] mx-auto'>
           <li className='flex justify-between'>
             <p>Vocabulário</p>
             <p className='text-[18px]'><span className='text-white text-[22px]'>{bestVocabulario} </span>  de  <span className='text-white text-[22px]'>{TOTAL_QUESTIONS} </span></p>
