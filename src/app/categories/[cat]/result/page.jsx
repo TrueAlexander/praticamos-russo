@@ -11,7 +11,7 @@ const ResultPage = () => {
   const category = searchParams.get('cat')
   const user = searchParams.get('user')
 
-  const handleClick = () => router.push('/categories') 
+  const handleClick = () => router.push('/dashboard') 
 
   return (
     <div className='text-white text-center uppercase flex flex-col justify-center'>

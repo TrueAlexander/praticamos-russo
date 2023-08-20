@@ -47,7 +47,6 @@ const Quiz = ({questions, totalQuestions, category}) => {
   }, [currentQuestionIndex])
 
   useEffect(() => {
-    // setTimeout(() => setIsLoading(false),  1000) 
     setIsLoading(false)
   }, [questions])
 
