@@ -14,13 +14,13 @@ const ButtonAuth = ({setShowModal, name, signOut, nameShow, setIsLoading}) => {
           {
             label: 'Sim',
             onClick: () => {
-              setIsLoading(true)
-              signOut()    
+              signOut() 
+              setIsLoading(true)      
             }
           },
           {
             label: 'Não',
-            onClick: () => console.log('Click No')
+            // onClick: () => console.log('Click No')
           }
         ]
       })

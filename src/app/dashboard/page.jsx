@@ -14,6 +14,7 @@ export default function Dashboard() {
   const TOTAL_QUESTIONS = 10
 
   const [nameShow, setNameShow] = useState("Desconhecido")
+  const [isLoading, setIsLoading] = useState(session.status === 'loading')
   const [bestScores, setBestScores] = useState()
 
   const bestVocabulario = bestScores?.filter(item => item.hasOwnProperty('vocabulario'))[0]?.vocabulario || 0
@@ -23,28 +24,23 @@ export default function Dashboard() {
   const name = session.data?.user?.name || null
   const email = session.data?.user?.email || null
 
-  // useEffect(() => {
-  //   setIsLoading(session.status === 'loading')
-  // }, [session.status])
-
   useEffect(() => {
+    setIsLoading(session.status === 'loading')
+
     if(session.status === "authenticated") {
-       getBestScores(email, name).then(result => setBestScores(result))  
+      getBestScores(email, name).then(result => setBestScores(result))  
     }
-    
-  }, [session.status])
-
-  useEffect(() => {
     if (session.data?.user?.name) {
-        setNameShow(session.data?.user?.name)
+      setNameShow(session.data?.user?.name)
     } else {
       setNameShow("Desconhecido")
-    }
-  }, [session])
+    } 
+    if(session.status === "unauthenticated") router.push('/')
+  }, [session.status])
 
   const handleClick = () => router.push('/categories')
 
-  if (session.status === "loading") {
+  if (isLoading) {
     return (
       <div className="flex-auto flex flex-col justify-center">
         <Loading/> 
@@ -53,7 +49,7 @@ export default function Dashboard() {
   } else if (session.status === "authenticated") {
     return (
       <div className='text-center flex flex-col justify-center w-[350px] max-w-[80%] mx-auto' >
-        <ButtonAuth name={name} signOut={signOut} nameShow={nameShow}/>
+        <ButtonAuth name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
         <p className='text-white p-4 py-6 font-bold text-[22px]'>Praticamos russo!</p>
         <p className='text-white text-[18px]'>{name}, seus melhores resultados:</p>
         <ul className='text-[#9f50ac] text-[20px] font-bold text-left my-5'>
@@ -80,7 +76,5 @@ export default function Dashboard() {
         />
       </div>
     )
-  } else {
-    router.push('/')
-  }
+  } 
 }
