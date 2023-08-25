@@ -6,6 +6,7 @@ import bcrypt from "bcryptjs"
 import nodemailer from "nodemailer"
 import jwt from "jsonwebtoken"
 
+
 //mail sender details
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -38,6 +39,12 @@ const handler = NextAuth({
             if (isPasswordCorrect) {
               /////
               if(user.emailVerified) {
+                const userObj = {
+                  name: user.name,
+                  email: user.email,
+                  isAdmin: user.isAdmin
+                }
+                console.log(user)
                 return user
               } else {
                 ///create token 
@@ -91,6 +98,31 @@ const handler = NextAuth({
   pages: {
     error: "/",
   },
+  callbacks: {
+    jwt: async ({token, user, session}) => {
+
+        console.log("jwt callback", {token, user, session})
+        //pass in user isAdmin to token
+        if (user) {
+          return {
+            ...token,
+            isAdmin: user.isAdmin,
+          }
+        }
+        return token
+    },
+    session: async ({session, token, user}) => {
+        console.log("session callback", {session, token, user})
+        //pass in user isAdmin to session
+        return {
+          ...session,
+          user: {
+            ...session.user,
+            isAdmin: token.isAdmin,
+          }
+        }
+    }
+},
   secret: process.env.NEXTAUTH_SECRET,
   
 

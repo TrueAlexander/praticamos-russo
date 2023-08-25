@@ -14,10 +14,10 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
     e.preventDefault()
     const email = e.target[0].value
     const password = e.target[1].value
-      await signIn("credentials", {
+    await signIn("credentials", {
         email,
         password,
-      })        
+      })       
   }
   useEffect(() => {
     setError(params.get("error"))

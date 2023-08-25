@@ -48,9 +48,10 @@ export default function Dashboard() {
     )
   } else if (session.status === "authenticated") {
     return (
-      // <div className='text-center flex flex-col justify-center w-[350px] max-w-[80%] mx-auto' >
       <div className='text-center flex flex-col justify-center' >
-        <ButtonAuth name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
+        <div className='absolute top-0 left-0 right-0'>
+          <ButtonAuth name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
+        </div>  
         <p className='text-white p-4 py-6 font-bold text-[22px]'>Praticamos russo!</p>
         <p className='text-white text-[18px]'>{name}, seus melhores resultados:</p>
         <ul className='text-[#9f50ac] text-[20px] font-bold text-left my-5'>
