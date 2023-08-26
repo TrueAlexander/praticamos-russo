@@ -108,7 +108,7 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
       <h3 className="text-[#9f50ac] py-4 mt-2 text-[17px] font-bold">ou identifique-se:</h3>
         <button 
           title="Criar Usuário" 
-          className="text-white text-[13px] underline cursor-pointer"
+          className="text-white text-[13px] underline cursor-pointer active:scale-95"
           onClick={() => setModeLogin(true)}
         >
           fazer login

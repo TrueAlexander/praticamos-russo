@@ -57,7 +57,7 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
           />
         </div>
         <button 
-          className="bg-[#9f50ac] select-none font-bold h-[30px] min-w-[100px] rounded-[10px] text-white mr-2 ml-2 mb-3" 
+          className="bg-[#9f50ac] select-none font-bold h-[30px] min-w-[100px] rounded-[10px] text-white mr-2 ml-2 mb-3 active:scale-95" 
           type="submit"
           title='Entrar'
         >
