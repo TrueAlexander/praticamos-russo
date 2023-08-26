@@ -39,12 +39,6 @@ const handler = NextAuth({
             if (isPasswordCorrect) {
               /////
               if(user.emailVerified) {
-                const userObj = {
-                  name: user.name,
-                  email: user.email,
-                  isAdmin: user.isAdmin
-                }
-                console.log(user)
                 return user
               } else {
                 ///create token 
@@ -62,11 +56,17 @@ const handler = NextAuth({
                 to: `${user.email}`,
                 subject: `Praticamos Russo. ${user.name}, verifique seu email!`,
                 html: `
-                <h2>Prezado ${user.name}! Obrigado pelo cadastro no Praticamos russo!</h2>
-                <h4>Por favor verifique seu email para ativar seu perfil</h4>
-                <a href="${process.env.URL_BASE}/api/auth/verify-email?token=${token}">Clique aqui!</a>
-                <p> Se você não é ${user.name}, e não se cadastrou no Praticamos russo, por favor ignore esta mensagem.
-                </p>`}
+                <body style="background:#2b2737;">
+                  <div style="font-family: arial;  font-size: 16px; text-align: center; color:white; background:#2b2737; padding: 30px 20px 80px;">
+                    <h2>Praticamos russo!</h2>
+                    <p style="font-size: 18px; line-height: 35px;">Prezado <span style="color:#9f50ac; font-size: 20px; font-weight: 600;">${user.name},</span> obrigado pelo cadastro no <a style="text-decoration:none; font-size: 20px; color: white; font-weight: bold;" href="${process.env.URL_BASE}">Praticamos russo app</a></p>
+                    <p style="line-height: 25px;">Por favor verifique seu email para ativar seu perfil:</p>
+                    <a style="color:#9f50ac; font-weight: 600;" href="${process.env.URL_BASE}/api/auth/verify-email?token=${token}">Clique aqui!</a>
+                    <p style="font-size: 13px; margin-top: 30px; line-height: 18px;"> Se você não é ${user.name}, e não se cadastrou no Praticamos russo, por favor ignore esta mensagem.
+                    </p>
+                  </div>
+                </body>
+                `}
 
               await new Promise((resolve, reject) => {
                 transporter.sendMail(mailOptions, (err, info) => {

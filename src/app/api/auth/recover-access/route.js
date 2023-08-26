@@ -4,7 +4,6 @@ import { NextResponse } from "next/server"
 import nodemailer from "nodemailer"
 import jwt from "jsonwebtoken"
 
-
 //mail sender details
 const transporter = nodemailer.createTransport({
   service: 'gmail',
@@ -43,11 +42,17 @@ export const POST = async (request) => {
       to: email,
       subject: 'Recuperação de acesso! Praticamos Russo.',
       html: `
-      <h2>Prezado ${user.name}!</h2>
-      <h4>Para recuperar o seu acesso a Praticamos russo, por favor clique em baixo: </h4>
-      <a href="${process.env.URL_BASE}/api/auth/request-change?token=${token}">Recuperar</a>
-      <p> Se você não é ${user.name}, e não se cadastrou no Praticamos russo, por favor ignore esta mensagem.
-      </p>`
+      <body style="background:#2b2737;">
+        <div style="font-family: arial; font-size: 16px; text-align: center; color:white; background:#2b2737; padding: 30px 20px 80px;">
+          <h2>Praticamos russo!</h2>
+          <p style="font-size: 20px; line-height: 35px;">Prezado <span style="color:#9f50ac; font-size: 20px; font-weight: 600;">${user.name},</span></p>
+          <p style="line-height: 25px;">Para recuperar o seu acesso a <a style="text-decoration:none; font-size: 20px; color: white; font-weight: bold;" href="${process.env.URL_BASE}">Praticamos russo app</a>, por favor clique em baixo: </p>
+          <a style="color:#9f50ac; font-weight: 600; " href="${process.env.URL_BASE}/api/auth/request-change?token=${token}">Recuperar</a>
+          <p style="font-size: 13px; line-height: 18px; margin-top: 30px"> Se você não é ${user.name}, e não se cadastrou no Praticamos russo, por favor ignore esta mensagem.
+          </p>
+        </div>
+      </body>
+      `
     }
 
     await new Promise((resolve, reject) => {
