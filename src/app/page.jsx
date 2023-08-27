@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react'
 import Button from '@/components/Button/Button'
 import AuthModal from '@/components/AuthModal/AuthModal'
 import ButtonAuth from "@/components/ButtonAuth/ButtonAuth"
+import AdminLink from '@/components/AdminLink/AdminLink'
 import { useSession, signOut } from 'next-auth/react' 
 import Loading from './loading'
 //Homepage Image
@@ -58,6 +59,7 @@ export default function Home() {
               onClick={handleClick} 
             />
             {showModal && <AuthModal showModal={showModal} setShowModal={setShowModal} setIsLoading={setIsLoading}/>}
+            {session.data?.user?.isAdmin && <AdminLink/>}
           </>
       }    
     </div>
