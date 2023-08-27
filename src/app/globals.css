@@ -2,9 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
-@media only screen and (orientation:landscape) {
+/* @media only screen and (orientation:landscape) {
   body {
     transform: rotate(90deg);
     opacity: 0;
+  }
+} */
+
+@media only screen and (max-width: 768px) and (orientation: landscape) {
+  body {
+    display: none;
+  }
+}
+
+/* Вернуть содержимое к обычной ориентации для настольных устройств */
+@media only screen and (min-width: 769px) {
+  body {
+    display: block;
   }
 }

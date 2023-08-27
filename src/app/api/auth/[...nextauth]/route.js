@@ -100,8 +100,6 @@ const handler = NextAuth({
   },
   callbacks: {
     jwt: async ({token, user, session}) => {
-
-        console.log("jwt callback", {token, user, session})
         //pass in user isAdmin to token
         if (user) {
           return {
@@ -112,7 +110,6 @@ const handler = NextAuth({
         return token
     },
     session: async ({session, token, user}) => {
-        console.log("session callback", {session, token, user})
         //pass in user isAdmin to session
         return {
           ...session,
