@@ -33,7 +33,7 @@ const AdminPage = () => {
 
   }, [session.status])
 
-  const handleClick = () => router.push('/categories')
+  const handleClick = (e) => router.push(`/admin/${e.target.name}`)
 
   if (isLoading) {
     return (
@@ -47,7 +47,7 @@ const AdminPage = () => {
         <ButtonAuth name="Admin" signOut={signOut} nameShow="Admin" setIsLoading={setIsLoading}/>
         <p className='text-white p-4 font-bold text-[20px]'>Gestão de exercícios!</p>
         <p className='text-[#9f50ac] pt-4 pb-4 text-[18px] '>
-          Para gestionar aos exercícios escolhe uma categoría:
+          Para gestionar exercícios escolhe uma categoría:
         </p>
         <Button name='vocabulario' text='Vocabulário' disabled={false} onClick={handleClick} />
         <br />
