@@ -33,10 +33,13 @@ const CategoryAdminPage = async ({params}) => {
   const questions = await getQuestionsByCategory(category)
 
   return (
-    <div className='text-center flex flex-col justify-center'>
-          <AdminQuestions questions={questions} category={category}/>     
-          {/* <p className='text-white p-4 mt-6 font-bold text-[22px]'>404. A página solicitada não existe!</p>     */}
+    <div className="fixed z-[10000] top-48 bottom-12 left-0 right-0  overflow-y-auto">
+      <div className='lg:max-w-[450px] max-w-[300px] mx-auto text-center flex flex-col justify-center'>
+        <AdminQuestions questions={questions} category={category}/>     
+      {/* <p className='text-white p-4 mt-6 font-bold text-[22px]'>404. A página solicitada não existe!</p>     */}
       </div>
+    </div>
+
   )
   // useEffect(() => {
   //   const questions = getQuestionsByCategory(category)
