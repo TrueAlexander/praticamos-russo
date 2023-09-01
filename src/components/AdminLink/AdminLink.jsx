@@ -4,7 +4,7 @@ import { MdOutlineAdminPanelSettings } from 'react-icons/md'
 const AdminLink = () => {
   return (
     <div 
-      className="text-white text-[24px] absolute bottom-5 right-2"
+      className="text-white text-[24px] absolute bottom-5 right-2 z-[10000]"
       title="Admin Painel"
     >
       <Link href="/admin">
