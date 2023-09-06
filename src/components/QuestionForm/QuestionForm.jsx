@@ -1,4 +1,5 @@
 import { IoClose } from "react-icons/io5"
+import "animate.css"
 
 const QuestionForm = ({category, setQuestionFormShow}) => {
 
@@ -7,7 +8,7 @@ const QuestionForm = ({category, setQuestionFormShow}) => {
   }
 
   return (
-    <div>
+    <div className="animate__animated animate__fadeIn">
       <button
           onClick={ handleClose }
           className="text-white text-[22px] absolute right-4 md:right-56 top-0 scale-125"
