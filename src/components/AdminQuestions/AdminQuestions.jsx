@@ -40,15 +40,8 @@ const AdminQuestions =  ({category, questions, setAnchorUpdate, anchorUpdate}) =
     setQuestionsList(questions)
   }, [questions])
 
-  console.log(questionsList)
-
   const criarClick = async () => {
     setQuestionFormShow(true)
-    ///appear a form to fill with question details and a button submit
-
-    ///after fullfill the form and press the submit button
-   // /????????????setQuestionsList((prev) => prev.push(formData)))))
-    //the new question send to database POST  - to receive feedback
   }
 
   const clickDelete =  (e) => {
@@ -116,16 +109,26 @@ const AdminQuestions =  ({category, questions, setAnchorUpdate, anchorUpdate}) =
     return (
       questionsList.map(item => {
         return (
-          <div key={item._id} className="bg-green-400 mb-5">
+          <div key={item._id} className="border border-[#9f50ac] rounded-md mb-5 py-1 pl-3 text-[14px] font-medium">
             <button 
               data-id={item._id}
               data-question={item.question}
-              className="text-[30px] block text-red-400 cursor-pointer w-fit mr-0 ml-auto"
+              className="text-[30px] float-right block text-red-600 cursor-pointer w-fit mr-0 ml-auto"
               onClick={clickDelete}
             >
               <IoClose/>
             </button>
-            {item.question}
+            <p>{item.question}</p>
+            <div className="text-left flex">
+              <div className="flex-1 border-r">
+                <p className="text-green-600  text-center border-b">{item.correct_answer}</p>
+                <p className="text-red-600  text-center">{item.incorrect_answers[0]}</p>
+              </div>
+              <div className="flex-1">
+                <p className="text-red-600  text-center border-b">{item.incorrect_answers[1]}</p>
+                <p className="text-red-600  text-center">{item.incorrect_answers[2]}</p>
+              </div>
+            </div>    
           </div>
         )
       })

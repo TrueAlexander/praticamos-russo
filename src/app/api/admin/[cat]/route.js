@@ -4,24 +4,16 @@ import { NextResponse } from "next/server"
 
 export const POST = async (request) => {
 
-  
-
   const { category } = await request.json() 
 
-  /////
   await connect()
 
   try {
     const res = await Question.find(
       { category: category }
     )
-
-    // console.log(res)
-
-    return NextResponse.json({ questions: res }, { status: 201 })
-    
-  } catch (error) {
-   
+    return NextResponse.json({ questions: res }, { status: 201 })  
+  } catch (error) { 
     return new NextResponse(error.message, {
       status: 500,
     })

@@ -93,7 +93,7 @@ const QuestionForm = ({category, setQuestionFormShow, setAnchorUpdate, setIsLoad
         <div className="my-2">
           <p className="text-[#9f50ac] text-[17px]">Resposta correta:</p>
           <input
-            className='px-2 py-1 bg-transparent text-white rounded-md w-[97%] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
+            className='px-2 py-1 bg-transparent text-green-600 rounded-md w-[97%] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
             type="text" 
             name="answer"
             minLength={1}
@@ -103,7 +103,7 @@ const QuestionForm = ({category, setQuestionFormShow, setAnchorUpdate, setIsLoad
         <div className="my-2">
           <p className="text-[#9f50ac] text-[17px]">Resposta incorreta #1:</p>
           <input
-            className='px-2 py-1 bg-transparent text-white rounded-md w-[97%] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
+            className='px-2 py-1 bg-transparent text-red-600 rounded-md w-[97%] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
             type="text" 
             name="answer"
             minLength={1}
@@ -113,7 +113,7 @@ const QuestionForm = ({category, setQuestionFormShow, setAnchorUpdate, setIsLoad
         <div className="my-2">
           <p className="text-[#9f50ac] text-[17px]">Resposta incorreta #2:</p>
           <input
-            className='px-2 py-1 bg-transparent text-white rounded-md w-[97%] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
+            className='px-2 py-1 bg-transparent text-red-600 rounded-md w-[97%] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
             type="text" 
             name="answer"
             minLength={1}
@@ -123,7 +123,7 @@ const QuestionForm = ({category, setQuestionFormShow, setAnchorUpdate, setIsLoad
         <div className="my-2">
           <p className="text-[#9f50ac] text-[17px]">Resposta incorreta #3:</p>
           <input
-            className='px-2 py-1 bg-transparent text-white rounded-md w-[97%] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
+            className='px-2 py-1 bg-transparent text-red-600 rounded-md w-[97%] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
             type="text" 
             name="answer"
             minLength={1}

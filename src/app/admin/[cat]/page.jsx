@@ -1,5 +1,4 @@
 "use client"
-// import Loading from './loading'
 import AdminQuestions from "@/components/AdminQuestions/AdminQuestions"
 import Link from "next/link"
 import { useState, useEffect } from 'react'
@@ -30,8 +29,6 @@ const CategoryAdminPage = ({params}) => {
     }
     getQuestionsByCategory(category)
   }, [anchorUpdate])
-
-  console.log(questions)
 
   return (
     <div className="fixed z-[10000] top-0 bg-[#2b2737] pt-5 bottom-12 left-0 right-0  overflow-y-auto text-center">
