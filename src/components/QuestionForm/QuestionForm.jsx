@@ -3,7 +3,7 @@ import "animate.css"
 import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 
-const QuestionForm = ({category, setQuestionFormShow}) => {
+const QuestionForm = ({category, setQuestionFormShow, setAnchorUpdate, setIsLoading}) => {
 
   const handleClose = () => {
     setQuestionFormShow(false)
@@ -11,7 +11,7 @@ const QuestionForm = ({category, setQuestionFormShow}) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
-
+    setIsLoading(true)
     try {
       const res = await fetch("/api/admin/create-question", {
         method: "POST",
@@ -43,8 +43,9 @@ const QuestionForm = ({category, setQuestionFormShow}) => {
             {
               label: 'Ok',
               onClick: () => {
-                // setShowModal(false)
-                // setIsLoading(false)
+                setAnchorUpdate(prev => !prev)
+                setIsLoading(false)
+                setQuestionFormShow(false)
               }
             }
           ]

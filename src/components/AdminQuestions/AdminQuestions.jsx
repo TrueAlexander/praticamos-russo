@@ -10,15 +10,16 @@ import { IoClose } from "react-icons/io5"
 import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 
-const AdminQuestions = ({questions, category}) => {
+const AdminQuestions =  ({category, questions, setAnchorUpdate, anchorUpdate}) => {
   const session = useSession()
   const router = useRouter()
 
   const [isLoading, setIsLoading] = useState(true)
   const [isAdmin, setIsAdmin] = useState(false)
-  const [questionsList, setQuestionsList] = useState(questions.questions)
+  const [questionsList, setQuestionsList] = useState(questions)
   const [questionFormShow, setQuestionFormShow] = useState(false)
 
+  //admin authentication
   useEffect(() => {
     if (session.status === "loading") {
       setIsLoading(true)
@@ -34,6 +35,11 @@ const AdminQuestions = ({questions, category}) => {
     }
   }, [session.status])
 
+  //update questions list for render when it was changed
+  useEffect(() => {
+    setQuestionsList(questions)
+  }, [questions])
+
   console.log(questionsList)
 
   const criarClick = async () => {
@@ -45,9 +51,7 @@ const AdminQuestions = ({questions, category}) => {
     //the new question send to database POST  - to receive feedback
   }
 
-  ///useEffect() if temporaryQuestions changes re render the component
   const clickDelete =  (e) => {
-
     const _id = e.currentTarget.getAttribute('data-id')
     const question = e.currentTarget.getAttribute('data-question')
 
@@ -57,8 +61,7 @@ const AdminQuestions = ({questions, category}) => {
         {
           label: 'Sim',
           onClick: async () => {
-
-            
+            setIsLoading(true)        
             try {
               const res = await fetch("/api/admin/delete-question", {
                 method: "DELETE",
@@ -69,15 +72,15 @@ const AdminQuestions = ({questions, category}) => {
               })
 
               if (res.status === 201) {
-                console.log('test')
+              
                 confirmAlert({
                   message: "Prezado Admin, a pergunta foi apagada com sucesso!",
                   buttons: [
                     {
                       label: 'Ok',
-                      onClick: () => {
-                        // setShowModal(false)
-                        // setIsLoading(false)
+                      onClick: async () => {
+                        setAnchorUpdate(prev => !prev)
+                        setIsLoading(false)
                       }
                     }
                   ]
@@ -89,14 +92,12 @@ const AdminQuestions = ({questions, category}) => {
                     {
                       label: 'Ok',
                       onClick: () => {
-                        // setShowModal(false)
-                        // setIsLoading(false)
+                        setIsLoading(false)
                       }
                     }
                   ]
                 })
-              }
-                
+              }               
             } catch (error) {
               console.log(error)
             }     
@@ -148,7 +149,7 @@ const AdminQuestions = ({questions, category}) => {
             {questionsList.length < 1 ? <h3>Eita! A lista das perguntas de <span>{category}</span> está vazia...</h3> : renderQuestions(questionsList)}
           </div>
         </div>}
-        {questionFormShow && <QuestionForm category={category} setQuestionFormShow={setQuestionFormShow} />}
+        {questionFormShow && <QuestionForm category={category} setQuestionFormShow={setQuestionFormShow} setAnchorUpdate={setAnchorUpdate} setIsLoading={setIsLoading}/>}
       </div>
     )
   } 
