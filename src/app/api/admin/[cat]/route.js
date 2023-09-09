@@ -4,7 +4,7 @@ import { NextResponse } from "next/server"
 
 export const POST = async (request) => {
 
-  ////change to request query params!!
+  
 
   const { category } = await request.json() 
 
@@ -16,7 +16,7 @@ export const POST = async (request) => {
       { category: category }
     )
 
-    console.log(res)
+    // console.log(res)
 
     return NextResponse.json({ questions: res }, { status: 201 })
     

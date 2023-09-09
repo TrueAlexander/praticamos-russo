@@ -15,7 +15,7 @@ body.react-confirm-alert-body-element {
   padding: 10px;
   right: 0 !important;
   bottom: 0 !important;
-  z-index: 99;
+  z-index: 10001;
   background: #8a77c3b2;
   display: -webkit-flex;
   display: -moz-flex;
@@ -83,7 +83,7 @@ body.react-confirm-alert-body-element {
 }
 
 .react-confirm-alert-button-group > button:active {
-  transform: scale(0.95)
+  transform: scale(0.95);
 }
 
 @-webkit-keyframes react-confirm-alert-fadeIn {

@@ -11,6 +11,7 @@ const questionSchema = new Schema(
     question: {
       type: String,
       required: true,
+      unique: true,
     },
     correct_answer: {
       type: String,

@@ -1,5 +1,7 @@
 import { IoClose } from "react-icons/io5"
 import "animate.css"
+import { confirmAlert } from 'react-confirm-alert'
+import '@/utils/react-confirm-alert.css'
 
 const QuestionForm = ({category, setQuestionFormShow}) => {
 
@@ -7,16 +9,77 @@ const QuestionForm = ({category, setQuestionFormShow}) => {
     setQuestionFormShow(false)
   }
 
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+
+    try {
+      const res = await fetch("/api/admin/create-question", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          category: category,
+          question: e.target[0].value,
+          correct_answer: e.target[1].value,
+          answers: [
+            e.target[1].value, 
+            e.target[2].value,
+            e.target[3].value,
+            e.target[4].value
+          ],
+          incorrect_answers: [
+            e.target[2].value,
+            e.target[3].value,
+            e.target[4].value
+          ],
+        }),
+      })
+
+      if (res.status === 201) {
+        confirmAlert({
+          message: "Prezado Admin, a pergunta foi criada com sucesso!",
+          buttons: [
+            {
+              label: 'Ok',
+              onClick: () => {
+                // setShowModal(false)
+                // setIsLoading(false)
+              }
+            }
+          ]
+        })
+      } else if (res.status === 400) {
+        confirmAlert({
+          message: "Prezado Admin, esta pergunta ja existe no banco de dados! Crie outra pergunta!",
+          buttons: [
+            {
+              label: 'Ok',
+              onClick: () => {
+                // setShowModal(false)
+                // setIsLoading(false)
+              }
+            }
+          ]
+        })
+      }
+         
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+
   return (
     <div className="animate__animated animate__fadeIn">
       <button
           onClick={ handleClose }
-          className="text-white text-[22px] absolute right-4 md:right-56 top-0 scale-125"
+          className="text-white text-[22px] absolute right-4 md:right-56 top-4 scale-125"
         >  
           <IoClose/></button>
       <form 
         className="form" 
-        // onSubmit={handleSubmit}
+        onSubmit={handleSubmit}
       >
         <div className="mt-3">
           <p className="text-[#9f50ac] text-[17px]">Pergunta:</p>
