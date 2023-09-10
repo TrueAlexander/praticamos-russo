@@ -84,7 +84,7 @@ const QuestionForm = ({category, setQuestionFormShow, setAnchorUpdate, setIsLoad
       >
         <div className="mt-3">
           <p className="text-[#9f50ac] text-[17px]">Pergunta:</p>
-          <textarea name="" id="" className='block mx-auto px-2 py-1 bg-transparent text-white rounded-md w-[97%] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
+          <textarea name="" id="" className='block resize-none mx-auto px-2 py-1 bg-transparent text-white rounded-md w-[97%] text-[16px] placeholder:text-white border border-white shadow-sm focus:outline-none focus:border-none focus:ring-[#9f50ac] focus:outline-[#9f50ac] focus:placeholder-transparent'
           required 
           >
 

@@ -11,8 +11,6 @@ import { useSession, signOut } from 'next-auth/react'
 import Loading from './loading'
 //Homepage Image
 import HomepageImage from '@/assets/home-pic.jpg'
-// import { confirmAlert } from 'react-confirm-alert'
-// import '@/utils/react-confirm-alert.css'
 
 export default function Home() {
   const router = useRouter()
