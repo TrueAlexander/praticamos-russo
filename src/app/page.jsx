@@ -18,7 +18,7 @@ export default function Home() {
   const params = useSearchParams()
 
   const [showModal, setShowModal] = useState(params.get("error") || false)
-  const [nameShow, setNameShow] = useState("Desconhecido")
+  const [nameShow, setNameShow] = useState("Visitante")
   const [isLoading, setIsLoading] = useState(session.status === 'loading')
  
 
@@ -34,7 +34,7 @@ export default function Home() {
 
         setNameShow(session.data?.user?.name)
     } else {
-      setNameShow("Desconhecido")
+      setNameShow("Visitante")
     }
   }, [session])
 

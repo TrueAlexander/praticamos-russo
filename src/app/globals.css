@@ -3,12 +3,35 @@
 @tailwind utilities;
 
 
+
 @media only screen and (max-width: 916px) and (orientation: landscape) {
   body {
-    /* transform: rotate(90deg); */
-    /* opacity: 0; */
-    height: auto;
+    /* transform: rotate(90deg);
+    height: fit-content; */
+    /* opacity: 0.3; */
+    /* height: auto !important;
+   
+    /*overflow-y: auto !important;*/
+    /* display: none !important;   */
+    /* position: relative !important;
+    overflow: auto !important; */
     
+    
+  }
+  main {
+    /* height:fit-content !important;
+    overflow: auto !important;
+    position: relative !important; */
+    
+  }
+  .logo {
+    /* position: static !important; */
+    /* overflow: auto !important; */
+    
+  }
+  .footer {
+    /* position: relative !important; */
+    /* overflow: auto !important; */
   }
 }
 

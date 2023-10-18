@@ -34,7 +34,7 @@ const ButtonAuth = ({setShowModal, name, signOut, nameShow, setIsLoading}) => {
       </p>
       <button
         className="text-white absolute right-5 top-5 scale-125" 
-        title={nameShow === "Desconhecido" ? "Entrar ou Cadastrar-se" : "Sair"}
+        title={nameShow === "Visitante" ? "Entrar ou Cadastrar-se" : "Sair"}
         onClick={handleClick}
       >
         {name ? <ImExit/> : <ImEnter/>}
