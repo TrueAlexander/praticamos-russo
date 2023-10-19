@@ -2,36 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 @media only screen and (max-width: 916px) and (orientation: landscape) {
   .bodyClass {
-    opacity: 0.3;
     justify-content: initial !important;
     overflow: auto !important; 
   }
   .main {
-    /* height:fit-content !important;
+    height: auto !important;    
+  }
+
+  .logo,
+  .footer  {
+    position: initial !important;   
+  }
+
+  .modalContent {
     overflow: auto !important;
-    position: relative !important; */
-    height: auto !important;
-    
-  }
-  .logo {
-    position: initial !important;
-    /* overflow: auto !important; */
-    
-  }
-  .footer {
-    position: initial !important;
-    /* overflow: auto !important; */
+    justify-content: initial !important;
   }
 }
-
-/* Вернуть содержимое к обычной ориентации для настольных устройств
-@media only screen and (min-width: 769px) {
-  body {
-    display: block;
-  }
-}  */
 
