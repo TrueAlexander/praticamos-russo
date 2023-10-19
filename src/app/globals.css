@@ -22,7 +22,7 @@
     /* height:fit-content !important;
     overflow: auto !important;
     position: relative !important; */
-    height: 100vh;
+    height: auto !important;
     
   }
   .logo {
