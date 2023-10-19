@@ -5,18 +5,10 @@
 
 
 @media only screen and (max-width: 916px) and (orientation: landscape) {
-  body {
-    /* transform: rotate(90deg);
-    height: fit-content; */
+  .bodyClass {
     opacity: 0.3;
-    /* height: auto !important;
-   
-    /*overflow-y: auto !important;*/
-    /* display: none !important;   */
-    /* position: relative !important;
-    overflow: auto !important; */
-    
-    
+    justify-content: initial !important;
+    overflow: auto !important; 
   }
   .main {
     /* height:fit-content !important;

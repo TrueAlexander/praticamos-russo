@@ -46,7 +46,7 @@ export default function RootLayout({children}) {
 
   return (
     <html lang="en">
-      <body className="bg-[#2b2737] p-4 box-border flex flex-col h-screen absolute top-0 bottom-0 left-0 right-0 ">
+      <body className="bg-[#2b2737] p-4 box-border flex flex-col h-screen absolute top-0 bottom-0 left-0 right-0 justify-center overflow-hidden bodyClass">
         <AuthProvider>
           <div className="w-fit mx-auto">
             <main className={`${quicksand.variable} font-quicksand max-w-[900px] w-full m-auto flex flex-col items-center h-screen justify-center overflow-hidden relative main`}>         
