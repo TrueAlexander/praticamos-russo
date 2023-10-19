@@ -18,12 +18,12 @@
     
   }
   .logo {
-    /* position: static !important; */
+    position: initial !important;
     /* overflow: auto !important; */
     
   }
   .footer {
-    /* position: relative !important; */
+    position: initial !important;
     /* overflow: auto !important; */
   }
 }
