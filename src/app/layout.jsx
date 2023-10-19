@@ -18,12 +18,38 @@ export const metadata = {
 }
 
 export default function RootLayout({children}) { 
+
+  // let layoutClass
+
+  // const layoutFull = () => {
+  //   if (window.orientation === 90 || window.orientation === -90) {
+  //     // The device is in landscape orientation
+  //     console.log("Device is in landscape orientation.")
+  //     return ""
+  //   } else {
+  //     // The device is not in landscape orientation
+  //     console.log("Device is not in landscape orientation.")
+  //     return "h-screen"
+  //   }
+  // }
+  
+  // const layoutFull = "h-screen"
+
+  // if (
+  //   //max-width: 916px
+  //   //orientation: landscape
+  // ) {
+  //   return layoutFull
+  // } else {
+  //   return ""
+  // }
+
   return (
     <html lang="en">
-      <body className="bg-[#2b2737] p-4     box-border flex flex-col h-screen ">
+      <body className="bg-[#2b2737] p-4 box-border flex flex-col h-screen absolute top-0 bottom-0 left-0 right-0 ">
         <AuthProvider>
           <div className="w-fit mx-auto">
-            <main className={`${quicksand.variable} font-quicksand max-w-[900px] w-full m-auto flex flex-col items-center justify-center  overflow-hidden relative`}>         
+            <main className={`${quicksand.variable} font-quicksand max-w-[900px] w-full m-auto flex flex-col items-center justify-center overflow-hidden relative`}>         
               <Link href='/' className="max-h-[90px] mt-[65px]  top-0 logo">
                 <div className="w-[90px] h-full cursor-pointer rounded-[50%] bg-gradient-radial from-[#dcddd8] to-[#9f50ac] border-4 border-[#9f50ac]">
                   <Image 
