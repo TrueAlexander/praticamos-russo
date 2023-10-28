@@ -15,7 +15,7 @@ const NoticePage = () => {
       <div className='text-white text-center uppercase flex flex-col justify-center'>
         <p className='text-white p-4 font-bold'>{`Prezado ${user}!`}</p>
         <p className="p-6 text-[#9f50ac] text-[20px]" >{`${message}`}</p>
-        <p className="lowercase text-white mb-6">Volte para o aplicatívo e faz login para começar:</p>
+        <p className="lowercase text-white mb-6">Volte ao aplicativo e faça login para começar:</p>
         <Button text='Voltar!' disabled={false} onClick={() => router.push("/")}/>
       </div> 
     )

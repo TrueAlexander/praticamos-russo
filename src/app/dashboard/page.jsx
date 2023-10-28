@@ -53,7 +53,7 @@ export default function Dashboard() {
           <ButtonAuth name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
         </div>  
         <p className='text-white p-4 py-6 font-bold text-[22px]'>Praticamos russo!</p>
-        <p className='text-white text-[18px]'>{nameShow.length > 12 ? nameShow.slice(0, 9) + "..." : nameShow}, suas estatísticas totais das respostas corretas:</p>
+        <p className='text-white text-[18px]'>{nameShow.length > 12 ? nameShow.slice(0, 9) + "..." : nameShow}, suas estatísticas totais de respostas certas:</p>
         <ul className='text-[#9f50ac] text-[20px] font-bold text-left my-5'>
           <li className='flex justify-between'>
             <p>Vocabulário</p>

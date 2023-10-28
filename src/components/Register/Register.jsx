@@ -27,7 +27,7 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
       })
       if (res.status === 201) {
         confirmAlert({
-          message: `Prezado ${name}, seu usuário foi criado! Para ativa-lo confira seu email: ${email}!`,
+          message: `Prezado ${name}, seu usuário foi criado! Para ativá-lo confira seu e-mail: ${email}!`,
           buttons: [
             {
               label: 'Ok',
@@ -82,7 +82,7 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
             type="email" 
             name="email" 
             autoComplete="on"
-            placeholder="email" 
+            placeholder="e-mail" 
             required 
           />
         </div>
