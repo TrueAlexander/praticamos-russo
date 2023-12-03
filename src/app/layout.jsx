@@ -37,7 +37,7 @@ export default function RootLayout({children}) {
                 {children} 
               </div>                   
               <p className='fixed bottom-0 text-white my-3 text-[10px] footer'>
-                Suporte técnico por <a href="https://www.eformaliza.com/" target="_blank" >e-Formaliza</a>
+                Suporte técnico por <a href="https://wa.me/5521967261434" target="_blank" >e-Formaliza</a>
               </p>
             </main>  
           </div>  
