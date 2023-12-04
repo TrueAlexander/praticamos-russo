@@ -4,6 +4,7 @@ import Link from 'next/link'
 import AuthProvider from "@/components/AuthProvider/AuthProvider"
 //Logo
 import Logo from '@/assets/logo.png'
+import ImageOG from '@/assets/imgOG.png'
 import "./globals.css"
 
 const quicksand = Quicksand({
@@ -12,9 +13,12 @@ const quicksand = Quicksand({
 })
 
 export const metadata = {
-  title: 'Praticamos russo',
-  description: 'Aprendemos russo. Praticamos russo. Vocabulário, verbos, casos!',
+  title: 'Russolinguo. Praticamos russo',
+  description: 'Russolinguo. Praticamos russo. Aprendemos russo. Vocabulário, verbos, casos!',
   themeColor: '#2b2737',
+  openGraph: {
+    images: ImageOG,
+  },
 }
 
 export default function RootLayout({children}) { 
