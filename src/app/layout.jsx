@@ -5,37 +5,43 @@ import AuthProvider from "@/components/AuthProvider/AuthProvider"
 //Logo
 import Logo from '@/assets/logo.png'
 import "./globals.css"
-import Head from "next/head"
 
 const quicksand = Quicksand({
   subsets: ['latin'],
   variable: '--font-quicksand'
 })
 
-// export const metadata = {
-//   title: 'Russolinguo. Praticamos russo',
-//   description: 'Russolinguo. Praticamos russo. Aprendemos russo. Vocabulário, verbos, casos!',
-//   themeColor: '#2b2737',
-//   openGraph: {
-//     images: "https://ibb.co/GcnJHjX",
-//   },
-// }
+export const metadata = {
+  title: 'Russolinguo. Praticamos russo',
+  description: 'Russolinguo. Praticamos russo. Aprendemos russo. Vocabulário, verbos, casos!',
+  themeColor: '#2b2737',
+  openGraph: {
+    title: 'Russolinguo. Praticamos russo',
+    description: 'Russolinguo. Praticamos russo. Aprendemos russo. Vocabulário, verbos, casos!',
+    url: 'https://russolinguo.com/',
+    siteName: 'Russolinguo. Praticamos russo',
+    images: [
+      {
+        url: 'https://ibb.co/GcnJHjX',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://ibb.co/GcnJHjX',
+        width: 1800,
+        height: 1600,
+        alt: 'My custom alt',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  
+}
 
 export default function RootLayout({children}) { 
   return (
     <html lang="en">
-      <Head>
-        <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>RussolinguoTEST. Praticamos russo</title>
-        <meta name="description" content='Russolinguo. Praticamos russo. Aprendemos russo. Vocabulário, verbos, casos!' />
-
-        {/* OpenGraph meta tags */}
-        <meta property="og:title" content="Russolinguo. Praticamos russo" />
-        <meta property="og:description" content='Russolinguo. Praticamos russo. Aprendemos russo. Vocabulário, verbos, casos!' />
-        <meta property="og:image" content="https://ibb.co/GcnJHjX" />
-        <meta property="og:type" content="website" />
-      </Head>
       <body className="bg-[#2b2737] p-4 box-border flex flex-col h-screen absolute top-0 bottom-0 left-0 right-0 justify-center overflow-hidden bodyClass">
         <AuthProvider>
           <div className="w-fit mx-auto">
