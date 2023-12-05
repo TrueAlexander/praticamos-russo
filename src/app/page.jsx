@@ -46,7 +46,7 @@ export default function Home() {
         ? <Loading/>
         : <>
             <ButtonAuth setShowModal={setShowModal} name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
-            <p className='text-white p-4 font-bold uppercase tracking-widest text-[24px]'>Russolinguo!</p>
+            <p className='text-white p-4 font-bold uppercase tracking-widest text-[24px]'>Russolinguo</p>
             <Image className='max-w-[400px] w-[80%] mx-auto rounded-[10px]' src={HomepageImage} alt='home-page'/>
             <p className='text-[#9f50ac] pt-4 pb-4 text-[18px] '>
               Clique abaixo

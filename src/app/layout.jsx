@@ -20,19 +20,20 @@ export const metadata = {
     description: 'Russolinguo. Praticamos russo. Aprendemos russo. Vocabulário, verbos, casos!',
     url: 'https://russolinguo.com/',
     siteName: 'Russolinguo. Praticamos russo',
-    images: [
-      {
-        url: 'https://ibb.co/GcnJHjX',
-        width: 800,
-        height: 600,
-      },
-      {
-        url: 'https://ibb.co/GcnJHjX',
-        width: 1800,
-        height: 1600,
-        alt: 'My custom alt',
-      },
-    ],
+    images: 'https://ibb.co/GcnJHjX',
+    // images: [
+    //   {
+    //     url: 'https://ibb.co/GcnJHjX',
+    //     width: 800,
+    //     height: 600,
+    //   },
+    //   {
+    //     url: 'https://ibb.co/GcnJHjX',
+    //     width: 1800,
+    //     height: 1600,
+    //     alt: 'My custom alt',
+    //   },
+    // ],
     locale: 'en_US',
     type: 'website',
   },
