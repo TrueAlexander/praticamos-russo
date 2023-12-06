@@ -68,11 +68,11 @@ const Quiz = ({questions, totalQuestions, category}) => {
         })
   
         if (res.status === 201 || 200) {
-          console.log("Seu resultado foi guardado")        
+          console.log("Seu resultado foi salvo")        
         }
         
       } catch (err) {   
-        console.log(err, "Erro do lado de servidor!")
+        console.log(err, "Ocorreu um erro do lado do servidor!")
       }   
      
       router.push(`/categories/${category}/result?user=${nameShow}&cat=${category}&res=${result}&total=${totalQuestions}`)
@@ -125,7 +125,7 @@ const Quiz = ({questions, totalQuestions, category}) => {
   } else {
     return (
       <div className='text-center flex flex-col justify-center'>     
-        <p className='text-white p-4 mt-6 font-bold text-[22px]'>404. A página solicitada não existe!</p>    
+        <p className='text-white p-4 mt-6 font-bold text-[22px]'>404. A página solicitada não foi encontrada.</p>    
       </div>)
   }
 }

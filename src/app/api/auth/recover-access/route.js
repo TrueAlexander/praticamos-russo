@@ -23,7 +23,7 @@ export const POST = async (request) => {
     const user = await User.findOne({email})
 
     if(!user) {
-      return new NextResponse("O usuario com este email nao foi encontrado, crie por favor um perfil", {
+      return new NextResponse("O usuário com este e-mail não foi encontrado. Por favor, crie um perfil", {
           status: 401,
         })
     } 
@@ -38,17 +38,17 @@ export const POST = async (request) => {
      {expiresIn: 60 * 60})
 
     const mailOptions = {
-      from: ' "Praticamos russo" <eformaliza@gmail.com>',
+      from: ' "RUSSOLINGUO" <eformaliza@gmail.com>',
       to: email,
-      subject: 'Recuperação de acesso! Praticamos Russo.',
+      subject: 'Recuperação de acesso. Russolinguo.',
       html: `
       <body style="background:#2b2737;">
         <div style="font-family: arial; font-size: 16px; text-align: center; color:white; background:#2b2737; padding: 30px 20px 80px;">
           <h2>Praticamos russo!</h2>
           <p style="font-size: 20px; line-height: 35px;">Prezado <span style="color:#9f50ac; font-size: 20px; font-weight: 600;">${user.name},</span></p>
-          <p style="line-height: 25px;">Para recuperar o seu acesso a <a style="text-decoration:none; font-size: 20px; color: white; font-weight: bold;" href="${process.env.URL_BASE}">Praticamos russo app</a>, por favor clique em baixo: </p>
+          <p style="line-height: 25px;">Para recuperar o seu acesso ao <a style="text-decoration:none; font-size: 20px; color: white; font-weight: bold;" href="${process.env.URL_BASE}">RUSSOLINGUO</a>, por favor, clique abaixo: </p>
           <a style="color:#9f50ac; font-weight: 600; " href="${process.env.URL_BASE}/api/auth/request-change?token=${token}">Recuperar</a>
-          <p style="font-size: 13px; line-height: 18px; margin-top: 30px"> Se você não é ${user.name}, e não se cadastrou no Praticamos russo, por favor ignore esta mensagem.
+          <p style="font-size: 13px; line-height: 18px; margin-top: 30px"> Caso você não seja ${user.name}, e não tenha se cadastrado no RUSSOLINGUO, por favor, ignore esta mensagem.
           </p>
         </div>
       </body>
@@ -67,7 +67,7 @@ export const POST = async (request) => {
       })
     })
 
-    return new NextResponse(`Para recuperar o acesso por favor confira seu email: ${email}`, {
+    return new NextResponse(`Para recuperar o acesso por favor confira abre seu e-mail: ${email}`, {
       status: 201,
     })
     

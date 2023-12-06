@@ -52,17 +52,17 @@ const handler = NextAuth({
 
               ///
               const mailOptions = {
-                from: ' "Praticamos russo" <eformaliza@gmail.com>',
+                from: ' "RUSSOLINGUO" <eformaliza@gmail.com>',
                 to: `${user.email}`,
-                subject: `Praticamos Russo. ${user.name}, verifique seu email!`,
+                subject: `RUSSOLINGUO. ${user.name}, por favor, verifique seu e-mail!`,
                 html: `
                 <body style="background:#2b2737;">
                   <div style="font-family: arial;  font-size: 16px; text-align: center; color:white; background:#2b2737; padding: 30px 20px 80px;">
-                    <h2>Praticamos russo!</h2>
-                    <p style="font-size: 18px; line-height: 35px;">Prezado <span style="color:#9f50ac; font-size: 20px; font-weight: 600;">${user.name},</span> obrigado pelo cadastro no <a style="text-decoration:none; font-size: 20px; color: white; font-weight: bold;" href="${process.env.URL_BASE}">Praticamos russo app</a></p>
-                    <p style="line-height: 25px;">Por favor verifique seu email para ativar seu perfil:</p>
+                    <h2>RUSSOLINGUO</h2>
+                    <p style="font-size: 18px; line-height: 35px;">Prezado <span style="color:#9f50ac; font-size: 20px; font-weight: 600;">${user.name},</span> obrigado pelo cadastro no <a style="text-decoration:none; font-size: 20px; color: white; font-weight: bold;" href="${process.env.URL_BASE}">RUSSOLINGUO</a></p>
+                    <p style="line-height: 25px;">Por favor, verifique seu e-mail para ativar seu perfil:</p>
                     <a style="color:#9f50ac; font-weight: 600;" href="${process.env.URL_BASE}/api/auth/verify-email?token=${token}">Clique aqui!</a>
-                    <p style="font-size: 13px; margin-top: 30px; line-height: 18px;"> Se você não é ${user.name}, e não se cadastrou no Praticamos russo, por favor ignore esta mensagem.
+                    <p style="font-size: 13px; margin-top: 30px; line-height: 18px;"> Caso você não seja ${user.name}, e não tenha se cadastrado no RUSSOLINGUO, por favor, ignore esta mensagem.
                     </p>
                   </div>
                 </body>

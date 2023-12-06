@@ -9,7 +9,7 @@ const ButtonAuth = ({setShowModal, name, signOut, nameShow, setIsLoading}) => {
       setShowModal(true)
     } else {     
       confirmAlert({
-        message: `${nameShow}, está seguro que quer sair?`,
+        message: `${nameShow}, tem certeza de que deseja sair?`,
         buttons: [
           {
             label: 'Sim',

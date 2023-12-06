@@ -12,16 +12,15 @@ const quicksand = Quicksand({
 })
 
 export const metadata = {
-  title: 'Russolinguo. Praticamos russo',
-  description: 'Russolinguo. Praticamos russo. Aprendemos russo. Vocabulário, verbos, casos!',
+  title: 'Russolinguo | Praticamos russo',
+  description: 'Russolinguo | Praticamos russo | Aprendemos russo | Vocabulário, verbos, casos...',
   themeColor: '#2b2737',
   openGraph: {
-    title: 'Russolinguo. Praticamos russo',
-    description: 'Russolinguo. Praticamos russo. Aprendemos russo. Vocabulário, verbos, casos!',
+    title: 'Russolinguo | Praticamos russo',
+    description: 'Russolinguo | Praticamos russo | Aprendemos russo | Vocabulário, verbos, casos...',
     url: 'https://russolinguo.com/',
-    siteName: 'Russolinguo. Praticamos russo',
-    // images: 'https://i.ibb.co/XDwv7PP/imgNewOG.png',
-    images: 'https://i.ibb.co/CnSFsM9/img-OGextra-Big.png',
+    siteName: 'Russolinguo | Praticamos russo',
+    images: 'https://i.ibb.co/Y33yVng/img-OGextra-Big.png',
     type: 'website',
   },
   

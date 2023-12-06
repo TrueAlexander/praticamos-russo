@@ -28,7 +28,7 @@ const AskRecover = () => {
         
         e.target[0].value = ""
         confirmAlert({
-          message: `Para recuperar o acesso por favor confira seu email: ${email}`,
+          message: `Para recuperar o acesso, por favor, abra seu e-mail: ${email}`,
           buttons: [
             {
               label: 'Ok',
@@ -42,7 +42,7 @@ const AskRecover = () => {
 
       } else {
         confirmAlert({
-          message: "O usuário com este email não foi encontrado! Tente novamente ou crie um perfil na plataforma!",
+          message: "Não foi possível encontrar um usuário com este e-mail. Por favor, tente novamente ou crie um perfil na plataforma.",
           buttons: [
             {
               label: 'Ok',
@@ -57,7 +57,7 @@ const AskRecover = () => {
     } catch (err) {   
       console.log(err, "Erro do lado de servidor!")
       confirmAlert({
-          message: "Infelizmente não há resposta de servidor! Por favor tente novamente mais tarde!",
+          message: "Lamentavelmente, não houve resposta do servidor. Por favor, tente novamente mais tarde.",
           buttons: [
             {
               label: 'Ok',
@@ -76,7 +76,7 @@ const AskRecover = () => {
       <>
          <h2 className="text-white p-4 font-bold text-[18px] block">Prezado Usuário!</h2>
         <div className="my-3 animate__animated animate__fadeIn">
-          <h3 className="text-[#9f50ac] text-[17px] font-bold">Para recuperar o acesso para a plataforma nos informa seu email:</h3>
+          <h3 className="text-[#9f50ac] text-[17px] font-bold">Para recuperar o acesso à plataforma, por favor, informe seu e-mail:</h3>
           <form 
             className="form" 
             onSubmit={handleSubmit}
@@ -87,7 +87,7 @@ const AskRecover = () => {
                 type="email" 
                 name="email" 
                 autoComplete="on"
-                placeholder="email" 
+                placeholder="e-mail" 
                 required 
               />
             </div>

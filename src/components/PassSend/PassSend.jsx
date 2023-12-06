@@ -19,7 +19,7 @@ const PassSend = () => {
     console.log(pass1, pass2)
     if (pass1 !== pass2) {
       confirmAlert({
-        message: "As senhas tem que ser iguais, vamos tentar de novo!",
+        message: "As senhas precisam ser iguais. Vamos tentar novamente!",
         buttons: [
           {
             label: 'Ok',
@@ -47,7 +47,7 @@ const PassSend = () => {
 
         if (res.status === 201) {
           confirmAlert({
-            message: "Prezado Usuário! A senha foi trocada com sucesso! Faz por favor o login com a nova senha!",
+            message: "Prezado Usuário, a senha foi alterada com sucesso! Por favor, faça o login com a nova senha!",
             buttons: [
               {
                 label: 'Ok',
@@ -60,7 +60,7 @@ const PassSend = () => {
           })
         } else {
           confirmAlert({
-            message: "Deu errado! Tente solicitar a recuperação do acesso de novo!",
+            message: "Ocorreu um erro. Por favor, tente solicitar a recuperação de acesso novamente.",
             buttons: [
               {
                 label: 'Ok',
@@ -73,7 +73,7 @@ const PassSend = () => {
           })  
         }       
       } catch (err) {   
-        console.log(err, "Erro do lado de servidor!")
+        console.log(err, "Ocorreu um erro no lado do servidor!")
       }
     }
   }
@@ -84,7 +84,7 @@ const PassSend = () => {
           <>
             <h2 className="text-white p-4 font-bold text-[18px] block">Prezado Usuário!</h2>
             <div className="my-3 animate__animated animate__fadeIn">
-              <h3 className="text-[#9f50ac] text-[17px] font-bold">Crie uma senha nova para recuperar o acesso ao seu perfil:</h3>
+              <h3 className="text-[#9f50ac] text-[17px] font-bold">Crie uma nova senha para recuperar o acesso ao seu perfil:</h3>
               <form 
                 className="form" 
                 onSubmit={handleSubmit}

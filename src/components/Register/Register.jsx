@@ -27,7 +27,7 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
       })
       if (res.status === 201) {
         confirmAlert({
-          message: `Prezado ${name}, seu usuário foi criado! Para ativá-lo confira seu e-mail: ${email}!`,
+          message: `Prezado ${name}, seu usuário foi criado! Para ativá-lo, por favor, confira seu e-mail: ${email}!`,
           buttons: [
             {
               label: 'Ok',
@@ -40,7 +40,7 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
         })
       } else {
         confirmAlert({
-          message: "Deu errado! Será que o usuário ja existe? Faz login ou tente outra vez!",
+          message: "Algo deu errado! Será que o usuário já existe? Faça login ou tente novamente.",
           buttons: [
             {
               label: 'Ok',
@@ -55,13 +55,13 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
       
       
     } catch (err) {   
-      console.log(err, "Erro do lado de servidor!")
+      console.log(err, "Ocorreu um erro do lado do servidor.")
     }
   }
 
   return (
     <div className="my-3 animate__animated animate__fadeIn">
-      <h3 className="text-[#9f50ac]  text-[17px] font-bold">Crie um novo Usuário:</h3>
+      <h3 className="text-[#9f50ac]  text-[17px] font-bold">Crie um novo usuário:</h3>
       <form 
         className="form" 
         onSubmit={handleSubmit}

@@ -41,7 +41,7 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
             type="email" 
             name="email" 
             autoComplete="on"
-            placeholder="email" 
+            placeholder="e-mail" 
             required 
           />
         </div>

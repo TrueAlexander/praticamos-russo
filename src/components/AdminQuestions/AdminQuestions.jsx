@@ -49,7 +49,7 @@ const AdminQuestions =  ({category, questions, setAnchorUpdate, anchorUpdate}) =
     const question = e.currentTarget.getAttribute('data-question')
 
     confirmAlert({
-      message: `Admin, você está seguro que quer apagar no banco de dados a pergunta: ${question}?`,
+      message: `Admin, você está certo de que deseja apagar no banco de dados a pergunta: ${question}?`,
       buttons: [
         {
           label: 'Sim',
@@ -80,7 +80,7 @@ const AdminQuestions =  ({category, questions, setAnchorUpdate, anchorUpdate}) =
                 })
               } else {
                 confirmAlert({
-                  message: "Prezado Admin, esta pergunta não existe no banco de dados, será que foi apagada anteriormente...",
+                  message: "Prezado Admin, esta pergunta não consta no banco de dados. Será que foi apagada anteriormente?",
                   buttons: [
                     {
                       label: 'Ok',
@@ -149,7 +149,7 @@ const AdminQuestions =  ({category, questions, setAnchorUpdate, anchorUpdate}) =
         <div className="my-5 animate__animated animate__fadeIn">
           <Button name="Criar" text="Criar pergunta nova" disabled={false} onClick={criarClick}/>
           <div className="my-4">
-            {questionsList.length < 1 ? <h3>Eita! A lista das perguntas de <span>{category}</span> está vazia...</h3> : renderQuestions(questionsList)}
+            {questionsList.length < 1 ? <h3>Ops! A lista de perguntas de <span>{category}</span> está vazia...</h3> : renderQuestions(questionsList)}
           </div>
         </div>}
         {questionFormShow && <QuestionForm category={category} setQuestionFormShow={setQuestionFormShow} setAnchorUpdate={setAnchorUpdate} setIsLoading={setIsLoading}/>}

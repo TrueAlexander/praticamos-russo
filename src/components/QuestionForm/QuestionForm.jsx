@@ -52,13 +52,13 @@ const QuestionForm = ({category, setQuestionFormShow, setAnchorUpdate, setIsLoad
         })
       } else if (res.status === 400) {
         confirmAlert({
-          message: "Prezado Admin, esta pergunta ja existe no banco de dados! Crie outra pergunta!",
+          message: "Prezado Admin, esta pergunta já existe no banco de dados. Por favor, crie outra pergunta.",
           buttons: [
             {
               label: 'Ok',
               onClick: () => {
                 // setShowModal(false)
-                // setIsLoading(false)
+                setIsLoading(false)
               }
             }
           ]
