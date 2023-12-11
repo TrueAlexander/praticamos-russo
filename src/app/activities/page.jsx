@@ -49,6 +49,7 @@ export default function Activities() {
           disabled={false} 
           onClick={handleClick} 
         />
+        <br />
         <Button
           text="Teste" 
           disabled={false} 

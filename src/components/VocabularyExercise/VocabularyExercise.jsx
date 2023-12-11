@@ -33,29 +33,22 @@ const VocabularyExercise = ({ question, onClick, currentQuestionIndex }) => {
       <div 
         // className="flex min-h-screen flex-col items-center justify-between p-24"
       >
-      <h3>Traduz o que você está ouvindo:</h3>
-      <div>
-        {/* <Image 
-          src=""
-          alt="assistent"
-          width={30}
-          height={30}
-        /> */}
-      </div>
-      <div>
-        <audio ref={audioRef} controls>
-          <source src={audio} type="audio/ogg" />
-          Your browser does not support the audio tag.
-        </audio>
-      </div>
-      {question.cards.map((item, number) => (      
-        <VocabularyCard
-          item={item}
-          key={number}
-        />
-      ))}
-      
-    </div>
+        <h3>Traduz o que você está ouvindo:</h3>
+        <div>
+          <audio ref={audioRef} controls className="mx-auto">
+            <source src={audio} type="audio/ogg" />
+            Your browser does not support the audio tag.
+          </audio>
+        </div>
+        <div className="mt-6 flex flex-wrap gap-5 w-80 items-center justify-center">
+          {question.cards.map((item, number) => (      
+            <VocabularyCard
+              item={item}
+              key={number}
+            />
+          ))}
+        </div>     
+       </div>
     )
   }
 }

@@ -34,7 +34,14 @@ const Categories = () => {
         <Button name='verbos' text='Verbos' disabled={false} onClick={handleClick} />
         <br />
         <Button name='casos' text='Casos' disabled={false} onClick={handleClick} />
-        <br />
+        <p className='text-[#9f50ac] pt-1 pb-1 text-[18px] '>
+          ou
+        </p>
+        <Button
+          text="Voltar" 
+          disabled={false} 
+          onClick={() => router.push('/dashboard')} 
+        />
       </div>
     )
   } else return (

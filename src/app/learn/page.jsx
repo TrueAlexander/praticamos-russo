@@ -51,12 +51,13 @@ export default function Learn() {
           disabled={false} 
           onClick={() => router.push('/learn/vocabulary-food')} 
         />
+         <br />
         <Button
           text="Vocabulario - Cidade" 
           disabled={false} 
           onClick={() => router.push('/learn/vocabulary-city')} 
         />
-        <p className='text-[#9f50ac] pt-4 pb-4 text-[18px] '>
+        <p className='text-[#9f50ac] pt-1 pb-1 text-[18px] '>
           ou
         </p>
         <Button

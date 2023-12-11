@@ -9,6 +9,8 @@ import QuestionCard from "@/components/QuestionCard/QuestionCard"
 import Loading from "@/app/loading"
 import OnlyNameShow from "../OnlyNameShow/OnlyNameShow"
 import VocabularyExercise from "../VocabularyExercise/VocabularyExercise"
+import { confirmAlert } from 'react-confirm-alert'
+import '@/utils/react-confirm-alert.css'
 
 const Vocabulary = ({questions, totalQuestions, category}) => {
 
@@ -85,6 +87,23 @@ const Vocabulary = ({questions, totalQuestions, category}) => {
       handleChangeQuestion(1)
     }
   }
+
+  const handleClickReturn = () => {
+    confirmAlert({
+      message: `${nameShow}, tem certeza de que deseja sair da atividade?`,
+      buttons: [
+        {
+          label: 'Sim',
+          onClick: () => router.push('/learn')  
+        },
+        {
+          label: 'Não',
+          // onClick: () => console.log('Click No')
+        }
+      ]
+    })
+  }
+
   if (session.status === "loading") {
     return (
       <div className="flex-auto flex flex-col justify-center">
@@ -120,25 +139,30 @@ const Vocabulary = ({questions, totalQuestions, category}) => {
               // correctAnswer={questions[currentQuestionIndex].correct_answer}
               onClick={handleOnAnswerClick}  
             />
-            <div className="flex justify-center mt-6">
-              {visible && <Button 
-                text="Anterior"
-                disabled={false}
-                onClick={() => handleChangeQuestion(-1)} 
-              />}
-              <Button
-                disabled={false}
-                text={currentQuestionIndex === totalQuestions - 1 ? 'Fim' : 'Próxima'}
-                onClick={handleClickForward}
-              />
-              <p className='text-[#9f50ac] pt-4 pb-4 text-[18px] '>
+            <div className="flex flex-col justify-center mt-6">
+              <div>
+                {visible && <Button 
+                  text="Anterior"
+                  disabled={false}
+                  onClick={() => handleChangeQuestion(-1)} 
+                />}
+                <Button
+                  disabled={false}
+                  text={currentQuestionIndex === totalQuestions - 1 ? 'Fim' : 'Próxima'}
+                  onClick={handleClickForward}
+                />
+              </div> 
+              <p className='text-[#9f50ac] pt-1 pb-1 text-[18px] '>
                 ou
               </p>
-              <Button
-                text="Voltar" 
-                disabled={false} 
-                onClick={() => router.push('/learn')} 
-              />              
+              <div>
+                <Button
+                  text="Voltar"
+                  addStyle="w-16 mx-auto h-6"
+                  disabled={false} 
+                  onClick={handleClickReturn} 
+                />
+              </div>        
             </div>
           </div>}
       </>   
