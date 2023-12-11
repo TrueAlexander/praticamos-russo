@@ -1,0 +1,421 @@
+
+[
+  {
+    "id": 0,
+    "activity": "aprendizagem",
+    "category": "comida",
+    "name": "Coffee",
+    "audio": "../sounds/Coffee.ogg",
+    "cards": [
+      {
+        "title": "ко́фе",
+        "titleLat": "kófie",
+        "alt": "café",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "вода́",
+        "titleLat": "vadá",
+        "alt": "água",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "молоко́",
+        "titleLat": "malakó",
+        "alt": "leite",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "сок",
+        "titleLat": "sok",
+        "alt": "suco",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 1,
+    "activity": "aprendizagem",
+    "category": "comida",
+    "name": "Coffee",
+    "audio": "../sounds/Milk.ogg",
+    "cards": [
+      {
+        "title": "ко́фе",
+        "titleLat": "kófie",
+        "alt": "café",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "вода́",
+        "titleLat": "vadá",
+        "alt": "água",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "молоко́",
+        "titleLat": "malakó",
+        "alt": "leite",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "сок",
+        "titleLat": "sok",
+        "alt": "suco",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 2,
+    "activity": "aprendizagem",
+    "category": "comida",
+    "name": "Coffee",
+    "audio": "../sounds/Tea.ogg",
+    "cards": [
+      {
+        "title": "ко́фе",
+        "titleLat": "kófie",
+        "alt": "café",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "вода́",
+        "titleLat": "vadá",
+        "alt": "água",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "молоко́",
+        "titleLat": "malakó",
+        "alt": "leite",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "сок",
+        "titleLat": "sok",
+        "alt": "suco",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 3,
+    "activity": "aprendizagem",
+    "category": "comida",
+    "name": "Coffee",
+    "audio": "../sounds/Water.ogg",
+    "cards": [
+      {
+        "title": "ко́фе",
+        "titleLat": "kófie",
+        "alt": "café",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "вода́",
+        "titleLat": "vadá",
+        "alt": "água",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "молоко́",
+        "titleLat": "malakó",
+        "alt": "leite",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "сок",
+        "titleLat": "sok",
+        "alt": "suco",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 4,
+    "activity": "aprendizagem",
+    "category": "comida",
+    "name": "Coffee",
+    "audio": "../sounds/Coffee.ogg",
+    "cards": [
+      {
+        "title": "ко́фе",
+        "titleLat": "kófie",
+        "alt": "café",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "вода́",
+        "titleLat": "vadá",
+        "alt": "água",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "молоко́",
+        "titleLat": "malakó",
+        "alt": "leite",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "сок",
+        "titleLat": "sok",
+        "alt": "suco",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 5,
+    "activity": "aprendizagem",
+    "category": "comida",
+    "name": "Coffee",
+    "audio": "../sounds/Coffee.ogg",
+    "cards": [
+      {
+        "title": "ко́фе",
+        "titleLat": "kófie",
+        "alt": "café",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "вода́",
+        "titleLat": "vadá",
+        "alt": "água",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "молоко́",
+        "titleLat": "malakó",
+        "alt": "leite",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "сок",
+        "titleLat": "sok",
+        "alt": "suco",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 6,
+    "activity": "aprendizagem",
+    "category": "comida",
+    "name": "Coffee",
+    "audio": "../sounds/Coffee.ogg",
+    "cards": [
+      {
+        "title": "ко́фе",
+        "titleLat": "kófie",
+        "alt": "café",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "вода́",
+        "titleLat": "vadá",
+        "alt": "água",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "молоко́",
+        "titleLat": "malakó",
+        "alt": "leite",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "сок",
+        "titleLat": "sok",
+        "alt": "suco",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 7,
+    "activity": "aprendizagem",
+    "category": "comida",
+    "name": "Coffee",
+    "audio": "../sounds/Coffee.ogg",
+    "cards": [
+      {
+        "title": "ко́фе",
+        "titleLat": "kófie",
+        "alt": "café",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "вода́",
+        "titleLat": "vadá",
+        "alt": "água",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "молоко́",
+        "titleLat": "malakó",
+        "alt": "leite",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "сок",
+        "titleLat": "sok",
+        "alt": "suco",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 8,
+    "activity": "aprendizagem",
+    "category": "comida",
+    "name": "Coffee",
+    "audio": "../sounds/Coffee.ogg",
+    "cards": [
+      {
+        "title": "ко́фе",
+        "titleLat": "kófie",
+        "alt": "café",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "вода́",
+        "titleLat": "vadá",
+        "alt": "água",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "молоко́",
+        "titleLat": "malakó",
+        "alt": "leite",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "сок",
+        "titleLat": "sok",
+        "alt": "suco",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 9,
+    "activity": "aprendizagem",
+    "category": "comida",
+    "name": "Coffee",
+    "audio": "../sounds/Coffee.ogg",
+    "cards": [
+      {
+        "title": "ко́фе",
+        "titleLat": "kófie",
+        "alt": "café",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "вода́",
+        "titleLat": "vadá",
+        "alt": "água",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "молоко́",
+        "titleLat": "malakó",
+        "alt": "leite",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "сок",
+        "titleLat": "sok",
+        "alt": "suco",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 10,
+    "activity": "aprendizagem",
+    "category": "comida",
+    "name": "Coffee",
+    "audio": "../sounds/Coffee.ogg",
+    "cards": [
+      {
+        "title": "ко́фе",
+        "titleLat": "kófie",
+        "alt": "café",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "вода́",
+        "titleLat": "vadá",
+        "alt": "água",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "молоко́",
+        "titleLat": "malakó",
+        "alt": "leite",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "сок",
+        "titleLat": "sok",
+        "alt": "suco",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  }  
+]

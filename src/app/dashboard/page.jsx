@@ -82,6 +82,14 @@ export default function Dashboard() {
           disabled={false} 
           onClick={handleClick} 
         />
+        <p className='text-[#9f50ac] pt-4 pb-4 text-[18px] '>
+          ou
+        </p>
+        <Button
+          text="Voltar" 
+          disabled={false} 
+          onClick={() => router.push('/activities')} 
+        />
       </div>
     )
   } 

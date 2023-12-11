@@ -2,6 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+
+audio::-webkit-media-controls-panel {
+  background-color: #a050acb7;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: white;
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+  background-color: rgba(177,212,224, .7);
+}
+
+audio {
+  height: 35px;
+  margin: 10px 0;
+}
+
+
 @media only screen and (max-width: 916px) and (orientation: landscape) {
   .bodyClass {
     justify-content: initial !important;

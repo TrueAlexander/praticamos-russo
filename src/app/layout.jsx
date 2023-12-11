@@ -39,6 +39,8 @@ export default function RootLayout({children}) {
                     className="" 
                     src={Logo} 
                     alt="logo"
+                    priority={false}
+                    // // placeholder="blur"
                   />
                 </div>     
               </Link>
