@@ -4,13 +4,23 @@ import Image from "next/image"
 import VocabularyCard from "../VocabularyCard/VocabularyCard"
 import { useEffect, useState, useRef } from "react"
 import Loading from "@/app/loading"
+import { shuffleArray } from "@/utils/arrayUtils"
 
-const VocabularyExercise = ({ question, onClick, currentQuestionIndex }) => {
+
+const VocabularyExercise = ({ question, currentQuestionIndex, answers }) => {
 
   const [audio, setAudio] = useState(question.audio)
   const audioRef = useRef()
 
   const [isLoading, setIsLoading] = useState(true)
+  const [clickedAnswer, setClickedAnswer] = useState(null)
+
+  const rightAnswer = question.name
+  console.log(clickedAnswer, rightAnswer)
+  
+  useEffect(() => {
+    setClickedAnswer(null)
+  }, [currentQuestionIndex])
 
   useEffect(() => {
     setAudio(question.audio)
@@ -21,6 +31,13 @@ const VocabularyExercise = ({ question, onClick, currentQuestionIndex }) => {
     }
     setIsLoading(false)
   }, [currentQuestionIndex])
+
+
+
+  console.log("question: ", question)
+  console.log("answers: ", answers)
+
+ 
 
   if (isLoading) {
     return (
@@ -41,10 +58,13 @@ const VocabularyExercise = ({ question, onClick, currentQuestionIndex }) => {
           </audio>
         </div>
         <div className="mt-6 flex flex-wrap gap-5 w-80 items-center justify-center">
-          {question.cards.map((item, number) => (      
+          {answers.map((item) => (      
             <VocabularyCard
               item={item}
-              key={number}
+              key={item.title}
+              clickedAnswer={clickedAnswer}
+              setClickedAnswer={setClickedAnswer}
+              rightAnswer={rightAnswer}
             />
           ))}
         </div>     

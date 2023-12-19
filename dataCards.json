@@ -4,8 +4,8 @@
     "id": 0,
     "activity": "aprendizagem",
     "category": "comida",
-    "name": "Coffee",
-    "audio": "../sounds/Coffee.ogg",
+    "name": "café",
+    "audio": "../sounds/comida/Coffee.ogg",
     "cards": [
       {
         "title": "ко́фе",
@@ -29,9 +29,9 @@
         "isCorrect": false 
       },
       {
-        "title": "сок",
-        "titleLat": "sok",
-        "alt": "suco",
+        "title": "суп",
+        "titleLat": "sup",
+        "alt": "sopa",
         "imgUrl": "",
         "isCorrect": false 
       }
@@ -42,34 +42,34 @@
     "id": 1,
     "activity": "aprendizagem",
     "category": "comida",
-    "name": "Coffee",
-    "audio": "../sounds/Milk.ogg",
+    "name": "leite",
+    "audio": "../sounds/comida/Milk.ogg",
     "cards": [
-      {
-        "title": "ко́фе",
-        "titleLat": "kófie",
-        "alt": "café",
-        "imgUrl": "",
-        "isCorrect": true 
-      },
-      {
-        "title": "вода́",
-        "titleLat": "vadá",
-        "alt": "água",
-        "imgUrl": "",
-        "isCorrect": false 
-      },
       {
         "title": "молоко́",
         "titleLat": "malakó",
         "alt": "leite",
         "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "карто́шка",
+        "titleLat": "kartóshka",
+        "alt": "batata",
+        "imgUrl": "",
         "isCorrect": false 
       },
       {
-        "title": "сок",
-        "titleLat": "sok",
-        "alt": "suco",
+        "title": "мя́со",
+        "titleLat": "miása",
+        "alt": "carne",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "макаро́ны",
+        "titleLat": "makaróni",
+        "alt": "macarrão",
         "imgUrl": "",
         "isCorrect": false 
       }
@@ -80,34 +80,34 @@
     "id": 2,
     "activity": "aprendizagem",
     "category": "comida",
-    "name": "Coffee",
-    "audio": "../sounds/Tea.ogg",
+    "name": "sopa",
+    "audio": "../sounds/comida/Soup.ogg",
     "cards": [
       {
-        "title": "ко́фе",
-        "titleLat": "kófie",
-        "alt": "café",
+        "title": "суп",
+        "titleLat": "sup",
+        "alt": "sopa",
         "imgUrl": "",
         "isCorrect": true 
       },
       {
-        "title": "вода́",
-        "titleLat": "vadá",
-        "alt": "água",
+        "title": "сыр",
+        "titleLat": "sir",
+        "alt": "queijo",
         "imgUrl": "",
         "isCorrect": false 
       },
       {
-        "title": "молоко́",
-        "titleLat": "malakó",
-        "alt": "leite",
+        "title": "рис",
+        "titleLat": "ris",
+        "alt": "arroz",
         "imgUrl": "",
         "isCorrect": false 
       },
       {
-        "title": "сок",
-        "titleLat": "sok",
-        "alt": "suco",
+        "title": "мя́со",
+        "titleLat": "miása",
+        "alt": "carne",
         "imgUrl": "",
         "isCorrect": false 
       }
@@ -118,22 +118,22 @@
     "id": 3,
     "activity": "aprendizagem",
     "category": "comida",
-    "name": "Coffee",
-    "audio": "../sounds/Water.ogg",
+    "name": "água",
+    "audio": "../sounds/comida/Water.ogg",
     "cards": [
       {
-        "title": "ко́фе",
-        "titleLat": "kófie",
-        "alt": "café",
+        "title": "ры́ба",
+        "titleLat": "ríba",
+        "alt": "peixe",
         "imgUrl": "",
-        "isCorrect": true 
+        "isCorrect": false 
       },
       {
         "title": "вода́",
         "titleLat": "vadá",
         "alt": "água",
         "imgUrl": "",
-        "isCorrect": false 
+        "isCorrect": true 
       },
       {
         "title": "молоко́",
@@ -143,9 +143,9 @@
         "isCorrect": false 
       },
       {
-        "title": "сок",
-        "titleLat": "sok",
-        "alt": "suco",
+        "title": "ку́рица",
+        "titleLat": "kúritsa",
+        "alt": "frango",
         "imgUrl": "",
         "isCorrect": false 
       }
@@ -156,34 +156,34 @@
     "id": 4,
     "activity": "aprendizagem",
     "category": "comida",
-    "name": "Coffee",
-    "audio": "../sounds/Coffee.ogg",
+    "name": "arroz",
+    "audio": "../sounds/comida/Rice.ogg",
     "cards": [
       {
-        "title": "ко́фе",
-        "titleLat": "kófie",
-        "alt": "café",
+        "title": "рис",
+        "titleLat": "ris",
+        "alt": "arroz",
         "imgUrl": "",
-        "isCorrect": true 
+        "isCorrect": true
       },
       {
-        "title": "вода́",
-        "titleLat": "vadá",
-        "alt": "água",
-        "imgUrl": "",
-        "isCorrect": false 
-      },
-      {
-        "title": "молоко́",
-        "titleLat": "malakó",
-        "alt": "leite",
+        "title": "ры́ба",
+        "titleLat": "ríba",
+        "alt": "peixe",
         "imgUrl": "",
         "isCorrect": false 
       },
       {
-        "title": "сок",
-        "titleLat": "sok",
-        "alt": "suco",
+        "title": "сыр",
+        "titleLat": "sir",
+        "alt": "queijo",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "суп",
+        "titleLat": "sup",
+        "alt": "sopa",
         "imgUrl": "",
         "isCorrect": false 
       }
@@ -194,20 +194,20 @@
     "id": 5,
     "activity": "aprendizagem",
     "category": "comida",
-    "name": "Coffee",
-    "audio": "../sounds/Coffee.ogg",
+    "name": "batata",
+    "audio": "../sounds/comida/Potato.ogg",
     "cards": [
       {
-        "title": "ко́фе",
-        "titleLat": "kófie",
-        "alt": "café",
+        "title": "карто́шка",
+        "titleLat": "kartóshka",
+        "alt": "batata",
         "imgUrl": "",
         "isCorrect": true 
       },
       {
-        "title": "вода́",
-        "titleLat": "vadá",
-        "alt": "água",
+        "title": "ку́рица",
+        "titleLat": "kúritsa",
+        "alt": "frango",
         "imgUrl": "",
         "isCorrect": false 
       },
@@ -219,9 +219,9 @@
         "isCorrect": false 
       },
       {
-        "title": "сок",
-        "titleLat": "sok",
-        "alt": "suco",
+        "title": "макаро́ны",
+        "titleLat": "makaróni",
+        "alt": "macarrão",
         "imgUrl": "",
         "isCorrect": false 
       }
@@ -232,20 +232,20 @@
     "id": 6,
     "activity": "aprendizagem",
     "category": "comida",
-    "name": "Coffee",
-    "audio": "../sounds/Coffee.ogg",
+    "name": "macarrão",
+    "audio": "../sounds/comida/Pasta.ogg",
     "cards": [
       {
-        "title": "ко́фе",
-        "titleLat": "kófie",
-        "alt": "café",
+        "title": "макаро́ны",
+        "titleLat": "makaróni",
+        "alt": "macarrão",
         "imgUrl": "",
         "isCorrect": true 
       },
       {
-        "title": "вода́",
-        "titleLat": "vadá",
-        "alt": "água",
+        "title": "карто́шка",
+        "titleLat": "kartóshka",
+        "alt": "batata",
         "imgUrl": "",
         "isCorrect": false 
       },
@@ -257,9 +257,9 @@
         "isCorrect": false 
       },
       {
-        "title": "сок",
-        "titleLat": "sok",
-        "alt": "suco",
+        "title": "ку́рица",
+        "titleLat": "kúritsa",
+        "alt": "frango",
         "imgUrl": "",
         "isCorrect": false 
       }
@@ -270,36 +270,36 @@
     "id": 7,
     "activity": "aprendizagem",
     "category": "comida",
-    "name": "Coffee",
-    "audio": "../sounds/Coffee.ogg",
+    "name": "carne",
+    "audio": "../sounds/comida/Meat.ogg",
     "cards": [
       {
-        "title": "ко́фе",
-        "titleLat": "kófie",
-        "alt": "café",
+        "title": "мя́со",
+        "titleLat": "miása",
+        "alt": "carne",
         "imgUrl": "",
         "isCorrect": true 
       },
       {
-        "title": "вода́",
-        "titleLat": "vadá",
-        "alt": "água",
+        "title": "сыр",
+        "titleLat": "sir",
+        "alt": "queijo",
         "imgUrl": "",
         "isCorrect": false 
       },
       {
-        "title": "молоко́",
-        "titleLat": "malakó",
-        "alt": "leite",
+        "title": "суп",
+        "titleLat": "sup",
+        "alt": "sopa",
         "imgUrl": "",
         "isCorrect": false 
       },
       {
-        "title": "сок",
-        "titleLat": "sok",
-        "alt": "suco",
+        "title": "ры́ба",
+        "titleLat": "ríba",
+        "alt": "peixe",
         "imgUrl": "",
-        "isCorrect": false 
+        "isCorrect": false  
       }
     ],
     "active": true
@@ -308,13 +308,13 @@
     "id": 8,
     "activity": "aprendizagem",
     "category": "comida",
-    "name": "Coffee",
-    "audio": "../sounds/Coffee.ogg",
+    "name": "peixe",
+    "audio": "../sounds/comida/Fish.ogg",
     "cards": [
       {
-        "title": "ко́фе",
-        "titleLat": "kófie",
-        "alt": "café",
+        "title": "ры́ба",
+        "titleLat": "ríba",
+        "alt": "peixe",
         "imgUrl": "",
         "isCorrect": true 
       },
@@ -326,16 +326,16 @@
         "isCorrect": false 
       },
       {
-        "title": "молоко́",
-        "titleLat": "malakó",
-        "alt": "leite",
+        "title": "сыр",
+        "titleLat": "sir",
+        "alt": "queijo",
         "imgUrl": "",
-        "isCorrect": false 
+        "isCorrect": false
       },
       {
-        "title": "сок",
-        "titleLat": "sok",
-        "alt": "suco",
+        "title": "ку́рица",
+        "titleLat": "kúritsa",
+        "alt": "frango",
         "imgUrl": "",
         "isCorrect": false 
       }
@@ -346,20 +346,20 @@
     "id": 9,
     "activity": "aprendizagem",
     "category": "comida",
-    "name": "Coffee",
-    "audio": "../sounds/Coffee.ogg",
+    "name": "frango",
+    "audio": "../sounds/comida/Chicken.ogg",
     "cards": [
       {
-        "title": "ко́фе",
-        "titleLat": "kófie",
-        "alt": "café",
+        "title": "ку́рица",
+        "titleLat": "kúritsa",
+        "alt": "frango",
         "imgUrl": "",
         "isCorrect": true 
       },
       {
-        "title": "вода́",
-        "titleLat": "vadá",
-        "alt": "água",
+        "title": "карто́шка",
+        "titleLat": "kartóshka",
+        "alt": "batata",
         "imgUrl": "",
         "isCorrect": false 
       },
@@ -371,9 +371,9 @@
         "isCorrect": false 
       },
       {
-        "title": "сок",
-        "titleLat": "sok",
-        "alt": "suco",
+        "title": "макаро́ны",
+        "titleLat": "makaróni",
+        "alt": "macarrão",
         "imgUrl": "",
         "isCorrect": false 
       }
@@ -384,34 +384,34 @@
     "id": 10,
     "activity": "aprendizagem",
     "category": "comida",
-    "name": "Coffee",
-    "audio": "../sounds/Coffee.ogg",
+    "name": "queijo",
+    "audio": "../sounds/comida/Cheese.m4a",
     "cards": [
       {
-        "title": "ко́фе",
-        "titleLat": "kófie",
-        "alt": "café",
+        "title": "сыр",
+        "titleLat": "sir",
+        "alt": "queijo",
         "imgUrl": "",
         "isCorrect": true 
       },
       {
-        "title": "вода́",
-        "titleLat": "vadá",
-        "alt": "água",
+        "title": "суп",
+        "titleLat": "sup",
+        "alt": "sopa",
         "imgUrl": "",
         "isCorrect": false 
       },
       {
-        "title": "молоко́",
-        "titleLat": "malakó",
-        "alt": "leite",
+        "title": "ры́ба",
+        "titleLat": "ríba",
+        "alt": "peixe",
         "imgUrl": "",
-        "isCorrect": false 
+        "isCorrect": false  
       },
       {
-        "title": "сок",
-        "titleLat": "sok",
-        "alt": "suco",
+        "title": "рис",
+        "titleLat": "ris",
+        "alt": "arroz",
         "imgUrl": "",
         "isCorrect": false 
       }

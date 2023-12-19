@@ -5,40 +5,28 @@ import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 //Components
 import Button from "@/components/Button/Button"
-import QuestionCard from "@/components/QuestionCard/QuestionCard"
 import Loading from "@/app/loading"
 import OnlyNameShow from "../OnlyNameShow/OnlyNameShow"
 import VocabularyExercise from "../VocabularyExercise/VocabularyExercise"
 import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
+import { shuffleArray } from "@/utils/arrayUtils"
 
 const Vocabulary = ({questions, totalQuestions, category}) => {
-
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
-  // const [result, setResult] = useState(0)
-
-  // const [userAnswers, setUserAnswers] = useState({})
-  const [visible, setVisible] = useState(false)
-
-  const [isLoading, setIsLoading] = useState(true)
-
-  // const isQuestionAnswered = userAnswers[currentQuestionIndex] ? true : false
 
   const router = useRouter()
   const session = useSession()
   const nameShow = session.data?.user?.name
-  const email = session.data?.user?.email
 
-  const handleOnAnswerClick = (answer, currentQuestionIndex) => {
-    // //if user has already answered, do nothing
-    // if (isQuestionAnswered) return
-    // //check answer against correct answer
-    // const isCorrect = questions[currentQuestionIndex].correct_answer === answer
-    // //add result + 1 if answer is correct
-    // if (isCorrect) setResult(prev => prev + 1)
-    // //save the answer in the object for user answer
-    // setUserAnswers(prev => ({...prev, [currentQuestionIndex]: answer}))
-  }
+  const [isLoading, setIsLoading] = useState(true)
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
+  
+  //visibility of the anterior button  
+  const [visible, setVisible] = useState(false)
+
+  //disabled Proxima button
+  const [disabled, setDisabled] = useState(true)
+
 
   const handleChangeQuestion = (step) => {
     const newQuestionIndex = currentQuestionIndex + step
@@ -84,6 +72,7 @@ const Vocabulary = ({questions, totalQuestions, category}) => {
      
       router.push(`/categories/${category}/result?user=${nameShow}&cat=${category}&res=100%&total=${totalQuestions}`)
     } else {
+      //if the previous question was responded correctly
       handleChangeQuestion(1)
     }
   }
@@ -103,6 +92,8 @@ const Vocabulary = ({questions, totalQuestions, category}) => {
       ]
     })
   }
+
+  const shuffledAnswers = shuffleArray(questions[currentQuestionIndex].cards)
 
   if (session.status === "loading") {
     return (
@@ -134,10 +125,10 @@ const Vocabulary = ({questions, totalQuestions, category}) => {
             <VocabularyExercise
               currentQuestionIndex={currentQuestionIndex}
               question={questions[currentQuestionIndex]}
-              // answers={questions[currentQuestionIndex].answers}
+              // answers={questions[currentQuestionIndex].cards}
+              answers={shuffledAnswers}
               // userAnswer={userAnswers[currentQuestionIndex]}
-              // correctAnswer={questions[currentQuestionIndex].correct_answer}
-              onClick={handleOnAnswerClick}  
+              // correctAnswer={questions[currentQuestionIndex].correct_answer
             />
             <div className="flex flex-col justify-center mt-6">
               <div>
