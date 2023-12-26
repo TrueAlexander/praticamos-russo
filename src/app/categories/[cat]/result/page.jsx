@@ -3,7 +3,7 @@
 import { useSearchParams, useRouter } from 'next/navigation'
 import Button from '@/components/Button/Button'
 
-const ResultPage = () => {
+const QuizResultPage = () => {
   const router = useRouter()
   const searchParams = useSearchParams()
   const result = searchParams.get('res')
@@ -24,4 +24,4 @@ const ResultPage = () => {
   )
 }
 
-export default ResultPage
+export default QuizResultPage

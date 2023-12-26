@@ -26,7 +26,7 @@ export default function Activities() {
     if(session.status === "unauthenticated") router.push('/')
   }, [session.status])
 
-  const handleClick = (e) => e.target.innerText === "Teste" ? router.push('/dashboard') : router.push('/learn')
+  const handleClick = (e) => e.target.innerText === "Teste" ? router.push('/dashboard') : router.push('/aprender')
   
   if (isLoading) {
     return (

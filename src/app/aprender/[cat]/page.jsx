@@ -13,12 +13,32 @@ const TOTAL_QUESTIONS = 10
 const VocabularyPage = ({params}) => {
   
   const category = params.cat
-  console.log(dataCards)
+  
+// Function to shuffle the cards for a given activity
+function shuffleCards(activity) {
+  const shuffledCards = [...activity.cards];
+  for (let i = shuffledCards.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledCards[i], shuffledCards[j]] = [shuffledCards[j], shuffledCards[i]]
+  }
+  return shuffledCards
+}
+
+// Function to shuffle cards for all activities in the imported array
+function shuffleAllCards(data) {
+  return data.map(activity => ({
+    ...activity,
+    cards: shuffleCards(activity),
+  }))
+}
+
+// Use the shuffled array
+const preparedData = shuffleAllCards(dataCards)
 
   ///to filter dataCards according to category
   //later to use only the filtered array
 
-  const [questions, setQuestions] = useState(dataCards)
+  const [questions, setQuestions] = useState(preparedData)
   const [isLoading, setIsLoading] = useState(false)
 
   // useEffect(() => {

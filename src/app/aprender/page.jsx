@@ -1,18 +1,18 @@
 'use client'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import getResults from '@/utils/getResults'
+// import getResults from '@/utils/getResults'
 //Components
 import Button from '@/components/Button/Button'
 import ButtonAuth from "@/components/ButtonAuth/ButtonAuth"
 import { useSession, signOut } from 'next-auth/react' 
 import Loading from './loading'
 
-export default function Learn() {
+export default function Aprender() {
   const router = useRouter()
   const session = useSession()
 
-  const [nameShow, setNameShow] = useState("Desconhecido")
+  const [nameShow, setNameShow] = useState("Visitante")
   const [isLoading, setIsLoading] = useState(session.status === 'loading')
 
   const name = session.data?.user?.name || null
@@ -42,26 +42,31 @@ export default function Learn() {
         <div className='absolute top-0 left-0 right-0'>
           <ButtonAuth name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
         </div>  
-        <p className='text-white p-4 py-6 font-bold text-[22px]'>Escolhe o tema em baixo:</p>
-        <p className='text-[#9f50ac] pt-4 pb-4 text-[18px] '>
-          clique para começar
+        <p className='text-white p-3 pt-6 font-bold text-[22px]'>Escolhe o tema em baixo:</p>
+        <p className='text-[#9f50ac] text-[18px] '>
+          clique para aprender novas palavras 
+        </p>
+        <p className='text-[#9f50ac] pb-4 text-[18px] '>
+          ou revise vocabulário aprendido:
         </p>
         <Button
-          text="Vocabulario - Comida" 
+          text="Comida"
+          learnt={true}
           disabled={false} 
-          onClick={() => router.push('/learn/vocabulary-food')} 
+          onClick={() => router.push('/aprender/comida')} 
         />
          <br />
         <Button
-          text="Vocabulario - Cidade" 
+          text="Cidade" 
           disabled={false} 
-          onClick={() => router.push('/learn/vocabulary-city')} 
+          onClick={() => router.push('/aprender/cidade')} 
         />
         <p className='text-[#9f50ac] pt-1 pb-1 text-[18px] '>
           ou
         </p>
         <Button
           text="Voltar" 
+          learnt={false}
           disabled={false} 
           onClick={() => router.push('/activities')} 
         />

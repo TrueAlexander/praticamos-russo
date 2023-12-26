@@ -4,22 +4,26 @@ import Image from "next/image"
 import VocabularyCard from "../VocabularyCard/VocabularyCard"
 import { useEffect, useState, useRef } from "react"
 import Loading from "@/app/loading"
-import { shuffleArray } from "@/utils/arrayUtils"
 
 
-const VocabularyExercise = ({ question, currentQuestionIndex, answers }) => {
+const VocabularyExercise = ({ question, currentQuestionIndex, answers, rightAnswer, setDisabled }) => {
 
   const [audio, setAudio] = useState(question.audio)
   const audioRef = useRef()
 
+
   const [isLoading, setIsLoading] = useState(true)
   const [clickedAnswer, setClickedAnswer] = useState(null)
 
-  const rightAnswer = question.name
-  console.log(clickedAnswer, rightAnswer)
+  useEffect(() => {
+    if (clickedAnswer === rightAnswer) {
+      setDisabled(false)
+    } else setDisabled(true)
+  }, [clickedAnswer])
   
   useEffect(() => {
     setClickedAnswer(null)
+    setDisabled(true)
   }, [currentQuestionIndex])
 
   useEffect(() => {
@@ -32,13 +36,6 @@ const VocabularyExercise = ({ question, currentQuestionIndex, answers }) => {
     setIsLoading(false)
   }, [currentQuestionIndex])
 
-
-
-  console.log("question: ", question)
-  console.log("answers: ", answers)
-
- 
-
   if (isLoading) {
     return (
       <div className="flex-auto flex flex-col justify-center">
@@ -50,7 +47,7 @@ const VocabularyExercise = ({ question, currentQuestionIndex, answers }) => {
       <div 
         // className="flex min-h-screen flex-col items-center justify-between p-24"
       >
-        <h3>Traduz o que você está ouvindo:</h3>
+        <h3>Traduz e repete o que você está ouvindo:</h3>
         <div>
           <audio ref={audioRef} controls className="mx-auto">
             <source src={audio} type="audio/ogg" />
@@ -65,6 +62,7 @@ const VocabularyExercise = ({ question, currentQuestionIndex, answers }) => {
               clickedAnswer={clickedAnswer}
               setClickedAnswer={setClickedAnswer}
               rightAnswer={rightAnswer}
+              setDisabled={setDisabled}
             />
           ))}
         </div>     

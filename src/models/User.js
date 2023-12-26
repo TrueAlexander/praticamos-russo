@@ -31,6 +31,10 @@ const userSchema = new Schema(
       type: Array,
       default: [],
     },
+    vocabulary: {
+      type: Array,
+      default: [],
+    },
   },
   { timestamps: true }
 )

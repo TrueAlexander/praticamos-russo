@@ -17,15 +17,18 @@ const Vocabulary = ({questions, totalQuestions, category}) => {
   const router = useRouter()
   const session = useSession()
   const nameShow = session.data?.user?.name
-
+  const email = session.data?.user?.email
+  
   const [isLoading, setIsLoading] = useState(true)
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0)
-  
+ 
   //visibility of the anterior button  
   const [visible, setVisible] = useState(false)
 
   //disabled Proxima button
   const [disabled, setDisabled] = useState(true)
+
+  const rightAnswer = questions[currentQuestionIndex].name
 
 
   const handleChangeQuestion = (step) => {
@@ -47,30 +50,28 @@ const Vocabulary = ({questions, totalQuestions, category}) => {
   const handleClickForward = async () => {
 
     if(currentQuestionIndex === totalQuestions - 1) {
-
-      //send the information to database that the category was learned
-      // try {
-      //   const res = await fetch("/api/update", {
-      //     method: "PUT",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify({
-      //       email,
-      //       category,
-      //       result,
-      //     }),
-      //   })
+      //send the information to database that the category was learnt
+      try {
+        const res = await fetch("/api/update-vocabulary", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            category
+          }),
+        })
   
-      //   if (res.status === 201 || 200) {
-      //     console.log("Seu resultado foi salvo")        
-      //   }
+        if (res.status === 201 || 200) {
+          console.log("Seu resultado foi salvo")        
+        }
         
-      // } catch (err) {   
-      //   console.log(err, "Ocorreu um erro do lado do servidor!")
-      // }   
+      } catch (err) {   
+        console.log(err, "Ocorreu um erro do lado do servidor!")
+      }   
      
-      router.push(`/categories/${category}/result?user=${nameShow}&cat=${category}&res=100%&total=${totalQuestions}`)
+      router.push(`/aprender/${category}/result?user=${nameShow}`)
     } else {
       //if the previous question was responded correctly
       handleChangeQuestion(1)
@@ -83,7 +84,7 @@ const Vocabulary = ({questions, totalQuestions, category}) => {
       buttons: [
         {
           label: 'Sim',
-          onClick: () => router.push('/learn')  
+          onClick: () => router.push('/aprender')  
         },
         {
           label: 'Não',
@@ -92,8 +93,6 @@ const Vocabulary = ({questions, totalQuestions, category}) => {
       ]
     })
   }
-
-  const shuffledAnswers = shuffleArray(questions[currentQuestionIndex].cards)
 
   if (session.status === "loading") {
     return (
@@ -114,19 +113,12 @@ const Vocabulary = ({questions, totalQuestions, category}) => {
             {/* <p className="text-[#9f50ac] font-bold pb-2 text-[16px]">
               Pergunta {currentQuestionIndex + 1} de {totalQuestions}
             </p> */}
-            {/* <QuestionCard 
-              currentQuestionIndex={currentQuestionIndex}
-              question={questions[currentQuestionIndex].question}
-              answers={questions[currentQuestionIndex].answers}
-              userAnswer={userAnswers[currentQuestionIndex]}
-              correctAnswer={questions[currentQuestionIndex].correct_answer}
-              onClick={handleOnAnswerClick}
-            /> */}
             <VocabularyExercise
               currentQuestionIndex={currentQuestionIndex}
               question={questions[currentQuestionIndex]}
-              // answers={questions[currentQuestionIndex].cards}
-              answers={shuffledAnswers}
+              answers={questions[currentQuestionIndex].cards}
+              rightAnswer={rightAnswer}
+              setDisabled={setDisabled}            
               // userAnswer={userAnswers[currentQuestionIndex]}
               // correctAnswer={questions[currentQuestionIndex].correct_answer
             />
@@ -138,7 +130,7 @@ const Vocabulary = ({questions, totalQuestions, category}) => {
                   onClick={() => handleChangeQuestion(-1)} 
                 />}
                 <Button
-                  disabled={false}
+                  disabled={disabled}
                   text={currentQuestionIndex === totalQuestions - 1 ? 'Fim' : 'Próxima'}
                   onClick={handleClickForward}
                 />

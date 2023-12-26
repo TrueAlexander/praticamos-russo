@@ -1,8 +1,8 @@
 "use client"
 import Image from 'next/image'
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect} from 'react'
 
-const VocabularyCard = ({ item, clickedAnswer, setClickedAnswer, rightAnswer }) => {
+const VocabularyCard = ({ item, clickedAnswer, setClickedAnswer, rightAnswer, setDisabled  }) => {
 
   const divRef = useRef()
 
@@ -21,6 +21,7 @@ const VocabularyCard = ({ item, clickedAnswer, setClickedAnswer, rightAnswer }) 
         setClickedAnswer(currentValue)
         if(currentValue === rightAnswer) {
           setAddClass('border-[#55ac78]')
+          setDisabled(false)
         } else {
           setAddClass('border-[#ac5050]')
         }  
