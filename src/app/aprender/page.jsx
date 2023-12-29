@@ -7,6 +7,7 @@ import Button from '@/components/Button/Button'
 import ButtonAuth from "@/components/ButtonAuth/ButtonAuth"
 import { useSession, signOut } from 'next-auth/react' 
 import Loading from './loading'
+import getLearnt from '@/utils/getLearnt'
 
 export default function Aprender() {
   const router = useRouter()
@@ -18,9 +19,18 @@ export default function Aprender() {
   const name = session.data?.user?.name || null
   const email = session.data?.user?.email || null
 
+  const [learntArr, setLearntArr] = useState()
+
+  useEffect(() => { 
+    setLearntArr(learntArr)
+  }, [learntArr])
+
   useEffect(() => {
     setIsLoading(session.status === 'loading')
 
+    if(session.status === "authenticated") {
+      getLearnt(email, name).then(result => setLearntArr(result))  
+    }
     if (session.data?.user?.name) {
       setNameShow(session.data?.user?.name)
     } else {
@@ -47,19 +57,20 @@ export default function Aprender() {
           clique para aprender novas palavras 
         </p>
         <p className='text-[#9f50ac] pb-4 text-[18px] '>
-          ou revise vocabulário aprendido:
+          ou reforçe o vocabulário aprendido:
         </p>
         <Button
           text="Comida"
-          learnt={true}
+          learnt={learntArr?.includes('comida')}
           disabled={false} 
-          onClick={() => router.push('/aprender/comida')} 
+          onClick={() => router.push(`/aprender/comida?rep=${learntArr.includes('comida')}`)} 
         />
          <br />
         <Button
           text="Cidade" 
+          learnt={learntArr?.includes('cidade')}
           disabled={false} 
-          onClick={() => router.push('/aprender/cidade')} 
+          onClick={() => router.push(`/aprender/cidade?rep=${learntArr.includes('cidade')}`)} 
         />
         <p className='text-[#9f50ac] pt-1 pb-1 text-[18px] '>
           ou

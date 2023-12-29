@@ -20,15 +20,14 @@ const VocabularyCard = ({ item, clickedAnswer, setClickedAnswer, rightAnswer, se
       } else {
         setClickedAnswer(currentValue)
         if(currentValue === rightAnswer) {
-          setAddClass('border-[#55ac78]')
+          setAddClass('border-[#55ac78] bg-[#87cfa40f]')
           setDisabled(false)
         } else {
-          setAddClass('border-[#ac5050]')
+          setAddClass('border-[#ac5050] bg-[#ac50501d]')
         }  
       }    
     }  
   }
-
   return (
     <div 
       className={`border-2 border-solid  ${currentChosen === clickedAnswer ?  addClass : 'border-[#9f50ac]'} w-28 h-28 rounded-lg flex flex-col items-center justify-center overflow-hidden cursor-pointer`}
@@ -38,7 +37,8 @@ const VocabularyCard = ({ item, clickedAnswer, setClickedAnswer, rightAnswer, se
       <h3 
         onClick={(e) => handleClick(e)}
         >{item.alt}</h3>
-      <h3 className='text-[#9f50ac] text-sm' 
+      <h3 className='text-[#9f50ac] text-sm ' 
+
       onClick={(e) => handleClick(e)}
       >{item.title}</h3>
       

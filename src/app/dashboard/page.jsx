@@ -13,7 +13,7 @@ export default function Dashboard() {
   const session = useSession()
   // const TOTAL_QUESTIONS = 10
 
-  const [nameShow, setNameShow] = useState("Desconhecido")
+  const [nameShow, setNameShow] = useState("Visitante")
   const [isLoading, setIsLoading] = useState(session.status === 'loading')
   const [statScores, setStatScores] = useState()
 
@@ -33,7 +33,7 @@ export default function Dashboard() {
     if (session.data?.user?.name) {
       setNameShow(session.data?.user?.name)
     } else {
-      setNameShow("Desconhecido")
+      setNameShow("Visitante")
     } 
     if(session.status === "unauthenticated") router.push('/')
   }, [session.status])

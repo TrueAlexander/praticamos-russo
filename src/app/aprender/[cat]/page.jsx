@@ -8,10 +8,13 @@ import dataCards from '../../../../dataCards.json'
 //Components
 import Vocabulary from "../../../components/Vocabulary/Vocabulary"
 import Loading from "../loading"
+import { useSearchParams } from "next/navigation"
 const TOTAL_QUESTIONS = 10
 
 const VocabularyPage = ({params}) => {
   
+  const searchParams = useSearchParams()
+  const repeat = searchParams.get('rep')
   const category = params.cat
   
 // Function to shuffle the cards for a given activity
@@ -93,13 +96,12 @@ const preparedData = shuffleAllCards(dataCards)
     )
   } else if (shuffledNewQuestions.length > 10) {
     return ( 
-      // <Quiz questions={shuffledNewQuestions} totalQuestions={TOTAL_QUESTIONS} category={category}/>
-      //add an activity component, props: questions={shuffledNewQuestions} totalQuestions={TOTAL_QUESTIONS} category={category} 
       <>
         <Vocabulary 
           questions={shuffledNewQuestions} 
           totalQuestions={TOTAL_QUESTIONS} 
           category={category}
+          repeat={repeat}
         />
       </>
       

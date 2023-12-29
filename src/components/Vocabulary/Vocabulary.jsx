@@ -1,5 +1,4 @@
 'use client'
-
 import React, { useEffect, useState } from "react"
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
@@ -12,7 +11,7 @@ import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 import { shuffleArray } from "@/utils/arrayUtils"
 
-const Vocabulary = ({questions, totalQuestions, category}) => {
+const Vocabulary = ({questions, totalQuestions, category, repeat}) => {
 
   const router = useRouter()
   const session = useSession()
@@ -51,6 +50,7 @@ const Vocabulary = ({questions, totalQuestions, category}) => {
 
     if(currentQuestionIndex === totalQuestions - 1) {
       //send the information to database that the category was learnt
+      setIsLoading(true)
       try {
         const res = await fetch("/api/update-vocabulary", {
           method: "PUT",
@@ -64,14 +64,14 @@ const Vocabulary = ({questions, totalQuestions, category}) => {
         })
   
         if (res.status === 201 || 200) {
-          console.log("Seu resultado foi salvo")        
+          console.log("Seu resultado foi salvo")      
         }
         
       } catch (err) {   
         console.log(err, "Ocorreu um erro do lado do servidor!")
       }   
      
-      router.push(`/aprender/${category}/result?user=${nameShow}`)
+      router.push(`/aprender/${category}/result?user=${nameShow}&rep=${repeat}`)
     } else {
       //if the previous question was responded correctly
       handleChangeQuestion(1)
