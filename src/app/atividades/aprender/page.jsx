@@ -63,14 +63,14 @@ export default function Aprender() {
           text="Comida"
           learnt={learntArr?.includes('comida')}
           disabled={false} 
-          onClick={() => router.push(`/aprender/comida?rep=${learntArr.includes('comida')}`)} 
+          onClick={() => router.push(`/atividades/aprender/comida?rep=${learntArr.includes('comida')}`)} 
         />
          <br />
         <Button
           text="Cidade" 
           learnt={learntArr?.includes('cidade')}
           disabled={false} 
-          onClick={() => router.push(`/aprender/cidade?rep=${learntArr.includes('cidade')}`)} 
+          onClick={() => router.push(`/atividades/aprender/cidade?rep=${learntArr.includes('cidade')}`)} 
         />
         <p className='text-[#9f50ac] pt-1 pb-1 text-[18px] '>
           ou
@@ -79,7 +79,7 @@ export default function Aprender() {
           text="Voltar" 
           learnt={false}
           disabled={false} 
-          onClick={() => router.push('/activities')} 
+          onClick={() => router.push('/atividades')} 
         />
       </div>
     )

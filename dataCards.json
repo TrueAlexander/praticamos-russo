@@ -5,7 +5,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "café",
-    "audio": "../sounds/comida/Coffee.ogg",
+    "audio": "../../sounds/comida/Coffee.ogg",
     "cards": [
       {
         "title": "ко́фе",
@@ -43,7 +43,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "leite",
-    "audio": "../sounds/comida/Milk.ogg",
+    "audio": "../../sounds/comida/Milk.ogg",
     "cards": [
       {
         "title": "молоко́",
@@ -81,7 +81,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "sopa",
-    "audio": "../sounds/comida/Soup.ogg",
+    "audio": "../../sounds/comida/Soup.ogg",
     "cards": [
       {
         "title": "суп",
@@ -119,7 +119,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "água",
-    "audio": "../sounds/comida/Water.ogg",
+    "audio": "../../sounds/comida/Water.ogg",
     "cards": [
       {
         "title": "ры́ба",
@@ -157,7 +157,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "arroz",
-    "audio": "../sounds/comida/Rice.ogg",
+    "audio": "../../sounds/comida/Rice.ogg",
     "cards": [
       {
         "title": "рис",
@@ -195,7 +195,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "batata",
-    "audio": "../sounds/comida/Potato.ogg",
+    "audio": "../../sounds/comida/Potato.ogg",
     "cards": [
       {
         "title": "карто́шка",
@@ -233,7 +233,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "macarrão",
-    "audio": "../sounds/comida/Pasta.ogg",
+    "audio": "../../sounds/comida/Pasta.ogg",
     "cards": [
       {
         "title": "макаро́ны",
@@ -271,7 +271,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "carne",
-    "audio": "../sounds/comida/Meat.ogg",
+    "audio": "../../sounds/comida/Meat.ogg",
     "cards": [
       {
         "title": "мя́со",
@@ -309,7 +309,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "peixe",
-    "audio": "../sounds/comida/Fish.ogg",
+    "audio": "../../sounds/comida/Fish.ogg",
     "cards": [
       {
         "title": "ры́ба",
@@ -347,7 +347,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "frango",
-    "audio": "../sounds/comida/Chicken.ogg",
+    "audio": "../../sounds/comida/Chicken.ogg",
     "cards": [
       {
         "title": "ку́рица",
@@ -385,7 +385,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "queijo",
-    "audio": "../sounds/comida/Cheese.m4a",
+    "audio": "../../sounds/comida/Cheese.m4a",
     "cards": [
       {
         "title": "сыр",
@@ -417,5 +417,43 @@
       }
     ],
     "active": true
-  }  
+  },
+  {
+    "id": 11,
+    "activity": "aprendizagem",
+    "category": "cidade",
+    "name": "queijo",
+    "audio": "../../sounds/comida/Cheese.m4a",
+    "cards": [
+      {
+        "title": "сыр",
+        "titleLat": "sir",
+        "alt": "queijo",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "суп",
+        "titleLat": "sup",
+        "alt": "sopa",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "ры́ба",
+        "titleLat": "ríba",
+        "alt": "peixe",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "рис",
+        "titleLat": "ris",
+        "alt": "arroz",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  }   
 ]

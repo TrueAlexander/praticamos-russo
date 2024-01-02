@@ -40,7 +40,7 @@ export default function Home() {
 
   // const handleClick = () => session.status === "authenticated" ? router.push('/dashboard') : setShowModal(true)
 
-  const handleClick = () => session.status === "authenticated" ? router.push('/activities') : setShowModal(true)
+  const handleClick = () => session.status === "authenticated" ? router.push('/atividades') : setShowModal(true)
 
   return (
     <div className='text-center flex flex-col justify-center'>

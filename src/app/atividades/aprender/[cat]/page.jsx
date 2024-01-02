@@ -4,12 +4,12 @@ import { shuffleArray } from "@/utils/arrayUtils"
 import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 import { useEffect, useState } from "react"
-import dataCards from '../../../../dataCards.json'
+import dataCards from '../../../../../dataCards.json'
 //Components
-import Vocabulary from "../../../components/Vocabulary/Vocabulary"
+import Vocabulary from "../../../../components/Vocabulary/Vocabulary"
 import Loading from "../loading"
 import { useSearchParams } from "next/navigation"
-const TOTAL_QUESTIONS = 10
+const TOTAL_QUESTIONS = 11
 
 const VocabularyPage = ({params}) => {
   
@@ -37,13 +37,14 @@ function shuffleAllCards(data) {
 
 // Use the shuffled array
 const preparedData = shuffleAllCards(dataCards)
-
-  ///to filter dataCards according to category
+///to filter dataCards according to category
+  const filteredByCat = preparedData.filter(item => item.category === category)
   //later to use only the filtered array
 
-  const [questions, setQuestions] = useState(preparedData)
+  const [questions, setQuestions] = useState(filteredByCat)
   const [isLoading, setIsLoading] = useState(false)
 
+  // go here to use MongoDB for Data
   // useEffect(() => {
 
   //   const getQuestionsMongoDB = async (category)=> {

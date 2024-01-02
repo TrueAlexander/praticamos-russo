@@ -11,7 +11,7 @@ const QuizResultPage = () => {
   const category = searchParams.get('cat')
   const user = searchParams.get('user')
 
-  const handleClick = () => router.push('/dashboard') 
+  const handleClick = () => router.push('/atividades/teste') 
 
   return (
     <div className='text-white text-center uppercase flex flex-col justify-center'>

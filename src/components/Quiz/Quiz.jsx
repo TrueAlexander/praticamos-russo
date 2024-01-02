@@ -75,7 +75,7 @@ const Quiz = ({questions, totalQuestions, category}) => {
         console.log(err, "Ocorreu um erro do lado do servidor!")
       }   
      
-      router.push(`/categories/${category}/result?user=${nameShow}&cat=${category}&res=${result}&total=${totalQuestions}`)
+      router.push(`/atividades/teste/categorias/${category}/result?user=${nameShow}&cat=${category}&res=${result}&total=${totalQuestions}`)
     } else {
       handleChangeQuestion(1)
     }

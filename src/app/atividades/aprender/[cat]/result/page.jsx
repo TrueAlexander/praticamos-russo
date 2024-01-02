@@ -9,11 +9,10 @@ const VocabResultPage = ({params}) => {
   const searchParams = useSearchParams()
   const user = searchParams.get('user')
   const repeat = searchParams.get('rep')
-  console.log(repeat)
   const category = params.cat
 
 
-  const handleClick = () => router.push('/aprender') 
+  const handleClick = () => router.push('/atividades/aprender') 
 
   return (
     <div className='text-white text-center uppercase flex flex-col justify-center'>

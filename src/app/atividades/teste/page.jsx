@@ -8,7 +8,7 @@ import ButtonAuth from "@/components/ButtonAuth/ButtonAuth"
 import { useSession, signOut } from 'next-auth/react' 
 import Loading from './loading'
 
-export default function Dashboard() {
+export default function Teste() {
   const router = useRouter()
   const session = useSession()
   // const TOTAL_QUESTIONS = 10
@@ -38,7 +38,7 @@ export default function Dashboard() {
     if(session.status === "unauthenticated") router.push('/')
   }, [session.status])
 
-  const handleClick = () => router.push('/categories')
+  const handleClick = () => router.push('/atividades/teste/categorias')
 
   if (isLoading) {
     return (
@@ -88,7 +88,7 @@ export default function Dashboard() {
         <Button
           text="Voltar" 
           disabled={false} 
-          onClick={() => router.push('/activities')} 
+          onClick={() => router.push('/atividades')} 
         />
       </div>
     )

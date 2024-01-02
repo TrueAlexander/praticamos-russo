@@ -5,7 +5,7 @@ import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 import { useEffect, useState } from "react"
 //Components
-import Quiz from "../../../components/Quiz/Quiz"
+import Quiz from "../../../../../components/Quiz/Quiz"
 import Loading from "../loading"
 const TOTAL_QUESTIONS = 10
 

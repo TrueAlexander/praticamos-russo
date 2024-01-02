@@ -71,7 +71,7 @@ const Vocabulary = ({questions, totalQuestions, category, repeat}) => {
         console.log(err, "Ocorreu um erro do lado do servidor!")
       }   
      
-      router.push(`/aprender/${category}/result?user=${nameShow}&rep=${repeat}`)
+      router.push(`/atividades/aprender/${category}/result?user=${nameShow}&rep=${repeat}`)
     } else {
       //if the previous question was responded correctly
       handleChangeQuestion(1)
@@ -84,7 +84,7 @@ const Vocabulary = ({questions, totalQuestions, category, repeat}) => {
       buttons: [
         {
           label: 'Sim',
-          onClick: () => router.push('/aprender')  
+          onClick: () => router.push('/atividades/aprender')  
         },
         {
           label: 'Não',

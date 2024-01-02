@@ -12,7 +12,7 @@ const Categories = () => {
   const router = useRouter()
   const nameShow = session.data?.user?.name
 
-  const handleClick = (e) => router.push(`/categories/${e.target.name}`)
+  const handleClick = (e) => router.push(`/atividades/teste/categorias/${e.target.name}`)
 
   if (session.status === "loading") {
     return (
@@ -40,7 +40,7 @@ const Categories = () => {
         <Button
           text="Voltar" 
           disabled={false} 
-          onClick={() => router.push('/dashboard')} 
+          onClick={() => router.push('/atividades/teste')} 
         />
       </div>
     )

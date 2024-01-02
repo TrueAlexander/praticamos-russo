@@ -7,7 +7,7 @@ import ButtonAuth from "@/components/ButtonAuth/ButtonAuth"
 import { useSession, signOut } from 'next-auth/react' 
 import Loading from './loading'
 
-export default function Activities() {
+export default function Atividades() {
   const router = useRouter()
   const session = useSession()
 
@@ -26,7 +26,7 @@ export default function Activities() {
     if(session.status === "unauthenticated") router.push('/')
   }, [session.status])
 
-  const handleClick = (e) => e.target.innerText === "Teste" ? router.push('/dashboard') : router.push('/aprender')
+  const handleClick = (e) => e.target.innerText === "Teste" ? router.push('/atividades/teste') : router.push('/atividades/aprender')
   
   if (isLoading) {
     return (
@@ -45,7 +45,7 @@ export default function Activities() {
           clique para começar
         </p>
         <Button
-          text="Aprendizagem" 
+          text="Aprender" 
           disabled={false} 
           onClick={handleClick} 
         />
