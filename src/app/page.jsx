@@ -38,8 +38,6 @@ export default function Home() {
     }
   }, [session])
 
-  // const handleClick = () => session.status === "authenticated" ? router.push('/dashboard') : setShowModal(true)
-
   const handleClick = () => session.status === "authenticated" ? router.push('/atividades') : setShowModal(true)
 
   return (
