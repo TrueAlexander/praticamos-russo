@@ -43,3 +43,22 @@ audio {
   }
 }
 
+@media only screen and (max-height: 730px) {
+  .bodyClass {
+    justify-content: initial !important;
+    overflow: auto !important; 
+  }
+  .main {
+    height: auto !important;    
+  }
+
+  .logo,
+  .footer  {
+    position: initial !important;   
+  }
+
+  .modalContent {
+    overflow: auto !important;
+    justify-content: initial !important;
+  }
+}
