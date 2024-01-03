@@ -44,7 +44,7 @@ export default function RootLayout({children}) {
                   />
                 </div>     
               </Link>
-              <div className="pt-[30px] bg-red-900">
+              <div className="pt-[30px]">
                 {children} 
               </div>                   
               <p className='fixed bottom-0 text-white my-3 text-[10px] footer'>
