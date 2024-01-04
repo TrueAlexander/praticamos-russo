@@ -19,24 +19,23 @@ export default function Home() {
 
   const [showModal, setShowModal] = useState(params.get("error") || false)
   const [nameShow, setNameShow] = useState("Visitante")
-  const [isLoading, setIsLoading] = useState(session.status === 'loading')
+  // const [isLoading, setIsLoading] = useState(session.status === 'loading')
+  const [isLoading, setIsLoading] = useState(true)
  
 
   const name = session.data?.user?.name || null
 
   useEffect(() => {
-    setIsLoading(session.status === 'loading')
-  }, [session.status])
-
-
-  useEffect(() => {
+    // setIsLoading(session.status === 'loading')
+    if (session.status !== 'loading') {
+      setIsLoading(false)
+    }
     if (session.data?.user?.name) {
-
-        setNameShow(session.data?.user?.name)
+      setNameShow(session.data?.user?.name)
     } else {
       setNameShow("Visitante")
     }
-  }, [session])
+  }, [session.status])
 
   const handleClick = () => session.status === "authenticated" ? router.push('/atividades') : setShowModal(true)
 
@@ -47,7 +46,7 @@ export default function Home() {
         : <>
             <ButtonAuth setShowModal={setShowModal} name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
             <p className='text-white p-4 font-bold uppercase tracking-widest text-[24px]'>Russolinguo</p>
-            <Image className='max-w-[400px] w-[80%] mx-auto rounded-[10px]' src={HomepageImage} alt='home-page'/>
+            <Image className='max-w-[400px] w-[80%] mx-auto rounded-[10px]' src={HomepageImage} alt='home-page' priority={false} placeholder="blur"/>
             <p className='text-[#9f50ac] pt-4 pb-4 text-[18px] '>
               Clique abaixo
             </p>
