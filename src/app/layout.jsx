@@ -48,10 +48,10 @@ export default function RootLayout({children}) {
                     priority={false}
                     // // placeholder="blur"
                   />
-                </div>     
+                </div>    
               </Link>
-              {/* <div className="pt-[30px]"> */}
-              <div className="">
+              {/* <div className="pt-[30px]"></div> */}
+              <div className="pt-[30px] bg-slate-500" style={{ height: 'calc(100% - 160px)' }} >
                 {children} 
               </div>                   
               <p className='fixed bottom-0 text-white my-3 text-[10px] footer'>
