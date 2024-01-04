@@ -45,16 +45,18 @@ export default function Home() {
         ? <Loading/>
         : <>
             <ButtonAuth setShowModal={setShowModal} name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
-            <p className='text-white p-4 font-bold uppercase tracking-widest text-[24px]'>Russolinguo</p>
-            <Image className='max-w-[400px] w-[80%] mx-auto rounded-[10px]' src={HomepageImage} alt='home-page' priority={false} placeholder="blur"/>
-            <p className='text-[#9f50ac] pt-4 pb-4 text-[18px] '>
-              Clique abaixo
-            </p>
-            <Button 
-              text={session.status === "authenticated" ? "Começar!" : "Entrar"} 
-              disabled={false} 
-              onClick={handleClick} 
-            />
+            <div className='bg-green-300 var-content-class'>
+              <p className='text-white p-4 font-bold uppercase tracking-widest text-[24px]'>Russolinguo</p>
+              <Image className='max-w-[400px] w-[80%] mx-auto rounded-[10px]' src={HomepageImage} alt='home-page' priority={false} placeholder="blur"/>
+              <p className='text-[#9f50ac] pt-4 pb-4 text-[18px] '>
+                Clique abaixo
+              </p>
+              <Button 
+                text={session.status === "authenticated" ? "Começar!" : "Entrar"} 
+                disabled={false} 
+                onClick={handleClick} 
+              />
+            </div>           
             {showModal && <AuthModal showModal={showModal} setShowModal={setShowModal} setIsLoading={setIsLoading}/>}
             {session.data?.user?.isAdmin && <AdminLink/>}
           </>

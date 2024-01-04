@@ -23,13 +23,18 @@ audio {
 
 
 /* @media only screen and (max-width: 916px) and (orientation: landscape) { */
-  @media only screen and (max-width: 734px) and (orientation: landscape) {
+  @media only screen and (max-width: 916px) and (orientation: landscape) {
   .bodyClass {
     justify-content: initial !important;
     overflow: auto !important; 
   }
   .main {
     height: auto !important;    
+  }
+
+  .var-content-class {
+    margin-top: 0;
+    overflow: auto !important;
   }
 
   .logo,
@@ -45,20 +50,25 @@ audio {
 
 @media only screen and (max-height: 734px) {
   .bodyClass {
-    justify-content: initial !important;
+    /* justify-content: initial !important; */
+    /* margin-top: 150px; */
     overflow: auto !important; 
   }
   .main {
-    height: auto !important;    
+    /* height: auto !important;     */
   }
 
   .logo,
   .footer  {
-    position: initial !important;   
+    /* position: initial !important;    */
+  }
+
+  .var-content-class {
+    margin-top: 100px;
+    overflow: auto !important;
   }
 
   .modalContent {
     overflow: auto !important;
-    justify-content: initial !important;
   }
 }
