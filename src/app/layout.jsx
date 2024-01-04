@@ -30,8 +30,9 @@ export default function RootLayout({children}) {
   return (
     <html lang="en">
       <body 
-        style={{ height: '100vh', position: "absolute", top: 0, left: 0, right: 0  }} 
-        className="bg-[#2b2737] p-4 box-border flex flex-col h-screen absolute top-0 bottom-0 left-0 right-0 justify-center overflow-hidden bodyClass"
+        style={{ height: '100%', position: "absolute", top: 0, left: 0, right: 0  }} 
+        // className="bg-[#2b2737] p-4 box-border flex flex-col h-screen absolute top-0 bottom-0 left-0 right-0 justify-center overflow-hidden bodyClass"
+        className="bg-[#2b2737] p-4 box-border flex flex-col justify-center overflow-hidden bodyClass"
       >
         <AuthProvider>
           <div className="w-fit mx-auto">
