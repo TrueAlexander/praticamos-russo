@@ -53,13 +53,17 @@ audio {
     overflow: auto !important; 
   }
   .main {
-    height: auto !important;    
+    height: 100lvh !important;  
+    overflow: auto !important;   
     /* padding-top: 170px; */
     /* margin-bottom: 100px; */
   }
   .logo,
   .footer  {
     position: initial !important;   
+  }
+  .footer {
+    display: none;
   }
  
 }
