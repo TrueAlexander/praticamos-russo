@@ -23,7 +23,7 @@ audio {
 
 
 /* @media only screen and (max-width: 916px) and (orientation: landscape) { */
-  @media only screen and (max-width: 916px) and (orientation: landscape) {
+  /* @media only screen and (max-width: 916px) and (orientation: landscape) {
   .bodyClass {
     justify-content: initial !important;
     overflow: auto !important; 
@@ -46,29 +46,38 @@ audio {
     overflow: auto !important;
     justify-content: initial !important;
   }
+} */
+@media only screen and (max-height: 728px) {
+  .bodyClass {
+    justify-content: initial !important;
+    overflow: auto !important; 
+  }
+  .main {
+    height: auto !important;    
+    /* padding-top: 170px; */
+    /* margin-bottom: 100px; */
+  }
+  .logo,
+  .footer  {
+    position: initial !important;   
+  }
+ 
 }
 
+/*
 @media only screen and (max-height: 734px) {
   .bodyClass {
     /* justify-content: initial !important; */
     /* margin-top: 150px; */
-    overflow: auto !important; 
-  }
-  .main {
-    /* height: auto !important;     */
-  }
+    /* overflow: auto !important; 
+  } */
 
-  .logo,
-  .footer  {
-    /* position: initial !important;    */
-  }
 
-  .var-content-class {
+  /* .var-content-class {
     margin-top: 100px;
     overflow: auto !important;
   }
 
   .modalContent {
     overflow: auto !important;
-  }
-}
+  } */
