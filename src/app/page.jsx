@@ -42,7 +42,8 @@ export default function Home() {
   return (
     <div className='text-center flex flex-col justify-center'>
       {isLoading 
-        ? <Loading/>
+        // ? <Loading/>
+        ? ""
         : <>
             <ButtonAuth setShowModal={setShowModal} name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
             <div className='bg-green-300 var-content-class'>
