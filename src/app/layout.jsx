@@ -52,7 +52,7 @@ export default function RootLayout({children}) {
                 </div>    
               </Link>
               <div className="pt-[30px]">
-                {children} 
+                {/* {children}  */}
               </div>                   
               <p className='fixed bottom-0 text-white my-3 text-[10px] footer'>
                 Suporte técnico por <a href="https://wa.me/5521967261434" target="_blank" >e-Formaliza</a>
