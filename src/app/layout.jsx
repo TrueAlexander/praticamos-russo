@@ -42,24 +42,24 @@ export default function RootLayout({children}) {
       >
         <AuthProvider>
           {/* <div className="w-fit mx-auto bg-slate-500"> */}
-          <div className="">
+ 
             {/* <main className={`${quicksand.variable} font-quicksand max-w-[900px] w-full m-auto flex flex-col items-center h-lvh justify-center overflow-hidden relative main bg-red-500`}> */}
-            <main className={`${quicksand.variable} `}>            
+            <main className={`${quicksand.variable} font-quicksand max-w-[380px] mx-auto`}>            
               <Link 
                 href='/' 
                 // className="max-h-[90px] mt-[65px] fixed top-0 logo"
                 className=""
+                title="Voltar"
               >
                 <div 
-                  className="w-[90px] h-full cursor-pointer rounded-[50%] bg-gradient-radial from-[#dcddd8] to-[#9f50ac] border-4 border-[#9f50ac]"
-                  // className=""
+                  className="w-[90px] h-full cursor-pointer rounded-[50%] bg-gradient-radial from-[#dcddd8] to-[#9f50ac] border-4 border-[#9f50ac] mx-auto mt-[45px]"
                 >
                   <Image 
                     className="" 
                     src={Logo} 
                     alt="logo"
                     priority={false}
-                    // // placeholder="blur"
+                    // placeholder="blur"
                   />
                 </div>    
               </Link>
@@ -68,12 +68,12 @@ export default function RootLayout({children}) {
               </div>                   
               <p 
                 // className='fixed bottom-0 text-white my-3 text-[10px] footer'
-                className=""
+                className="text-white my-3 text-[10px] text-center"
               >
                 Suporte técnico por <a href="https://wa.me/5521967261434" target="_blank" >e-Formaliza</a>
               </p>
             </main>  
-          </div>  
+ 
         </AuthProvider>   
       </body>
     </html>

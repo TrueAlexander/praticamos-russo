@@ -31,7 +31,7 @@ const ButtonAuth = ({setShowModal, name, signOut, nameShow, setIsLoading}) => {
     <div>
       <p 
         // className="text-[#9f50ac] absolute left-5 top-5 animate__animated animate__fadeIn animate-slower"
-        className="text-[#9f50ac]"
+        className="text-[#9f50ac] animate__animated animate__fadeIn animate-slower"
       >
         Olá, {nameShow.length > 12 ? nameShow.slice(0, 9) + "..." : nameShow}!
       </p>
