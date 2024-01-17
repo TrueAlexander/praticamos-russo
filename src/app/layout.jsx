@@ -37,18 +37,23 @@ export default function RootLayout({children}) {
         // className="bg-[#2b2737] box-border flex flex-col  justify-center 
         // overflow-hidden 
         // bodyClass"
-        className="bg-[#2b2737] box-border flex flex-col  justify-center 
-      
-        "
-
+        className="bg-[#2b2737] h-svh"
         // className="bg-[#2b2737] p-4 box-border overflow-hidden bodyClass"
       >
         <AuthProvider>
-          <div className="w-fit mx-auto bg-slate-500">
+          {/* <div className="w-fit mx-auto bg-slate-500"> */}
+          <div className="">
             {/* <main className={`${quicksand.variable} font-quicksand max-w-[900px] w-full m-auto flex flex-col items-center h-lvh justify-center overflow-hidden relative main bg-red-500`}> */}
-            <main className={`${quicksand.variable} font-quicksand max-w-[900px] w-full m-auto flex flex-col items-center  justify-center relative main bg-red-500`}>            
-              <Link href='/' className="max-h-[90px] mt-[65px] fixed top-0 logo">
-                <div className="w-[90px] h-full cursor-pointer rounded-[50%] bg-gradient-radial from-[#dcddd8] to-[#9f50ac] border-4 border-[#9f50ac]">
+            <main className={`${quicksand.variable} `}>            
+              <Link 
+                href='/' 
+                // className="max-h-[90px] mt-[65px] fixed top-0 logo"
+                className=""
+              >
+                <div 
+                  className="w-[90px] h-full cursor-pointer rounded-[50%] bg-gradient-radial from-[#dcddd8] to-[#9f50ac] border-4 border-[#9f50ac]"
+                  // className=""
+                >
                   <Image 
                     className="" 
                     src={Logo} 
@@ -58,10 +63,13 @@ export default function RootLayout({children}) {
                   />
                 </div>    
               </Link>
-              {/* <div className="pt-[30px]">
+              <div className="pt-[30px]">
                 {children} 
-              </div>                    */}
-              <p className='fixed bottom-0 text-white my-3 text-[10px] footer'>
+              </div>                   
+              <p 
+                // className='fixed bottom-0 text-white my-3 text-[10px] footer'
+                className=""
+              >
                 Suporte técnico por <a href="https://wa.me/5521967261434" target="_blank" >e-Formaliza</a>
               </p>
             </main>  

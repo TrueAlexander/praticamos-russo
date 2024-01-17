@@ -29,11 +29,15 @@ const ButtonAuth = ({setShowModal, name, signOut, nameShow, setIsLoading}) => {
 
   return (
     <div>
-      <p className="text-[#9f50ac] absolute left-5 top-5 animate__animated animate__fadeIn animate-slower">
+      <p 
+        // className="text-[#9f50ac] absolute left-5 top-5 animate__animated animate__fadeIn animate-slower"
+        className="text-[#9f50ac]"
+      >
         Olá, {nameShow.length > 12 ? nameShow.slice(0, 9) + "..." : nameShow}!
       </p>
       <button
-        className="text-white absolute right-5 top-5 scale-125" 
+        // className="text-white absolute right-5 top-5 scale-125"
+        className="text-white scale-125" 
         title={nameShow === "Visitante" ? "Entrar ou Cadastrar-se" : "Sair"}
         onClick={handleClick}
       >
