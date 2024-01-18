@@ -42,7 +42,7 @@ export default function Home() {
   return (
     <div 
       // className='text-center flex flex-col justify-center'
-      className="text-center bg-slate-300"
+      className="text-center"
     >
       {isLoading 
         ? <Loading/>

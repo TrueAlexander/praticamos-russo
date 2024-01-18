@@ -30,7 +30,7 @@ export const metadata = {
 
 export default function RootLayout({children}) { 
   return (
-    <html lang="en" style={{ height: '100%' }}>
+    <html lang="en" style={{ height: 'calc(100% - 25px)' }}>
       <body 
         // style={{ height: '100vh', position: "absolute", top: 0, left: 0, right: 0, display: "flex", flexDirection: "column", justifyItems:"center"  }} 
         // className="bg-[#2b2737] p-4 box-border flex flex-col h-dvh absolute top-0 bottom-0 left-0 right-0 justify-center overflow-hidden bodyClass"
@@ -64,12 +64,12 @@ export default function RootLayout({children}) {
                   />
                 </div>    
               </Link>
-              <div className="flex-grow flex items-center justify-center overflow-y-auto">
+              <div className="flex-grow flex items-center justify-center overflow-y-auto children pb-4">
                 {children} 
               </div>                   
               <p 
                 // className='fixed bottom-0 text-white my-3 text-[10px] footer'
-                className="text-white my-3 text-[10px]  text-center bg-slate-500 mx-auto left-0"
+                className="text-white my-1 text-[10px] left-1/2 -translate-x-1/2  fixed bottom-0 mx-auto left-0"
               >
                 Suporte técnico por <a href="https://wa.me/5521967261434" target="_blank" >e-Formaliza</a>
               </p>
