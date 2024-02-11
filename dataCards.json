@@ -422,38 +422,874 @@
     "id": 11,
     "activity": "aprendizagem",
     "category": "cidade",
-    "name": "queijo",
-    "audio": "../../sounds/comida/Cheese.m4a",
+    "name": "cidade",
+    "audio": "../../sounds/cidade/City.m4a",
     "cards": [
       {
-        "title": "сыр",
-        "titleLat": "sir",
-        "alt": "queijo",
+        "title": "го́род",
+        "titleLat": "górad",
+        "alt": "cidade",
         "imgUrl": "",
         "isCorrect": true 
       },
       {
-        "title": "суп",
-        "titleLat": "sup",
-        "alt": "sopa",
+        "title": "ме́сто",
+        "titleLat": "miésta",
+        "alt": "lugar",
         "imgUrl": "",
         "isCorrect": false 
       },
       {
-        "title": "ры́ба",
-        "titleLat": "ríba",
-        "alt": "peixe",
+        "title": "райо́н",
+        "titleLat": "raión",
+        "alt": "bairro",
         "imgUrl": "",
         "isCorrect": false  
       },
       {
-        "title": "рис",
-        "titleLat": "ris",
-        "alt": "arroz",
+        "title": "у́лица",
+        "titleLat": "úlitsa",
+        "alt": "rua",
         "imgUrl": "",
         "isCorrect": false 
       }
     ],
     "active": true
-  }   
+  },
+  {
+    "id": 12,
+    "activity": "aprendizagem",
+    "category": "cidade",
+    "name": "rua",
+    "audio": "../../sounds/cidade/Street.m4a",
+    "cards": [
+      {
+        "title": "у́лица",
+        "titleLat": "úlitsa",
+        "alt": "rua",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "пло́щадь",
+        "titleLat": "plóschad'",
+        "alt": "praça",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "райо́н",
+        "titleLat": "raión",
+        "alt": "bairro",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "го́род",
+        "titleLat": "górad",
+        "alt": "cidade",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 13,
+    "activity": "aprendizagem",
+    "category": "cidade",
+    "name": "praça",
+    "audio": "../../sounds/cidade/Square.m4a",
+    "cards": [
+      {
+        "title": "пло́щадь",
+        "titleLat": "plóschad'",
+        "alt": "praça",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "столи́ца",
+        "titleLat": "stolítsa",
+        "alt": "capital",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "зда́ние",
+        "titleLat": "zdánie",
+        "alt": "prédio",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "у́лица",
+        "titleLat": "úlitsa",
+        "alt": "rua",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 14,
+    "activity": "aprendizagem",
+    "category": "cidade",
+    "name": "lugar",
+    "audio": "../../sounds/cidade/Place.m4a",
+    "cards": [
+      {
+        "title": "ме́сто",
+        "titleLat": "miésta",
+        "alt": "lugar",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "столи́ца",
+        "titleLat": "stolítsa",
+        "alt": "capital",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "го́род",
+        "titleLat": "górad",
+        "alt": "cidade",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "у́лица",
+        "titleLat": "úlitsa",
+        "alt": "rua",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 15,
+    "activity": "aprendizagem",
+    "category": "cidade",
+    "name": "avenida",
+    "audio": "../../sounds/cidade/Avenue.m4a",
+    "cards": [
+      {
+        "title": "проспе́кт",
+        "titleLat": "praspékt",
+        "alt": "avenida",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "сосе́д",
+        "titleLat": "sasiéd",
+        "alt": "vizinho",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "го́род",
+        "titleLat": "górad",
+        "alt": "cidade",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "пло́щадь",
+        "titleLat": "plóschad'",
+        "alt": "praça",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 16,
+    "activity": "aprendizagem",
+    "category": "cidade",
+    "name": "parque",
+    "audio": "../../sounds/cidade/Park.m4a",
+    "cards": [
+      {
+        "title": "парк",
+        "titleLat": "park",
+        "alt": "parque",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "проспе́кт",
+        "titleLat": "praspékt",
+        "alt": "avenida",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "го́род",
+        "titleLat": "górad",
+        "alt": "cidade",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "райо́н",
+        "titleLat": "raión",
+        "alt": "bairro",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 17,
+    "activity": "aprendizagem",
+    "category": "cidade",
+    "name": "casa",
+    "audio": "../../sounds/cidade/Home.m4a",
+    "cards": [
+      {
+        "title": "дом",
+        "titleLat": "dom",
+        "alt": "casa",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "райо́н",
+        "titleLat": "raión",
+        "alt": "bairro",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "ме́сто",
+        "titleLat": "miésta",
+        "alt": "lugar",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "зда́ние",
+        "titleLat": "zdánie",
+        "alt": "prédio",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 18,
+    "activity": "aprendizagem",
+    "category": "cidade",
+    "name": "prédio",
+    "audio": "../../sounds/cidade/Building.m4a",
+    "cards": [
+      {
+        "title": "зда́ние",
+        "titleLat": "zdánie",
+        "alt": "prédio",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "столи́ца",
+        "titleLat": "stolítsa",
+        "alt": "capital",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "ме́сто",
+        "titleLat": "miésta",
+        "alt": "lugar",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "дом",
+        "titleLat": "dom",
+        "alt": "casa",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 19,
+    "activity": "aprendizagem",
+    "category": "cidade",
+    "name": "capital",
+    "audio": "../../sounds/cidade/Capital.m4a",
+    "cards": [
+      {
+        "title": "столи́ца",
+        "titleLat": "stolítsa",
+        "alt": "capital",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "го́род",
+        "titleLat": "górad",
+        "alt": "cidade",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "ме́сто",
+        "titleLat": "miésta",
+        "alt": "lugar",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "у́лица",
+        "titleLat": "úlitsa",
+        "alt": "rua",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 20,
+    "activity": "aprendizagem",
+    "category": "cidade",
+    "name": "bairro",
+    "audio": "../../sounds/cidade/District.m4a",
+    "cards": [
+      {
+        "title": "райо́н",
+        "titleLat": "raión",
+        "alt": "bairro",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "го́род",
+        "titleLat": "górad",
+        "alt": "cidade",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "проспе́кт",
+        "titleLat": "praspékt",
+        "alt": "avenida",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "парк",
+        "titleLat": "park",
+        "alt": "parque",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 21,
+    "activity": "aprendizagem",
+    "category": "cidade",
+    "name": "vizinho",
+    "audio": "../../sounds/cidade/Neighbor.m4a",
+    "cards": [
+      {  
+        "title": "сосе́д",
+        "titleLat": "sasiéd",
+        "alt": "vizinho",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "го́род",
+        "titleLat": "górad",
+        "alt": "cidade",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "проспе́кт",
+        "titleLat": "praspékt",
+        "alt": "avenida",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "пло́щадь",
+        "titleLat": "plóschad'",
+        "alt": "praça",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 22,
+    "activity": "aprendizagem",
+    "category": "familia",
+    "name": "família",
+    "audio": "../../sounds/familia/Family.m4a",
+    "cards": [
+      {  
+        "title": "семья́",
+        "titleLat": "semiá",
+        "alt": "família",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "сестра́",
+        "titleLat": "siestrá",
+        "alt": "irmã",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "тётя",
+        "titleLat": "tiótia",
+        "alt": "tia",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "дя́дя",
+        "titleLat": "diádia",
+        "alt": "tio",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 23,
+    "activity": "aprendizagem",
+    "category": "familia",
+    "name": "pais",
+    "audio": "../../sounds/familia/Parents.m4a",
+    "cards": [
+      {  
+        "title": "роди́тели",
+        "titleLat": "rodítieli",
+        "alt": "pais",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "ба́бушка",
+        "titleLat": "bábushka",
+        "alt": "avó",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "тётя",
+        "titleLat": "tiótia",
+        "alt": "tia",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "дя́дя",
+        "titleLat": "diádia",
+        "alt": "tio",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 24,
+    "activity": "aprendizagem",
+    "category": "familia",
+    "name": "mãe",
+    "audio": "../../sounds/familia/Mom.m4a",
+    "cards": [
+      {  
+        "title": "ма́ма",
+        "titleLat": "máma",
+        "alt": "mãe",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "ба́бушка",
+        "titleLat": "bábushka",
+        "alt": "avó",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "па́па",
+        "titleLat": "pápa",
+        "alt": "pai",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "дя́дя",
+        "titleLat": "diádia",
+        "alt": "tio",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 25,
+    "activity": "aprendizagem",
+    "category": "familia",
+    "name": "pai",
+    "audio": "../../sounds/familia/Dad.m4a",
+    "cards": [
+      {  
+        "title": "па́па",
+        "titleLat": "pápa",
+        "alt": "pai",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "ма́ма",
+        "titleLat": "máma",
+        "alt": "mãe",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "бра́т",
+        "titleLat": "brát",
+        "alt": "irmão",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "дя́дя",
+        "titleLat": "diádia",
+        "alt": "tio",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 26,
+    "activity": "aprendizagem",
+    "category": "familia",
+    "name": "filho",
+    "audio": "../../sounds/familia/Son.m4a",
+    "cards": [
+      {  
+        "title": "сын",
+        "titleLat": "syn",
+        "alt": "filho",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "дочь",
+        "titleLat": "dotch",
+        "alt": "filha",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "бра́т",
+        "titleLat": "brát",
+        "alt": "irmão",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "дя́дя",
+        "titleLat": "diádia",
+        "alt": "tio",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 27,
+    "activity": "aprendizagem",
+    "category": "familia",
+    "name": "filha",
+    "audio": "../../sounds/familia/Daughter.m4a",
+    "cards": [
+      {  
+        "title": "дочь",
+        "titleLat": "dotch",
+        "alt": "filha",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "сестра́",
+        "titleLat": "siestrá",
+        "alt": "irmã",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "семья́",
+        "titleLat": "família",
+        "alt": "família",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "тётя",
+        "titleLat": "tiótia",
+        "alt": "tia",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 28,
+    "activity": "aprendizagem",
+    "category": "familia",
+    "name": "tio",
+    "audio": "../../sounds/familia/Uncle.m4a",
+    "cards": [
+      {  
+        "title": "дя́дя",
+        "titleLat": "diádia",
+        "alt": "tio",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "дочь",
+        "titleLat": "dotch",
+        "alt": "filha",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "брат",
+        "titleLat": "brat",
+        "alt": "irmão",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "тётя",
+        "titleLat": "tiótia",
+        "alt": "tia",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 29,
+    "activity": "aprendizagem",
+    "category": "familia",
+    "name": "tia",
+    "audio": "../../sounds/familia/Aunt.m4a",
+    "cards": [
+      {  
+        "title": "тётя",
+        "titleLat": "tiótia",
+        "alt": "tia",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "дя́дя",
+        "titleLat": "diádia",
+        "alt": "tio",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "ба́бушка",
+        "titleLat": "bábushka",
+        "alt": "avó",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "семья́",
+        "titleLat": "família",
+        "alt": "família",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 30,
+    "activity": "aprendizagem",
+    "category": "familia",
+    "name": "avô",
+    "audio": "../../sounds/familia/Grandfather.m4a",
+    "cards": [
+      {  
+        "title": "де́душка",
+        "titleLat": "diédushka",
+        "alt": "avô",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "дя́дя",
+        "titleLat": "diádia",
+        "alt": "tio",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "ба́бушка",
+        "titleLat": "bábushka",
+        "alt": "avó",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "дочь",
+        "titleLat": "dotch",
+        "alt": "filha",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 31,
+    "activity": "aprendizagem",
+    "category": "familia",
+    "name": "avó",
+    "audio": "../../sounds/familia/Grandmother.m4a",
+    "cards": [
+      {  
+        "title": "ба́бушка",
+        "titleLat": "bábushka",
+        "alt": "avó",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "де́душка",
+        "titleLat": "diédushka",
+        "alt": "avô",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "семья́",
+        "titleLat": "família",
+        "alt": "família",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "дочь",
+        "titleLat": "dotch",
+        "alt": "filha",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 32,
+    "activity": "aprendizagem",
+    "category": "familia",
+    "name": "irmão",
+    "audio": "../../sounds/familia/Brother.m4a",
+    "cards": [
+      {  
+        "title": "бра́т",
+        "titleLat": "brat",
+        "alt": "irmão",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "сын",
+        "titleLat": "syn",
+        "alt": "filho",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "семья́",
+        "titleLat": "família",
+        "alt": "família",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "дочь",
+        "titleLat": "dotch",
+        "alt": "filha",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  },
+  {
+    "id": 33,
+    "activity": "aprendizagem",
+    "category": "familia",
+    "name": "irmã",
+    "audio": "../../sounds/familia/Sister.m4a",
+    "cards": [
+      {  
+        "title": "сестра́",
+        "titleLat": "siestrá",
+        "alt": "irmã",
+        "imgUrl": "",
+        "isCorrect": true 
+      },
+      {
+        "title": "тётя",
+        "titleLat": "tiótia",
+        "alt": "tia",
+        "imgUrl": "",
+        "isCorrect": false 
+      },
+      {
+        "title": "семья́",
+        "titleLat": "família",
+        "alt": "família",
+        "imgUrl": "",
+        "isCorrect": false  
+      },
+      {
+        "title": "дочь",
+        "titleLat": "dotch",
+        "alt": "filha",
+        "imgUrl": "",
+        "isCorrect": false 
+      }
+    ],
+    "active": true
+  }                               
 ]

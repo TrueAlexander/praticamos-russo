@@ -2,7 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide scrollbar for Chrome, Safari, and newer Edge */
+::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
 
+/* Optional: Ensure other elements don't take the space of the scrollbar */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
 audio::-webkit-media-controls-panel {
   background-color: #a050acb7;
 }

@@ -8,6 +8,7 @@ import ButtonAuth from "@/components/ButtonAuth/ButtonAuth"
 import { useSession, signOut } from 'next-auth/react' 
 import Loading from './loading'
 import getLearnt from '@/utils/getLearnt'
+import dataCards from '../../../../dataCards.json'
 
 export default function Aprender() {
   const router = useRouter()
@@ -38,8 +39,24 @@ export default function Aprender() {
     } 
     if(session.status === "unauthenticated") router.push('/')
   }, [session.status])
-  
 
+  ////
+  const renderCategories = (array) => {
+ 
+    const uniqueObjectsArraySet = Array.from(new Set(array.map(obj => obj.category)))
+      .map(category => array.find(obj => obj.category === category))
+    return uniqueObjectsArraySet.map((item) => {
+      return <Button 
+        key={item.id}
+        addStyle={"my-2"} 
+        text={item.category} 
+        learnt={learntArr?.includes(`${item.category}`)}
+        disabled={false} 
+        onClick={() => router.push(`/atividades/aprender/${item.category}?rep=${learntArr?.includes(item.category)}`)} 
+      /> 
+    })
+  }
+  
   if (isLoading) {
     return (
       <div className="flex-auto flex flex-col justify-center">
@@ -56,23 +73,31 @@ export default function Aprender() {
         <p className='text-[#9f50ac] text-[18px] '>
           clique para aprender novas palavras 
         </p>
-        <p className='text-[#9f50ac] pb-4 text-[18px] '>
+        <p className='text-[#9f50ac] pb-2 text-[18px] '>
           ou reforçe o vocabulário aprendido:
         </p>
-        <Button
+        {renderCategories(dataCards)}
+        {/* <Button
           text="Comida"
           learnt={learntArr?.includes('comida')}
           disabled={false} 
           onClick={() => router.push(`/atividades/aprender/comida?rep=${learntArr?.includes('comida')}`)} 
         />
-         <br />
+        <br />
         <Button
           text="Cidade" 
           learnt={learntArr?.includes('cidade')}
           disabled={false} 
           onClick={() => router.push(`/atividades/aprender/cidade?rep=${learntArr?.includes('cidade')}`)} 
         />
-        <p className='text-[#9f50ac] pt-1 pb-1 text-[18px] '>
+        <br />
+        <Button
+          text="Família" 
+          learnt={learntArr?.includes('familia')}
+          disabled={false} 
+          onClick={() => router.push(`/atividades/aprender/familia?rep=${learntArr?.includes('familia')}`)} 
+        /> */}
+        <p className='text-[#9f50ac] pb-1 text-[18px] '>
           ou
         </p>
         <Button

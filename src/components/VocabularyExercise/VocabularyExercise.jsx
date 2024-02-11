@@ -50,7 +50,7 @@ const VocabularyExercise = ({ question, currentQuestionIndex, answers, rightAnsw
         <h3>Traduz e repete o que você está ouvindo:</h3>
         <div>
           <audio ref={audioRef} controls className="mx-auto">
-            <source src={audio} type="audio/ogg" />
+            <source src={audio} type="audio/mpeg" />
             Your browser does not support the audio tag.
           </audio>
         </div>
