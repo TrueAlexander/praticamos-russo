@@ -1,0 +1,81 @@
+[
+  {
+    "id": 0,
+    "tense": "presente",
+    "infinitive": "viver / жи́ть",
+    "answers": [
+      {"eu": ["vivo", "живу́"]},
+      {"você": ["vive", "живёшь"]},
+      {"ele": ["vive", "живёт"]},
+      {"nós": ["vivemos", "живём"]},
+      {"vocês": ["vivem", "живёте"]},
+      {"eles": ["vivem", "живу́т"]} 
+    ]
+    
+  },
+  {
+    "id": 1,
+    "tense": "presente",
+    "infinitive": "pensar / ду́мать",
+    "answers": [
+      {"eu": ["penso", "ду́маю"]},
+      {"você": ["pensa", "ду́маешь"]},
+      {"ele": ["pensa", "ду́мает"]},
+      {"nós": ["pensamos", "ду́маем"]},
+      {"vocês": ["pensam", "ду́маете"]},
+      {"eles": ["pensam", "ду́мают"]}
+    ]
+  },
+  {
+    "id": 2,
+    "tense": "presente",
+    "infinitive": "comer / есть",
+    "answers": [
+      {"eu": ["como", "ем"]},
+      {"você": ["comes", "ешь"]},
+      {"ele": ["come", "ест"]},
+      {"nós": ["comemos", "еди́м"]},
+      {"vocês": ["comen", "еди́те"]},
+      {"eles": ["comen", "едя́т"]}
+    ]
+  },
+  {
+    "id": 3,
+    "tense": "presente",
+    "infinitive": "trabalhar / рабо́тать",
+    "answers": [
+      {"eu": ["trabalho", "рабо́таю"]},
+      {"você": ["trabalha", "рабо́таешь"]},
+      {"ele": ["trabalha", "рабо́тает"]},
+      {"nós": ["trabalhamos", "рабо́таем"]},
+      {"vocês": ["trabalham", "рабо́таете"]},
+      {"eles": ["trabalham", "рабо́тают"]}
+    ]
+  },
+  {
+    "id": 4,
+    "tense": "presente",
+    "infinitive": "amar / люби́ть",
+    "answers": [
+      {"eu": ["amo", "люблю́"]},
+      {"você": ["ama", "лю́бишь"]},
+      {"ele": ["ama", "лю́бит"]},
+      {"nós": ["amamos", "лю́бим"]},
+      {"vocês": ["amam", "лю́бите"]},
+      {"eles": ["amam", "лю́бят"]}
+    ]
+  },
+  {
+    "id": 5,
+    "tense": "presente",
+    "infinitive": "cantar / петь",
+    "answers": [
+      {"eu": ["canto", "пою́"]},
+      {"você": ["canta", "поёшь"]},
+      {"ele": ["canta", "поёт"]},
+      {"nós": ["cantamos", "поём"]},
+      {"vocês": ["cantam", "поёте"]},
+      {"eles": ["cantam", "пою́т"]}
+    ]
+  }
+]

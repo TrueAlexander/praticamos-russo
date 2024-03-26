@@ -5,7 +5,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "café",
-    "audio": "../../sounds/comida/Coffee.ogg",
+    "audio": "../../../sounds/comida/Coffee.ogg",
     "cards": [
       {
         "title": "ко́фе",
@@ -43,7 +43,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "leite",
-    "audio": "../../sounds/comida/Milk.ogg",
+    "audio": "../../../sounds/comida/Milk.ogg",
     "cards": [
       {
         "title": "молоко́",
@@ -81,7 +81,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "sopa",
-    "audio": "../../sounds/comida/Soup.ogg",
+    "audio": "../../../sounds/comida/Soup.ogg",
     "cards": [
       {
         "title": "суп",
@@ -119,7 +119,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "água",
-    "audio": "../../sounds/comida/Water.ogg",
+    "audio": "../../../sounds/comida/Water.ogg",
     "cards": [
       {
         "title": "ры́ба",
@@ -157,7 +157,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "arroz",
-    "audio": "../../sounds/comida/Rice.ogg",
+    "audio": "../../../sounds/comida/Rice.ogg",
     "cards": [
       {
         "title": "рис",
@@ -195,7 +195,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "batata",
-    "audio": "../../sounds/comida/Potato.ogg",
+    "audio": "../../../sounds/comida/Potato.ogg",
     "cards": [
       {
         "title": "карто́шка",
@@ -233,7 +233,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "macarrão",
-    "audio": "../../sounds/comida/Pasta.ogg",
+    "audio": "../../../sounds/comida/Pasta.ogg",
     "cards": [
       {
         "title": "макаро́ны",
@@ -271,7 +271,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "carne",
-    "audio": "../../sounds/comida/Meat.ogg",
+    "audio": "../../../sounds/comida/Meat.ogg",
     "cards": [
       {
         "title": "мя́со",
@@ -309,7 +309,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "peixe",
-    "audio": "../../sounds/comida/Fish.ogg",
+    "audio": "../../../sounds/comida/Fish.ogg",
     "cards": [
       {
         "title": "ры́ба",
@@ -347,7 +347,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "frango",
-    "audio": "../../sounds/comida/Chicken.ogg",
+    "audio": "../../../sounds/comida/Chicken.ogg",
     "cards": [
       {
         "title": "ку́рица",
@@ -385,7 +385,7 @@
     "activity": "aprendizagem",
     "category": "comida",
     "name": "queijo",
-    "audio": "../../sounds/comida/Cheese.m4a",
+    "audio": "../../../sounds/comida/Cheese.m4a",
     "cards": [
       {
         "title": "сыр",
@@ -423,7 +423,7 @@
     "activity": "aprendizagem",
     "category": "cidade",
     "name": "cidade",
-    "audio": "../../sounds/cidade/City.m4a",
+    "audio": "../../../sounds/cidade/City.m4a",
     "cards": [
       {
         "title": "го́род",
@@ -461,7 +461,7 @@
     "activity": "aprendizagem",
     "category": "cidade",
     "name": "rua",
-    "audio": "../../sounds/cidade/Street.m4a",
+    "audio": "../../../sounds/cidade/Street.m4a",
     "cards": [
       {
         "title": "у́лица",
@@ -499,7 +499,7 @@
     "activity": "aprendizagem",
     "category": "cidade",
     "name": "praça",
-    "audio": "../../sounds/cidade/Square.m4a",
+    "audio": "../../../sounds/cidade/Square.m4a",
     "cards": [
       {
         "title": "пло́щадь",
@@ -537,7 +537,7 @@
     "activity": "aprendizagem",
     "category": "cidade",
     "name": "lugar",
-    "audio": "../../sounds/cidade/Place.m4a",
+    "audio": "../../../sounds/cidade/Place.m4a",
     "cards": [
       {
         "title": "ме́сто",
@@ -575,7 +575,7 @@
     "activity": "aprendizagem",
     "category": "cidade",
     "name": "avenida",
-    "audio": "../../sounds/cidade/Avenue.m4a",
+    "audio": "../../../sounds/cidade/Avenue.m4a",
     "cards": [
       {
         "title": "проспе́кт",
@@ -613,7 +613,7 @@
     "activity": "aprendizagem",
     "category": "cidade",
     "name": "parque",
-    "audio": "../../sounds/cidade/Park.m4a",
+    "audio": "../../../sounds/cidade/Park.m4a",
     "cards": [
       {
         "title": "парк",
@@ -651,7 +651,7 @@
     "activity": "aprendizagem",
     "category": "cidade",
     "name": "casa",
-    "audio": "../../sounds/cidade/Home.m4a",
+    "audio": "../../../sounds/cidade/Home.m4a",
     "cards": [
       {
         "title": "дом",
@@ -689,7 +689,7 @@
     "activity": "aprendizagem",
     "category": "cidade",
     "name": "prédio",
-    "audio": "../../sounds/cidade/Building.m4a",
+    "audio": "../../../sounds/cidade/Building.m4a",
     "cards": [
       {
         "title": "зда́ние",
@@ -727,7 +727,7 @@
     "activity": "aprendizagem",
     "category": "cidade",
     "name": "capital",
-    "audio": "../../sounds/cidade/Capital.m4a",
+    "audio": "../../../sounds/cidade/Capital.m4a",
     "cards": [
       {
         "title": "столи́ца",
@@ -765,7 +765,7 @@
     "activity": "aprendizagem",
     "category": "cidade",
     "name": "bairro",
-    "audio": "../../sounds/cidade/District.m4a",
+    "audio": "../../../sounds/cidade/District.m4a",
     "cards": [
       {
         "title": "райо́н",
@@ -803,7 +803,7 @@
     "activity": "aprendizagem",
     "category": "cidade",
     "name": "vizinho",
-    "audio": "../../sounds/cidade/Neighbor.m4a",
+    "audio": "../../../sounds/cidade/Neighbor.m4a",
     "cards": [
       {  
         "title": "сосе́д",
@@ -841,7 +841,7 @@
     "activity": "aprendizagem",
     "category": "familia",
     "name": "família",
-    "audio": "../../sounds/familia/Family.m4a",
+    "audio": "../../../sounds/familia/Family.m4a",
     "cards": [
       {  
         "title": "семья́",
@@ -879,7 +879,7 @@
     "activity": "aprendizagem",
     "category": "familia",
     "name": "pais",
-    "audio": "../../sounds/familia/Parents.m4a",
+    "audio": "../../../sounds/familia/Parents.m4a",
     "cards": [
       {  
         "title": "роди́тели",
@@ -917,7 +917,7 @@
     "activity": "aprendizagem",
     "category": "familia",
     "name": "mãe",
-    "audio": "../../sounds/familia/Mom.m4a",
+    "audio": "../../../sounds/familia/Mom.m4a",
     "cards": [
       {  
         "title": "ма́ма",
@@ -955,7 +955,7 @@
     "activity": "aprendizagem",
     "category": "familia",
     "name": "pai",
-    "audio": "../../sounds/familia/Dad.m4a",
+    "audio": "../../../sounds/familia/Dad.m4a",
     "cards": [
       {  
         "title": "па́па",
@@ -993,7 +993,7 @@
     "activity": "aprendizagem",
     "category": "familia",
     "name": "filho",
-    "audio": "../../sounds/familia/Son.m4a",
+    "audio": "../../../sounds/familia/Son.m4a",
     "cards": [
       {  
         "title": "сын",
@@ -1031,7 +1031,7 @@
     "activity": "aprendizagem",
     "category": "familia",
     "name": "filha",
-    "audio": "../../sounds/familia/Daughter.m4a",
+    "audio": "../../../sounds/familia/Daughter.m4a",
     "cards": [
       {  
         "title": "дочь",
@@ -1069,7 +1069,7 @@
     "activity": "aprendizagem",
     "category": "familia",
     "name": "tio",
-    "audio": "../../sounds/familia/Uncle.m4a",
+    "audio": "../../../sounds/familia/Uncle.m4a",
     "cards": [
       {  
         "title": "дя́дя",
@@ -1107,7 +1107,7 @@
     "activity": "aprendizagem",
     "category": "familia",
     "name": "tia",
-    "audio": "../../sounds/familia/Aunt.m4a",
+    "audio": "../../../sounds/familia/Aunt.m4a",
     "cards": [
       {  
         "title": "тётя",
@@ -1145,7 +1145,7 @@
     "activity": "aprendizagem",
     "category": "familia",
     "name": "avô",
-    "audio": "../../sounds/familia/Grandfather.m4a",
+    "audio": "../../../sounds/familia/Grandfather.m4a",
     "cards": [
       {  
         "title": "де́душка",
@@ -1183,7 +1183,7 @@
     "activity": "aprendizagem",
     "category": "familia",
     "name": "avó",
-    "audio": "../../sounds/familia/Grandmother.m4a",
+    "audio": "../../../sounds/familia/Grandmother.m4a",
     "cards": [
       {  
         "title": "ба́бушка",
@@ -1221,7 +1221,7 @@
     "activity": "aprendizagem",
     "category": "familia",
     "name": "irmão",
-    "audio": "../../sounds/familia/Brother.m4a",
+    "audio": "../../../sounds/familia/Brother.m4a",
     "cards": [
       {  
         "title": "бра́т",
@@ -1259,7 +1259,7 @@
     "activity": "aprendizagem",
     "category": "familia",
     "name": "irmã",
-    "audio": "../../sounds/familia/Sister.m4a",
+    "audio": "../../../sounds/familia/Sister.m4a",
     "cards": [
       {  
         "title": "сестра́",

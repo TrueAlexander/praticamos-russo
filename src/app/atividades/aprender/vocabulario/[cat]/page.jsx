@@ -4,9 +4,9 @@ import { shuffleArray } from "@/utils/arrayUtils"
 import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 import { useEffect, useState } from "react"
-import dataCards from '../../../../../dataCards.json'
+import dataCards from '../../../../../../dataCards.json'
 //Components
-import Vocabulary from "../../../../components/Vocabulary/Vocabulary"
+import Vocabulary from "../../../../../components/Vocabulary/Vocabulary"
 import Loading from "../loading"
 import { useSearchParams } from "next/navigation"
 const TOTAL_QUESTIONS = 11

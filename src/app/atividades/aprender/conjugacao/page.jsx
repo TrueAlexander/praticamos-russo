@@ -8,8 +8,7 @@ import ButtonAuth from "@/components/ButtonAuth/ButtonAuth"
 import { useSession, signOut } from 'next-auth/react' 
 import Loading from './loading'
 
-
-export default function Aprender() {
+export default function Conjugacao() {
   const router = useRouter()
   const session = useSession()
 
@@ -17,11 +16,13 @@ export default function Aprender() {
   const [isLoading, setIsLoading] = useState(session.status === 'loading')
 
   const name = session.data?.user?.name || null
-  // const email = session.data?.user?.email || null
+  const email = session.data?.user?.email || null
 
   useEffect(() => {
     setIsLoading(session.status === 'loading')
-    if(session.status === "authenticated") {  
+
+    if(session.status === "authenticated") {
+      // getLearnt(email, name).then(result => setLearntArr(result))  
     }
     if (session.data?.user?.name) {
       setNameShow(session.data?.user?.name)
@@ -30,8 +31,6 @@ export default function Aprender() {
     } 
     if(session.status === "unauthenticated") router.push('/')
   }, [session.status])
-
-  ////
 
   
   if (isLoading) {
@@ -46,21 +45,23 @@ export default function Aprender() {
         <div className='absolute top-0 left-0 right-0'>
           <ButtonAuth name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
         </div>  
-        <p className='text-white p-3 pt-6 font-bold text-[22px]'>Escolhe o que quer aprender:</p>
+        <p className='text-white p-3 pt-6 font-bold text-[22px]'>Escolha um tempo verbal:</p>
         <p className='text-[#9f50ac] text-[18px] '>
-          clique para começar 
+          clique para aprender e/ou praticar conjugação 
         </p>
-        <Button
-          text="Palavras novas"
-          addStyle={"my-2"}
-          disabled={false} 
-          onClick={() => router.push('/atividades/aprender/vocabulario')} 
-        />
-        <Button
-          text="Conjugar verbos"
+        <Button 
           addStyle={"my-2"} 
+          text="Presente" 
+          // learnt={learntArr?.includes(`${item.category}`)}
           disabled={false} 
-          onClick={() => router.push('/atividades/aprender/conjugacao')} 
+          onClick={() => router.push('/atividades/aprender/conjugacao/presente')} 
+        />
+        <Button 
+          addStyle={"my-2"} 
+          text="Passado" 
+          // learnt={learntArr?.includes(`${item.category}`)}
+          disabled={true} 
+          onClick={() => router.push('/atividades/aprender/conjugacao/passado')}
         />
         <p className='text-[#9f50ac] pb-1 text-[18px] '>
           ou
@@ -69,7 +70,7 @@ export default function Aprender() {
           text="Voltar" 
           learnt={false}
           disabled={false} 
-          onClick={() => router.push('/atividades')} 
+          onClick={() => router.push('/atividades/aprender')} 
         />
       </div>
     )

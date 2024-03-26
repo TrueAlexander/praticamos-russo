@@ -6,7 +6,7 @@ const Button = ({name, text, disabled, onClick, addStyle, learnt}) => {
   return (
     <>
       <button
-        className={`bg-[#9f50ac] select-none  relative font-bold h-[32px] min-w-[100px] px-2 rounded-[10px] text-white mr-2 ml-2 ${disabled ? "cursor-default bg-[#a050ac69] text-slate-400" : "active:scale-95"} ${addStyle ? addStyle : ""}`}
+        className={`bg-[#9f50ac] select-none  tracking-wider relative font-bold h-[32px] min-w-[100px] px-2 rounded-[10px] text-white mr-2 ml-2 ${disabled ? "cursor-default bg-[#a050ac69] text-slate-400" : "active:scale-95"} ${addStyle ? addStyle : ""}`}
         onClick={onClick}
         disabled={disabled}
         name={name}
