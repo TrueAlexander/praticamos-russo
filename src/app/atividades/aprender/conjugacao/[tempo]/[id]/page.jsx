@@ -5,13 +5,13 @@ import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 import { useEffect, useState } from "react"
 import { useSession, signOut } from 'next-auth/react' 
-import dataVerbs from '../../../../../../../dataVerbs.json'
+import dataVerbsPresent from '../../../../../../../dataVerbsPresent.json'
+import dataVerbsPast from '../../../../../../../dataVerbsPast.json'
 //Components
 import Loading from "../loading"
-import { useSearchParams } from "next/navigation"
 import Button from "@/components/Button/Button"
 import { useRouter } from "next/navigation"
-import OnlyNameShow from '@/components/OnlyNameShow/OnlyNameShow'
+// import OnlyNameShow from '@/components/OnlyNameShow/OnlyNameShow'
 import ReadVerb from '@/components/ReadVerb/ReadVerb'
 import InteractVerb from "@/components/InteractVerb/InteractVerb"
 
@@ -20,24 +20,22 @@ const VerbTense = ({params}) => {
   
   const router = useRouter()
   const session = useSession()
-  const nameShow = session.data?.user?.name
-  // const searchParams = useSearchParams()
-  // const repeat = searchParams.get('rep')
+  // const nameShow = session.data?.user?.name
+
   const id = params.id
+  const tense = params.tempo
+  const dataVerbs = tense === "passado" ? dataVerbsPast : dataVerbsPresent
   const verb = dataVerbs[id]
 
   const [interact, setInteract] = useState(false)
 
   const conjugations = verb.answers
 
-  //
   const audios = verb.audios || ""
-
-  //
-
   console.log(audios)
   
-  const pronouns = [
+  const pronouns = tense !== "passado" 
+  ? [
     ["Я", "Eu"],
     ["Ты", "Você"],
     ["Он/Она́", "Ele/Ela"],
@@ -45,32 +43,13 @@ const VerbTense = ({params}) => {
     ["Вы", "Vocês"],
     ["Они́", "Eles/Elas"],
   ]
-  // ["Он/Она́/Оно́", "Ele / Ela"],
-  //////
+  : [
+    ["Он", "Ele"],
+    ["Она́", "Ela"],
+    ["Оно́", "Isso"],
+    ["Они́", "Eles"],
+  ] 
 
-  // return (
-  //   <div className={interact 
-  //     ? styles.verbsAction + " container" 
-  //     : styles.verbs + " container"}
-  //   >
-  //     <h2 className={styles.verbsTitle}>Conjugación del verbo: <span>{verb.infinitive}</span></h2>
-  //     {interact 
-  //       ? <Interact conjugations={conjugations} pronouns={pronouns} />
-  //       : <Read conjugations={conjugations} pronouns={pronouns} />}
-  //     <button
-  //       className="btn btn-forward"
-  //       onClick={() => setInteract(!interact)}
-  //     >
-  //       &#8594;
-  //     </button>
-  //     <ButtonBack/>
-  //   </div>
-    
-  // )
-
-
-
-  /////
 
   if (session.status === "loading") {
     return (
@@ -101,7 +80,7 @@ const VerbTense = ({params}) => {
             text="à lista de verbos"
             addStyle="w-[180px] ml-auto mr-auto"
             disabled={false} 
-            onClick={() => router.push('/atividades/aprender/conjugacao/presente')} 
+            onClick={() => router.push(`/atividades/aprender/conjugacao/${tense}`)} 
           />
       </div>    
     )

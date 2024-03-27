@@ -29,9 +29,9 @@ const AnswersVerb = ({conjugations, setChosen, setCheckResults}) => {
   
   return (
     <div 
-      className={countClick < 6 ? "flex h-[70px] w-[300px] mt-2 border flex-wrap text-white text-sm p-1 bg-[#a050ac4e] rounded-md" : ""}
+      className={countClick < conjugations.length ? "flex h-[70px] w-[300px] mt-2 border flex-wrap text-white text-sm p-1 bg-[#a050ac4e] rounded-md" : ""}
     >
-      {countClick < 6 ? array.map((item, ind) => {
+      {countClick < conjugations.length ? array.map((item, ind) => {
         const arrayAnswers = Object.values(item)
         return arrayAnswers.map(answer => {
           return (

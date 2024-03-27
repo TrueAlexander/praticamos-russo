@@ -5,7 +5,8 @@ import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 import { useEffect, useState } from "react"
 import { useSession, signOut } from 'next-auth/react' 
-import dataVerbs from '../../../../../../dataVerbs.json'
+import dataVerbsPresent from '../../../../../../dataVerbsPresent.json'
+import dataVerbsPast from '../../../../../../dataVerbsPast.json'
 //Components
 import Loading from "../loading"
 import { useSearchParams } from "next/navigation"
@@ -23,8 +24,8 @@ const VerbTense = ({params}) => {
   // const searchParams = useSearchParams()
   // const repeat = searchParams.get('rep')
   const tense = params.tempo
-  // console.log(tense)
-  // console.log(dataVerbs)
+  const dataVerbs = tense === "passado" ? dataVerbsPast : dataVerbsPresent
+  console.log(dataVerbs)
 // Function to shuffle the cards for a given activity
 // function shuffleCards(activity) {
 //   const shuffledCards = [...activity.cards];
@@ -65,14 +66,15 @@ const VerbTense = ({params}) => {
     return ( 
       <div className='fixed z-[10000] top-0 bottom-0 overflow-y-auto bg-[#2b2737] text-center flex flex-col justify-center' >
           {/* <OnlyNameShow nameShow={nameShow}/> */}
-          <p className='text-white p-4 font-bold text-[22px]'>Escolhe um verbo:</p>
+          <p className='text-white p-1 font-bold text-[22px]'>Tempo {tense.charAt(0).toUpperCase() + tense.slice(1)}</p>
+          <p className='text-[#9f50ac] p-1 text-[18px]'>Escolhe um verbo:</p>
           {dataVerbs.map(verb =>(
               <Button
                 key={verb.id}
                 addStyle={"my-2"} 
                 text={verb.infinitive} 
                 disabled={false} 
-                onClick={() => router.push(`/atividades/aprender/conjugacao/presente/${verb.id}`)}
+                onClick={() => router.push(`/atividades/aprender/conjugacao/${tense}/${verb.id}`)}
               />
               )
           )}

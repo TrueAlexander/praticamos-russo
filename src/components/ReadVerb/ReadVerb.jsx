@@ -1,40 +1,36 @@
 import React from 'react'
 import Button from '../Button/Button'
 import { CgPlayButtonO } from "react-icons/cg"
-import { useRef } from 'react'
 
 const ReadVerb = ({conjugations, pronouns, audios}) => {
 
-  // const audioRef = useRef()
-
-  const handlePlay = (e) => {
-    console.dir(e.target)
-    // audioRef.current.pause()
-    // audioRef.current.load()
-    // audioRef.current.play()
-  }
+  const handlePlay = (index) => {
+    const audio = document.getElementById(`audio${index}`)
+    audio.pause()
+    audio.play()
+  };
 
   return (
     <>
       <p className='text-[#9f50ac]'>leia as conjugações:</p>
       {conjugations.map((item, index) => {
         const arrayAnswers = Object.values(item)
-        return arrayAnswers.map((answer, number) => {
+        return arrayAnswers.map((answer) => {
           return (
             <div key={index} className='py-[3px]'>
               <h2 className='text-white text-[19px]'><span>{pronouns[index][0]}</span>  <span>{answer[1]}</span>
                 <div className='inline-block'>
-                  <label 
+                  <div 
                     htmlFor="audio"
-                    onClick={handlePlay}
+                    onClick={() => handlePlay(index + 1)}
                     className='ml-3 inline-block hover:text-[#a050ac]  active:text-[#a050ac] text-lg'
                   >
                     <CgPlayButtonO />
-                  </label>
+                  </div>
                   <audio 
-                    // ref={audioRef} 
+                    id={`audio${index + 1}`}
                     controls 
-                    className="mx-auto"
+                    className="mx-auto hidden"
                   >
                     <source 
                       src={audios[index]} 

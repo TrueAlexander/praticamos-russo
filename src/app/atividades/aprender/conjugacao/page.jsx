@@ -60,7 +60,7 @@ export default function Conjugacao() {
           addStyle={"my-2"} 
           text="Passado" 
           // learnt={learntArr?.includes(`${item.category}`)}
-          disabled={true} 
+          disabled={false} 
           onClick={() => router.push('/atividades/aprender/conjugacao/passado')}
         />
         <p className='text-[#9f50ac] pb-1 text-[18px] '>
