@@ -64,7 +64,7 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
           Enviar
         </button>
       </form>
-      <p className='text-red-600 my-3 '>{error?.slice(6)}</p>
+      <p className='text-red-600 my-3 font-semibold'>{error && decodeURIComponent(error?.slice(6))}</p>
       <Link href="/recover-access">
         <p
           title="Recuperar a senha" 

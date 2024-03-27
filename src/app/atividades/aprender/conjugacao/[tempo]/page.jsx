@@ -23,8 +23,8 @@ const VerbTense = ({params}) => {
   // const searchParams = useSearchParams()
   // const repeat = searchParams.get('rep')
   const tense = params.tempo
-  console.log(tense)
-  console.log(dataVerbs)
+  // console.log(tense)
+  // console.log(dataVerbs)
 // Function to shuffle the cards for a given activity
 // function shuffleCards(activity) {
 //   const shuffledCards = [...activity.cards];
@@ -63,8 +63,8 @@ const VerbTense = ({params}) => {
     )
   } else if (session.status === "authenticated") {
     return ( 
-      <div className='text-center flex flex-col justify-center' >
-          <OnlyNameShow nameShow={nameShow}/>
+      <div className='fixed z-[10000] top-0 bottom-0 overflow-y-auto bg-[#2b2737] text-center flex flex-col justify-center' >
+          {/* <OnlyNameShow nameShow={nameShow}/> */}
           <p className='text-white p-4 font-bold text-[22px]'>Escolhe um verbo:</p>
           {dataVerbs.map(verb =>(
               <Button

@@ -29,6 +29,13 @@ const VerbTense = ({params}) => {
   const [interact, setInteract] = useState(false)
 
   const conjugations = verb.answers
+
+  //
+  const audios = verb.audios || ""
+
+  //
+
+  console.log(audios)
   
   const pronouns = [
     ["Я", "Eu"],
@@ -73,8 +80,8 @@ const VerbTense = ({params}) => {
     )
   } else if (session.status === "authenticated") {
     return ( 
-      <div className='text-center flex flex-col justify-center' >
-          <OnlyNameShow nameShow={nameShow}/>
+      <div className='fixed z-[10000] top-0 bottom-0 overflow-y-auto bg-[#2b2737] text-center flex flex-col justify-center' >
+          {/* <OnlyNameShow nameShow={nameShow}/> */}
           <button 
             className="text-white tracking-wider active:scale-95  h-[23px] min-w-[90px] rounded-[10px] bg-[#9f50ac] fixed top-1/2 transform -translate-y-1/2 right-0 lg:mr-[345px] md:mr-[200px] rotate-90 "
             onClick={() => setInteract(!interact)}
@@ -85,7 +92,7 @@ const VerbTense = ({params}) => {
           <p className='text-white p-1 text-[22px]'>{verb.infinitive}</p>
           {interact 
             ? <InteractVerb conjugations={conjugations} pronouns={pronouns} />
-            : <ReadVerb conjugations={conjugations} pronouns={pronouns} />
+            : <ReadVerb conjugations={conjugations} pronouns={pronouns} audios={audios} />
           }
           <p className='text-[#9f50ac] pt-1 pb-1 text-[18px] '>
             ou

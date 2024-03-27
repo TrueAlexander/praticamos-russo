@@ -79,15 +79,14 @@ const handler = NextAuth({
                   }
                 })
               })
-
-
-              throw new Error("O usuário não ativado! Confira por favor seu email")
+              throw new Error(encodeURIComponent("Usuário não ativado! Por favor, verifique o seu e-mail."))     
               }
             } else {
-              throw new Error("E-mail e/ou senha errados!")
+              throw new Error(encodeURIComponent("E-mail e/ou senha incorretos!"))
             }
           } else {
-            throw new Error("Usuário não encontrado!")
+            throw new Error(encodeURIComponent("Usuário não encontrado!"))
+            
           }
         } catch (err) {
           throw new Error(err)

@@ -17,9 +17,9 @@ export default function Teste() {
   const [isLoading, setIsLoading] = useState(session.status === 'loading')
   const [statScores, setStatScores] = useState()
 
-  const statVocabulario = statScores?.filter(item => item.hasOwnProperty('vocabulario'))[0]?.vocabulario.toFixed(1) || 0
-  const statVerbos = statScores?.filter(item => item.hasOwnProperty('verbos'))[0]?.verbos.toFixed(1) || 0
-  const statCasos = statScores?.filter(item => item.hasOwnProperty('casos'))[0]?.casos.toFixed(1) || 0
+  const statVocabulario = statScores?.filter(item => item.hasOwnProperty('vocabulario'))[0]?.vocabulario.toFixed(1) || "0.0"
+  const statVerbos = statScores?.filter(item => item.hasOwnProperty('verbos'))[0]?.verbos.toFixed(1) || "0.0"
+  const statCasos = statScores?.filter(item => item.hasOwnProperty('casos'))[0]?.casos.toFixed(1) || "0.0"
 
   const name = session.data?.user?.name || null
   const email = session.data?.user?.email || null
@@ -28,7 +28,7 @@ export default function Teste() {
     setIsLoading(session.status === 'loading')
 
     if(session.status === "authenticated") {
-      getResults(email, name).then(result => setStatScores(result))  
+      getResults(email, name).then(result => setStatScores(result)) 
     }
     if (session.data?.user?.name) {
       setNameShow(session.data?.user?.name)
