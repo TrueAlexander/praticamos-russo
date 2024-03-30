@@ -55,6 +55,12 @@ export default function Atividades() {
           disabled={false} 
           onClick={handleClick} 
         />
+        <br />
+        <Button
+          text="Jogar" 
+          disabled={true} 
+          onClick={handleClick} 
+        />
       </div>
     )
   } 

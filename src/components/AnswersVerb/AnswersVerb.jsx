@@ -29,14 +29,14 @@ const AnswersVerb = ({conjugations, setChosen, setCheckResults}) => {
   
   return (
     <div 
-      className={countClick < conjugations.length ? "flex h-[70px] w-[300px] mt-2 border flex-wrap text-white text-sm p-1 bg-[#a050ac4e] rounded-md" : ""}
+      className={countClick < conjugations.length ? "flex h-[80px] w-[300px] mt-2 border flex-wrap text-white text-sm p-1 bg-[#a050ac4e] rounded-md" : ""}
     >
       {countClick < conjugations.length ? array.map((item, ind) => {
         const arrayAnswers = Object.values(item)
         return arrayAnswers.map(answer => {
           return (
           <span
-            className='inline-block border border-dotted h-min px-1 rounded-md w-min mb-1 mr-1 ml-1 cursor-pointer justify-start'
+            className='inline-block border border-dotted h-min px-1 rounded-md w-min mb-3 mr-1 ml-1 p-1 cursor-pointer justify-start text-[16px]'
             onClick={clickChoose} 
             key={ind}>
               {answer[1]}

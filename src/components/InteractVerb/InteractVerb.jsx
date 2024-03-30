@@ -41,9 +41,9 @@ const InteractVerb = ({conjugations, pronouns}) => {
             return (
               <div 
                 key={index}
-                className='text-white my-1 flex flex-col justify-left gap-0 text-sm'
+                className='text-white my-1 flex flex-col justify-left gap-0'
               >
-                <div>
+                <div className='text-lg'>
                   <span className='mr-2'>{pronouns[index][0]}</span>  
                   <span 
                     className={result[index] ? "red" : "w-[95px] inline-block  border rounded-md border-dotted"}
@@ -52,8 +52,8 @@ const InteractVerb = ({conjugations, pronouns}) => {
                   </span>
                 </div>
                 <div>
-                  <span className='text-[#9f50ac] mr-2 text-sm'>{pronouns[index][1]}</span>
-                  <span className='text-[#9f50ac] text-sm'>{answer[0]}</span>
+                  <span className='text-[#9f50ac] mr-2'>{pronouns[index][1]}</span>
+                  <span className='text-[#9f50ac]'>{answer[0]}</span>
                 </div>                 
               </div>
             )
@@ -64,9 +64,9 @@ const InteractVerb = ({conjugations, pronouns}) => {
               return (
                 <div 
                   key={index} 
-                  className='text-white my-1 flex flex-col justify-left gap-0 text-sm'
+                  className='text-white my-1 flex flex-col justify-left gap-0'
                 >
-                  <div>
+                  <div className='text-lg'>
                     <span className='mr-2'>{pronouns[index][0]}</span>  
                     <span 
                       className={result[index] ? "" : "w-[95px] inline-block border rounded-md border-dotted"}
@@ -78,8 +78,8 @@ const InteractVerb = ({conjugations, pronouns}) => {
                     </span>
                   </div>
                   <div>
-                    <span className='text-[#9f50ac] mr-2 text-sm'>{pronouns[index][1]}</span>
-                    <span className='text-[#9f50ac] text-sm'>{answer[0]}</span>
+                    <span className='text-[#9f50ac] mr-2'>{pronouns[index][1]}</span>
+                    <span className='text-[#9f50ac]'>{answer[0]}</span>
                   </div>   
                 </div>
               )
