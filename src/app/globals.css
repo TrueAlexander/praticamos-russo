@@ -43,3 +43,10 @@ audio {
     display: none !important;
   }
 }
+/*
+@media screen and (max-height: 650px) {
+  body {
+    background-color: lightblue;
+  }
+  
+  /* Outros estilos para telas com altura menor que 650px */

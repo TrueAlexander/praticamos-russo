@@ -40,7 +40,7 @@ export default function Atividades() {
         <div className='absolute top-0 left-0 right-0'>
           <ButtonAuth name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
         </div>  
-        <p className='text-white p-4 py-6 font-bold text-[22px]'>Escolhe a atividade abaixo:</p>
+        <p className='text-white p-4 py-6 font-bold text-[22px]'>Escolha a atividade abaixo:</p>
         <p className='text-[#9f50ac] pt-4 pb-4 text-[18px] '>
           clique para começar
         </p>

@@ -30,7 +30,7 @@ const Login = ({setShowModal, setModeLogin, setIsLoading}) => {
   
   return (
     <div className="my-3 animate__animated animate__fadeIn">
-      <h3 className="text-[#9f50ac] text-[17px] font-bold">Faz Login:</h3>
+      <h3 className="text-[#9f50ac] text-[17px] font-bold">Faça Login:</h3>
       <form 
         className="form" 
         onSubmit={handleSubmit}

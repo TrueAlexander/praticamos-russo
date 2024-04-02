@@ -47,7 +47,7 @@ const VocabularyExercise = ({ question, currentQuestionIndex, answers, rightAnsw
       <div 
         // className="flex min-h-screen flex-col items-center justify-between p-24"
       >
-        <h3>Traduz e repete o que você está ouvindo:</h3>
+        <h3>Traduza e repita o que você está ouvindo:</h3>
         <div>
           <audio ref={audioRef} controls className="mx-auto">
             <source src={audio} type="audio/mpeg" />

@@ -46,7 +46,7 @@ export default function Aprender() {
         <div className='absolute top-0 left-0 right-0'>
           <ButtonAuth name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
         </div>  
-        <p className='text-white p-3 pt-6 font-bold text-[22px]'>Escolhe o que quer aprender:</p>
+        <p className='text-white p-3 pt-6 font-bold text-[22px]'>Escolha o que quer aprender:</p>
         <p className='text-[#9f50ac] text-[18px] '>
           clique para começar 
         </p>

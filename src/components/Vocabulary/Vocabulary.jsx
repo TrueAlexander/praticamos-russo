@@ -10,8 +10,11 @@ import VocabularyExercise from "../VocabularyExercise/VocabularyExercise"
 import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 import { shuffleArray } from "@/utils/arrayUtils"
+import { useMediaQuery } from 'react-responsive'
 
 const Vocabulary = ({questions, totalQuestions, category, repeat}) => {
+
+  const isScreenBelow650px = useMediaQuery({ query: '(max-height: 650px)' })
 
   const router = useRouter()
   const session = useSession()
@@ -108,8 +111,8 @@ const Vocabulary = ({questions, totalQuestions, category, repeat}) => {
         ? <div className="flex-auto flex flex-col justify-center">
             <Loading/> 
           </div>  
-        : <div className="text-white text-center mt-5 grow-0 flex flex-col justify-center">
-            <OnlyNameShow nameShow={nameShow}/>
+        : <div className={isScreenBelow650px ? "fixed z-[10000] top-0 bottom-0 overflow-y-auto bg-[#2b2737] text-center flex flex-col justify-center text-white" : "text-white text-center mt-5 grow-0 flex flex-col justify-center"}>
+            {/* <OnlyNameShow nameShow={nameShow}/> */}
             {/* <p className="text-[#9f50ac] font-bold pb-2 text-[16px]">
               Pergunta {currentQuestionIndex + 1} de {totalQuestions}
             </p> */}
