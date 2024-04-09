@@ -1,0 +1,548 @@
+[
+  {
+    "id": 0,
+    "russian": {
+      "masc": "большо́й",
+      "fem": "больша́я",
+      "neu": "большо́е",
+      "plural": "больши́е" 
+    },
+    "portuguese": {
+      "masc": "grande",
+      "fem": "grande",
+      "neu": "grande",
+      "plural": "grandes" 
+    },
+    "audios": {
+      "masc": "/sounds/adjectives/0/masc.m4a",
+      "fem": "/sounds/adjectives/0/fem.m4a",
+      "neu": "/sounds/adjectives/0/neu.m4a",
+      "plural": "/sounds/adjectives/0/plural.m4a" 
+    },
+    "audios_ant": {
+      "masc": "/sounds/adjectives/1/masc.m4a",
+      "fem": "/sounds/adjectives/1/fem.m4a",
+      "neu": "/sounds/adjectives/1/neu.m4a",
+      "plural": "/sounds/adjectives/1/plural.m4a" 
+    },
+    "antonyms_pt": {
+      "masc": "pequeno",
+      "fem": "pequena",
+      "neu": "pequeno",
+      "plural": "pequenos/-as" 
+    },
+    "antonyms_ru": {
+      "masc": "ма́ленький",
+      "fem": "ма́ленькая",
+      "neu": "ма́ленькое",
+      "plural": "ма́ленькие" 
+    }
+  },
+  {
+    "id": 1,
+    "russian": {
+      "masc": "ма́ленький",
+      "fem": "ма́ленькая",
+      "neu": "ма́ленькое",
+      "plural": "ма́ленькие" 
+    },
+    "portuguese": {
+      "masc": "pequeno",
+      "fem": "pequena",
+      "neu": "pequeno",
+      "plural": "pequenos/-as" 
+    },
+    "audios": {
+      "masc": "/sounds/adjectives/1/masc.m4a",
+      "fem": "/sounds/adjectives/1/fem.m4a",
+      "neu": "/sounds/adjectives/1/neu.m4a",
+      "plural": "/sounds/adjectives/1/plural.m4a" 
+    },
+    "audios_ant": {
+      "masc": "/sounds/adjectives/0/masc.m4a",
+      "fem": "/sounds/adjectives/0/fem.m4a",
+      "neu": "/sounds/adjectives/0/neu.m4a",
+      "plural": "/sounds/adjectives/0/plural.m4a" 
+    },
+    "antonyms_pt": {
+      "masc": "grande",
+      "fem": "grande",
+      "neu": "grande",
+      "plural": "grandes"
+    },
+    "antonyms_ru": {
+      "masc": "большо́й",
+      "fem": "больша́я",
+      "neu": "большо́е",
+      "plural": "больши́е"
+    } 
+  },
+  {
+    "id": 2,
+    "russian": {
+      "masc": "хоро́ший",
+      "fem": "хоро́шая",
+      "neu": "хоро́шее",
+      "plural": "хоро́шие" 
+    },
+    "portuguese": {
+      "masc": "bom",
+      "fem": "boa",
+      "neu": "bom",
+      "plural": "bons/boas" 
+    },
+    "audios": {
+      "masc": "/sounds/adjectives/2/masc.m4a",
+      "fem": "/sounds/adjectives/2/fem.m4a",
+      "neu": "/sounds/adjectives/2/neu.m4a",
+      "plural": "/sounds/adjectives/2/plural.m4a" 
+    },
+    "audios_ant": {
+      "masc": "/sounds/adjectives/3/masc.m4a",
+      "fem": "/sounds/adjectives/3/fem.m4a",
+      "neu": "/sounds/adjectives/3/neu.m4a",
+      "plural": "/sounds/adjectives/3/plural.m4a" 
+    },
+    "antonyms_pt": {
+      "masc": "ruim",
+      "fem": "ruim",
+      "neu": "ruim",
+      "plural": "ruins"
+    },
+    "antonyms_ru": {
+      "masc": "плохо́й",
+      "fem": "плоха́я",
+      "neu": "плохо́е",
+      "plural": "плохи́е"
+    } 
+  },
+  {
+    "id": 3,
+    "russian": {
+      "masc": "плохо́й",
+      "fem": "плоха́я",
+      "neu": "плохо́е",
+      "plural": "плохи́е"
+    },
+    "portuguese": {
+      "masc": "ruim",
+      "fem": "ruim",
+      "neu": "ruim",
+      "plural": "ruins"
+    },
+    "audios": {
+      "masc": "/sounds/adjectives/3/masc.m4a",
+      "fem": "/sounds/adjectives/3/fem.m4a",
+      "neu": "/sounds/adjectives/3/neu.m4a",
+      "plural": "/sounds/adjectives/3/plural.m4a" 
+    },
+    "audios_ant": {
+      "masc": "/sounds/adjectives/2/masc.m4a",
+      "fem": "/sounds/adjectives/2/fem.m4a",
+      "neu": "/sounds/adjectives/2/neu.m4a",
+      "plural": "/sounds/adjectives/2/plural.m4a" 
+    },
+    "antonyms_pt": {
+      "masc": "bom",
+      "fem": "boa",
+      "neu": "bom",
+      "plural": "bons/boas" 
+    },
+    "antonyms_ru": {
+      "masc": "хоро́ший",
+      "fem": "хоро́шая",
+      "neu": "хоро́шее",
+      "plural": "хоро́шие"
+    } 
+  },
+  {
+    "id": 4,
+    "russian": {
+      "masc": "но́вый",
+      "fem": "но́вая",
+      "neu": "но́вое",
+      "plural": "но́вые"
+    },
+    "portuguese": {
+      "masc": "novo",
+      "fem": "nova",
+      "neu": "novo",
+      "plural": "novos/-as"
+    },
+    "audios": {
+      "masc": "/sounds/adjectives/4/masc.m4a",
+      "fem": "/sounds/adjectives/4/fem.m4a",
+      "neu": "/sounds/adjectives/4/neu.m4a",
+      "plural": "/sounds/adjectives/4/plural.m4a" 
+    },
+    "audios_ant": {
+      "masc": "/sounds/adjectives/5/masc.m4a",
+      "fem": "/sounds/adjectives/5/fem.m4a",
+      "neu": "/sounds/adjectives/5/neu.m4a",
+      "plural": "/sounds/adjectives/5/plural.m4a" 
+    },
+    "antonyms_pt": {
+      "masc": "velho",
+      "fem": "velha",
+      "neu": "velho",
+      "plural": "velhos/-as" 
+    },
+    "antonyms_ru": {
+      "masc": "ста́рый",
+      "fem": "ста́рая",
+      "neu": "ста́рое",
+      "plural": "ста́рые"
+    } 
+  },
+  {
+    "id": 5,
+    "russian": {
+      "masc": "ста́рый",
+      "fem": "ста́рая",
+      "neu": "ста́рое",
+      "plural": "ста́рые"
+    },
+    "portuguese": {
+      "masc": "velho",
+      "fem": "velha",
+      "neu": "velho",
+      "plural": "velhos/-as" 
+    },
+    "audios": {
+      "masc": "/sounds/adjectives/5/masc.m4a",
+      "fem": "/sounds/adjectives/5/fem.m4a",
+      "neu": "/sounds/adjectives/5/neu.m4a",
+      "plural": "/sounds/adjectives/5/plural.m4a" 
+    },
+    "audios_ant": {
+      "masc": "/sounds/adjectives/4/masc.m4a",
+      "fem": "/sounds/adjectives/4/fem.m4a",
+      "neu": "/sounds/adjectives/4/neu.m4a",
+      "plural": "/sounds/adjectives/4/plural.m4a" 
+    },
+    "antonyms_pt": {
+      "masc": "novo",
+      "fem": "nova",
+      "neu": "novo",
+      "plural": "novos/-as" 
+    },
+    "antonyms_ru": {
+      "masc": "но́вый",
+      "fem": "но́вая",
+      "neu": "но́вое",
+      "plural": "но́вые"
+    } 
+  },
+  {
+    "id": 6,
+    "russian": {
+      "masc": "сло́жный",
+      "fem": "сло́жная",
+      "neu": "сло́жное",
+      "plural": "сло́жные"
+    },
+    "portuguese": {
+      "masc": "difícil",
+      "fem": "difícil",
+      "neu": "difícil",
+      "plural": "difíceis" 
+    },
+    "audios": {
+      "masc": "/sounds/adjectives/6/masc.m4a",
+      "fem": "/sounds/adjectives/6/fem.m4a",
+      "neu": "/sounds/adjectives/6/neu.m4a",
+      "plural": "/sounds/adjectives/6/plural.m4a" 
+    },
+    "audios_ant": {
+      "masc": "/sounds/adjectives/7/masc.m4a",
+      "fem": "/sounds/adjectives/7/fem.m4a",
+      "neu": "/sounds/adjectives/7/neu.m4a",
+      "plural": "/sounds/adjectives/7/plural.m4a" 
+    },
+    "antonyms_pt": {
+      "masc": "simples",
+      "fem": "simples",
+      "neu": "simples",
+      "plural": "simples" 
+    },
+    "antonyms_ru": {
+      "masc": "просто́й",
+      "fem": "проста́я",
+      "neu": "просто́е",
+      "plural": "просты́е"
+    } 
+  },
+  {
+    "id": 7,
+    "russian": {
+      "masc": "просто́й",
+      "fem": "проста́я",
+      "neu": "просто́е",
+      "plural": "просты́е"
+    },
+    "portuguese": {
+      "masc": "simples",
+      "fem": "simples",
+      "neu": "simples",
+      "plural": "simples"
+    },
+    "audios": {
+      "masc": "/sounds/adjectives/7/masc.m4a",
+      "fem": "/sounds/adjectives/7/fem.m4a",
+      "neu": "/sounds/adjectives/7/neu.m4a",
+      "plural": "/sounds/adjectives/7/plural.m4a" 
+    },
+    "audios_ant": {
+      "masc": "/sounds/adjectives/6/masc.m4a",
+      "fem": "/sounds/adjectives/6/fem.m4a",
+      "neu": "/sounds/adjectives/6/neu.m4a",
+      "plural": "/sounds/adjectives/6/plural.m4a" 
+    },
+    "antonyms_pt": {
+      "masc": "difícil",
+      "fem": "difícil",
+      "neu": "difícil",
+      "plural": "difíceis" 
+    },
+    "antonyms_ru": {
+      "masc": "сло́жный",
+      "fem": "сло́жная",
+      "neu": "сло́жное",
+      "plural": "сло́жные"
+    } 
+  },
+  {
+    "id": 8,
+    "russian": {
+      "masc": "интере́сный",
+      "fem": "интере́сная",
+      "neu": "интере́сное",
+      "plural": "интере́сные"
+    },
+    "portuguese": {
+      "masc": "interessante",
+      "fem": "interessante",
+      "neu": "interessante",
+      "plural": "interessantes" 
+    },
+    "audios": {
+      "masc": "/sounds/adjectives/8/masc.m4a",
+      "fem": "/sounds/adjectives/8/fem.m4a",
+      "neu": "/sounds/adjectives/8/neu.m4a",
+      "plural": "/sounds/adjectives/8/plural.m4a" 
+    },
+    "audios_ant": {
+      "masc": "/sounds/adjectives/9/masc.m4a",
+      "fem": "/sounds/adjectives/9/fem.m4a",
+      "neu": "/sounds/adjectives/9/neu.m4a",
+      "plural": "/sounds/adjectives/9/plural.m4a" 
+    },
+    "antonyms_pt": {
+      "masc": "chato",
+      "fem": "chata",
+      "neu": "chato",
+      "plural": "chatos/-as" 
+    },
+    "antonyms_ru": {
+      "masc": "ску́чный",
+      "fem": "ску́чная",
+      "neu": "ску́чное",
+      "plural": "ску́чные"
+    } 
+  },
+  {
+    "id": 9,
+    "russian": {
+      "masc": "ску́чный",
+      "fem": "ску́чная",
+      "neu": "ску́чное",
+      "plural": "ску́чные"
+    },
+    "portuguese": {
+      "masc": "chato",
+      "fem": "chata",
+      "neu": "chato",
+      "plural": "chatos/-as" 
+    },
+    "audios": {
+      "masc": "/sounds/adjectives/9/masc.m4a",
+      "fem": "/sounds/adjectives/9/fem.m4a",
+      "neu": "/sounds/adjectives/9/neu.m4a",
+      "plural": "/sounds/adjectives/9/plural.m4a" 
+    },
+    "audios_ant": {
+      "masc": "/sounds/adjectives/8/masc.m4a",
+      "fem": "/sounds/adjectives/8/fem.m4a",
+      "neu": "/sounds/adjectives/8/neu.m4a",
+      "plural": "/sounds/adjectives/8/plural.m4a" 
+    },
+    "antonyms_pt": {
+      "masc": "interessante",
+      "fem": "interessante",
+      "neu": "interessante",
+      "plural": "interessantes" 
+    },
+    "antonyms_ru": {
+      "masc": "интере́сный",
+      "fem": "интере́сная",
+      "neu": "интере́сное",
+      "plural": "интере́сные"
+    } 
+  },
+  {
+    "id": 10,
+    "russian": {
+      "masc": "све́тлый",
+      "fem": "све́тлая",
+      "neu": "све́тлое",
+      "plural": "све́тлые"
+    },
+    "portuguese": {
+      "masc": "claro",
+      "fem": "clara",
+      "neu": "claro",
+      "plural": "claros/-as" 
+    },
+    "audios": {
+      "masc": "/sounds/adjectives/10/masc.m4a",
+      "fem": "/sounds/adjectives/10/fem.m4a",
+      "neu": "/sounds/adjectives/10/neu.m4a",
+      "plural": "/sounds/adjectives/10/plural.m4a" 
+    },
+    "audios_ant": {
+      "masc": "/sounds/adjectives/11/masc.m4a",
+      "fem": "/sounds/adjectives/11/fem.m4a",
+      "neu": "/sounds/adjectives/11/neu.m4a",
+      "plural": "/sounds/adjectives/11/plural.m4a" 
+    },
+    "antonyms_pt": {
+      "masc": "escuro",
+      "fem": "escura",
+      "neu": "escuro",
+      "plural": "escuros/-as" 
+    },
+    "antonyms_ru": {
+      "masc": "тёмный",
+      "fem": "тёмная",
+      "neu": "тёмное",
+      "plural": "тёмные"
+    } 
+  },
+  {
+    "id": 11,
+    "russian": {
+      "masc": "тёмный",
+      "fem": "тёмная",
+      "neu": "тёмное",
+      "plural": "тёмные"
+    },
+    "portuguese": {
+      "masc": "escuro",
+      "fem": "escura",
+      "neu": "escuro",
+      "plural": "escuros/-as" 
+    },
+    "audios": {
+      "masc": "/sounds/adjectives/11/masc.m4a",
+      "fem": "/sounds/adjectives/11/fem.m4a",
+      "neu": "/sounds/adjectives/11/neu.m4a",
+      "plural": "/sounds/adjectives/11/plural.m4a" 
+    },
+    "audios_ant": {
+      "masc": "/sounds/adjectives/10/masc.m4a",
+      "fem": "/sounds/adjectives/10/fem.m4a",
+      "neu": "/sounds/adjectives/10/neu.m4a",
+      "plural": "/sounds/adjectives/10/plural.m4a" 
+    },
+    "antonyms_pt": {
+      "masc": "claro",
+      "fem": "clara",
+      "neu": "claro",
+      "plural": "claros/-as" 
+    },
+    "antonyms_ru": {
+      "masc": "све́тлый",
+      "fem": "све́тлая",
+      "neu": "све́тлое",
+      "plural": "све́тлые"
+    } 
+  },
+  {
+    "id": 12,
+    "russian": {
+      "masc": "горя́чий",
+      "fem": "горя́чая",
+      "neu": "горя́чее",
+      "plural": "горя́чие"
+    },
+    "portuguese": {
+      "masc": "quente",
+      "fem": "quente",
+      "neu": "quente",
+      "plural": "quentes" 
+    },
+    "audios": {
+      "masc": "/sounds/adjectives/12/masc.m4a",
+      "fem": "/sounds/adjectives/12/fem.m4a",
+      "neu": "/sounds/adjectives/12/neu.m4a",
+      "plural": "/sounds/adjectives/12/plural.m4a" 
+    },
+    "audios_ant": {
+      "masc": "/sounds/adjectives/13/masc.m4a",
+      "fem": "/sounds/adjectives/13/fem.m4a",
+      "neu": "/sounds/adjectives/13/neu.m4a",
+      "plural": "/sounds/adjectives/13/plural.m4a" 
+    },
+    "antonyms_pt": {
+      "masc": "frio",
+      "fem": "fria",
+      "neu": "frio",
+      "plural": "frios/-as" 
+    },
+    "antonyms_ru": {
+      "masc": "холо́дный",
+      "fem": "холо́дная",
+      "neu": "холо́дное",
+      "plural": "холо́дные"
+    } 
+  },
+  {
+    "id": 13,
+    "russian": {
+      "masc": "холо́дный",
+      "fem": "холо́дная",
+      "neu": "холо́дное",
+      "plural": "холо́дные"
+    },
+    "portuguese": {
+      "masc": "frio",
+      "fem": "fria",
+      "neu": "frio",
+      "plural": "frios/-as" 
+    },
+    "audios": {
+      "masc": "/sounds/adjectives/13/masc.m4a",
+      "fem": "/sounds/adjectives/13/fem.m4a",
+      "neu": "/sounds/adjectives/13/neu.m4a",
+      "plural": "/sounds/adjectives/13/plural.m4a" 
+    },
+    "audios_ant": {
+      "masc": "/sounds/adjectives/12/masc.m4a",
+      "fem": "/sounds/adjectives/12/fem.m4a",
+      "neu": "/sounds/adjectives/12/neu.m4a",
+      "plural": "/sounds/adjectives/12/plural.m4a" 
+    },
+    "antonyms_pt": {
+      "masc": "quente",
+      "fem": "quente",
+      "neu": "quente",
+      "plural": "quentes" 
+    },
+    "antonyms_ru": {
+      "masc": "горя́чий",
+      "fem": "горя́чая",
+      "neu": "горя́чее",
+      "plural": "горя́чие"
+    } 
+  }
+]

@@ -65,8 +65,8 @@ export default function Aprender() {
         <Button
           text="Adjetivos"
           addStyle={"my-2"} 
-          disabled={true} 
-          onClick={() => router.push('/atividades/aprender/conjugacao')} 
+          disabled={false} 
+          onClick={() => router.push('/atividades/aprender/adjetivos')} 
         />
         <Button
           text="Audição"

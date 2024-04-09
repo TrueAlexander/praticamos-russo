@@ -22,10 +22,7 @@ export const metadata = {
     siteName: 'Russolinguo | Praticamos russo',
     images: 'https://i.ibb.co/Y33yVng/img-OGextra-Big.png',
     type: 'website',
-  },
-
-
-  
+  }, 
 }
 
 export default function RootLayout({children}) { 
@@ -57,7 +54,7 @@ export default function RootLayout({children}) {
               {children} 
             </div>                   
             <p 
-              className="text-white mb-3 mt-1 text-[10px] left-1/2 -translate-x-1/2  fixed bottom-0 mx-auto left-0"
+              className="text-white mb-3 mt-1 text-[10px] -translate-x-1/2  fixed bottom-0 mx-auto left-1/2"
             >
               Suporte técnico por <a href="https://wa.me/5521967261434" target="_blank" >e-Formaliza</a>
             </p>
