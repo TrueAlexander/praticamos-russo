@@ -11,12 +11,14 @@ import Loading from "../loading"
 import Button from "@/components/Button/Button"
 import { useRouter } from "next/navigation"
 import ReadAdjectives from "@/components/ReadAdjectives/ReadAdjectives"
+import InteractAdjectives from "@/components/InteractAdjectives/InteractAdjectives"
 
 
 const Antonimos = () => {
   
   const router = useRouter()
   const session = useSession()
+  const name = session.data?.user?.name || null
 
   const [interact, setInteract] = useState(false)
 
@@ -24,23 +26,39 @@ const Antonimos = () => {
 
   // const audios = verb.audios || ""
   // console.log(audios)
-  
-  // const pronouns = tense !== "passado" 
-  // ? [
-  //   ["Я", "Eu"],
-  //   ["Ты", "Você"],
-  //   ["Он/Она́", "Ele/Ela"],
-  //   ["Мы", "Nós"],
-  //   ["Вы", "Vocês"],
-  //   ["Они́", "Eles/Elas"],
-  // ]
-  // : [
-  //   ["Он", "Ele"],
-  //   ["Она́", "Ela"],
-  //   ["Оно́", "Isso"],
-  //   ["Они́", "Eles"],
-  // ] 
+  const handleClickReturn = () => {
+    confirmAlert({
+      message: `${name}, tem certeza de que deseja sair da atividade?`,
+      buttons: [
+        {
+          label: 'Sim',
+          onClick: () => router.push("/atividades/aprender/adjetivos")  
+        },
+        {
+          label: 'Não',
+          // onClick: () => console.log('Click No')
+        }
+      ]
+    })
+  }
 
+  const handleInteract = () => {
+    if (interact === true) {
+      confirmAlert({
+        message: `${name}, tem certeza de que deseja sair da atividade?`,
+        buttons: [
+          {
+            label: 'Sim',
+            onClick: () => setInteract(!interact)  
+          },
+          {
+            label: 'Não',
+            // onClick: () => console.log('Click No')
+          }
+        ]
+      })
+    } else setInteract(!interact)
+  }
 
   if (session.status === "loading") {
     return (
@@ -51,19 +69,17 @@ const Antonimos = () => {
   } else if (session.status === "authenticated") {
     return ( 
       <div className='fixed z-[10000] top-0 bottom-0 overflow-y-auto bg-[#2b2737] text-center flex flex-col justify-center' >
-          <button 
+          {<button 
             className="text-white tracking-wider active:scale-95  h-[23px] min-w-[90px] rounded-[10px] bg-[#9f50ac] fixed top-1/2 transform -translate-y-1/2 right-0 lg:mr-[345px] md:mr-[200px] rotate-90 "
-            onClick={() => setInteract(!interact)}
+            onClick={handleInteract}
           >
             {!interact ? "Praticar" : "Aprender"}
-          </button>
+          </button>}
           <p className='text-white font-bold text-[20px]'>Adjetivos - Antônimos</p>
           {/* <p className='text-[#9f50ac] text-[16px]'>Escute e repita:</p> */}
           {interact 
-            ? "<InteractAdjectives conjugations={conjugations} pronouns={pronouns} />"
+            ? <InteractAdjectives adjectives={dataAdjectives} />
             : <ReadAdjectives adjectives={dataAdjectives}/>
-            // ? <InteractAdjectives conjugations={conjugations} pronouns={pronouns} />
-            // : <ReadAdjectives conjugations={conjugations} pronouns={pronouns} audios={audios} />
           }
           <p className='text-[#9f50ac] pt-1 pb-1 text-[18px] '>
             ou
@@ -72,7 +88,7 @@ const Antonimos = () => {
             text="Voltar"
             addStyle="w-[180px] ml-auto mr-auto"
             disabled={false} 
-            onClick={() => router.push("/atividades/aprender/adjetivos")} 
+            onClick={handleClickReturn} 
           />
       </div>    
     )

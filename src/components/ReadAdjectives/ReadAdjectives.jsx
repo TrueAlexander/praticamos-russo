@@ -1,7 +1,5 @@
-import React from 'react'
-import Button from '../Button/Button'
 import { CgPlayButtonO } from "react-icons/cg"
-import { shuffleArray } from '@/utils/arrayUtils'
+import { useState, useEffect } from 'react'
 
 const ReadAdjectives = ({adjectives}) => {
 
@@ -12,8 +10,6 @@ const ReadAdjectives = ({adjectives}) => {
     audio.pause()
     audio.play()
   }
-
-  
   const handlePlayAnt = (index) => {
     const audio = document.getElementById(`audio_ant${index + 1}`)
     console.log(index)
@@ -22,17 +18,24 @@ const ReadAdjectives = ({adjectives}) => {
     audio.play()
   }
 
-  const evenAdjectives = adjectives.filter(num => num.id % 2 === 0)
-  console.log(evenAdjectives)
-  // const shuffledAdjectives = shuffleArray(evenAdjectives)
-  // console.log(adjectives[1].audios.masc)
+  const [loading, setIsLoading] = useState(true)
+  const [currentData, setCurrentData] = useState('')
+
+  useEffect(() => {
+    const generateData = () => Math.random() > 0.5 ? 'even' : 'odd'
+    setCurrentData(generateData())
+    setIsLoading(false)
+  }, [])
+
+  const evenAdjectives = adjectives.filter(adj => adj.id % 2 === 0)
+  const oddAdjectives = adjectives.filter(adj => adj.id % 2 !==0)
+ 
+  const dataArr = currentData === 'even' ? evenAdjectives : oddAdjectives
 
   return (
-    <>
+    loading ? <></> : <>
       <p className='text-[#9f50ac] mb-5'>escute e repita:</p>
-      {evenAdjectives.map((item, index) => {
-        // const arrayAnswers = Object.values(item)
-        // console.log(arrayAnswers)
+      {dataArr.map((item, index) => {
         return (
           <div key={item.id} className='py-[3px] text-white text-[17px]'>
             <div>

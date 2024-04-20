@@ -80,6 +80,7 @@ const Quiz = ({questions, totalQuestions, category}) => {
       handleChangeQuestion(1)
     }
   }
+  
   if (session.status === "loading") {
     return (
       <div className="flex-auto flex flex-col justify-center">

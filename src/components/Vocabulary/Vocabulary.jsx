@@ -122,8 +122,6 @@ const Vocabulary = ({questions, totalQuestions, category, repeat}) => {
               answers={questions[currentQuestionIndex].cards}
               rightAnswer={rightAnswer}
               setDisabled={setDisabled}            
-              // userAnswer={userAnswers[currentQuestionIndex]}
-              // correctAnswer={questions[currentQuestionIndex].correct_answer
             />
             <div className="flex flex-col justify-center mt-6">
               <div>
