@@ -61,7 +61,7 @@ export default function Adjetivos() {
           addStyle={"my-2"} 
           text="Aplicação" 
           // learnt={learntArr?.includes(`${item.category}`)}
-          disabled={true} 
+          disabled={false} 
           onClick={() => router.push('/atividades/aprender/adjetivos/aplicacao')}
         />
         <p className='text-[#9f50ac] pb-1 text-[18px] '>

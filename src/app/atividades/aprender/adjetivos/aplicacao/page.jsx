@@ -5,16 +5,16 @@ import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 import { useEffect, useState } from "react"
 import { useSession, signOut } from 'next-auth/react' 
-import dataAdjectives from '../../../../../../dataAdjectives.json'
+import dataAdjectives from '../../../../../../dataAppAdjectives.json'
 //Components
 import Loading from "../loading"
 import Button from "@/components/Button/Button"
 import { useRouter } from "next/navigation"
-import ReadAdjectives from "@/components/ReadAdjectives/ReadAdjectives"
-import InteractAdjectives from "@/components/InteractAdjectives/InteractAdjectives"
+import ApplicateAdj from "@/components/ApplicateAdj/ApplicateAdj"
 
 
-const Antonimos = () => {
+
+const Aplicacao = () => {
   
   const router = useRouter()
   const session = useSession()
@@ -22,10 +22,6 @@ const Antonimos = () => {
 
   const [interact, setInteract] = useState(false)
 
-  // const conjugations = verb.answers
-
-  // const audios = verb.audios || ""
-  // console.log(audios)
   const handleClickReturn = () => {
     confirmAlert({
       message: `${name}, tem certeza de que deseja sair da atividade?`,
@@ -69,18 +65,21 @@ const Antonimos = () => {
   } else if (session.status === "authenticated") {
     return ( 
       <div className='fixed z-[10000] top-0 bottom-0 overflow-y-auto bg-[#2b2737] text-center flex flex-col justify-center' >
-          {<button 
+          <button 
             className="text-white tracking-wider active:scale-95  h-[23px] min-w-[90px] rounded-[10px] bg-[#9f50ac] fixed top-1/2 transform -translate-y-1/2 right-0 lg:mr-[345px] md:mr-[200px] rotate-90 "
             onClick={handleInteract}
           >
             {!interact ? "Praticar" : "Aprender"}
-          </button>}
-          <p className='text-white font-bold text-[22px]'>Adjetivos - Antônimos</p>
+          </button>
+          <p className='text-white font-bold text-[22px]'>Adjetivos - Aplicação</p>
           {/* <p className='text-[#9f50ac] text-[16px]'>Escute e repita:</p> */}
           {interact 
-            ? <InteractAdjectives adjectives={dataAdjectives} />
-            : <ReadAdjectives adjectives={dataAdjectives}/>
+            ? 
+            "<InteractApplicateAdjectives adjectives={dataAdjectives} />"
+            : 
+            "<ReadApplicateAdjectives adjectives={dataAdjectives}/>"
           }
+            
           <p className='text-[#9f50ac] pt-1 pb-1 text-[18px] '>
             ou
           </p>
@@ -102,4 +101,4 @@ const Antonimos = () => {
  
 }
 
-export default Antonimos
+export default Aplicacao

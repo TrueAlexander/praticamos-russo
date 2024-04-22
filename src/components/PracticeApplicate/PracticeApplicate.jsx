@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react"
 import Loading from "@/app/loading"
 import Button from "../Button/Button"
-import AdjectiveCard from "../AdjectiveCard/AdjectiveCard"
+import AdjApplicationCard from "../AdjApplicationCard/AdjApplicationCard"
 
-const PracticeAnt = ({adjectives}) => {
+const PracticeApplicate = ({adjectives}) => {
+
+  console.log(adjectives)
 
   const [answer, setAnswer] = useState(null)
   const [isLoading, setIsLoading] = useState(true)
@@ -46,7 +48,7 @@ const PracticeAnt = ({adjectives}) => {
         </div>
       : 
       <div className="text-white text-center justify-center">
-        <AdjectiveCard
+        <AdjApplicationCard
           answer={answer}
           setAnswer={setAnswer}
           adjective={adjectives[currentAdjIndex]}
@@ -74,4 +76,4 @@ const PracticeAnt = ({adjectives}) => {
   )
 }
 
-export default PracticeAnt
+export default PracticeApplicate

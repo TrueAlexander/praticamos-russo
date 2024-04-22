@@ -1,0 +1,16 @@
+[
+  {
+    "id": 0,
+    "expression_pt": "escola velha",
+    "expression_ru": "старая школа",
+    "noun_ru": "школа",
+    "audio": "/sounds/adjectives_application/0.m4a"
+  },
+  {
+    "id": 1,
+    "expression_pt": "casa grande",
+    "expression_ru": "большой дом",
+    "noun_ru": "дом",
+    "audio": "/sounds/adjectives_application/1.m4a"
+  }
+]

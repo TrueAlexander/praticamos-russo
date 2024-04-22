@@ -2,10 +2,9 @@ import { CgPlayButtonO } from "react-icons/cg"
 import { useEffect, useState } from "react"
 import AnswersAnt from "../AnswersAnt/AnswersAnt"
 
-const AdjectiveCard = ({adjective, adjectives, answer, setAnswer}) => {
+const AdjectiveCard = ({adjective, adjectives, answer, setAnswer, evaluation, setEvaluation}) => {
 
-  const [evaluation, setEvaluation] = useState(false)
-
+  
   useEffect(() => {
     answer === adjective.antonyms_ru.masc ? setEvaluation(true) : setEvaluation(false)
   }, [answer])

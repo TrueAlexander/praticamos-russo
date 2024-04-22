@@ -8,7 +8,6 @@ const AnswersAnt = ({ setAnswer, answer, adjective, adjectives}) => {
   useEffect(() => {
     const currentAdj = adjective.russian.masc
     const currentAnt = adjective.antonyms_ru.masc
-
     const dataAnt = adjectives.map(adj => adj.antonyms_ru.masc)
     const antonymsArr = dataAnt.filter(item => item !== currentAnt && item !== currentAdj)
     const shuffledThreeAntonyms = shuffleArray(antonymsArr).slice(0, 3)

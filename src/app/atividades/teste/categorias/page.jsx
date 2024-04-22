@@ -30,9 +30,7 @@ const Categories = () => {
           Escolhe uma categoria de perguntas:
         </p>
         <Button name='vocabulario' text='Vocabulário' disabled={false} onClick={handleClick} />
-        <br />
-        <Button name='verbos' text='Verbos' disabled={false} onClick={handleClick} />
-        <br />
+        <Button addStyle='my-4' name='verbos' text='Verbos' disabled={false} onClick={handleClick} />
         <Button name='casos' text='Casos' disabled={false} onClick={handleClick} />
         <p className='text-[#9f50ac] pt-1 pb-1 text-[18px] '>
           ou

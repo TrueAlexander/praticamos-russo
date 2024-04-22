@@ -49,13 +49,12 @@ export default function Atividades() {
           disabled={false} 
           onClick={handleClick} 
         />
-        <br />
         <Button
+          addStyle="my-4"
           text="Teste" 
           disabled={false} 
           onClick={handleClick} 
         />
-        <br />
         <Button
           text="Jogar" 
           disabled={true} 
