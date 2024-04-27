@@ -6,7 +6,7 @@ import '@/utils/react-confirm-alert.css'
 import { useEffect, useState } from "react"
 import dataCards from '../../../../../../dataCards.json'
 //Components
-import Vocabulary from "../../../../../components/Vocabulary/Vocabulary"
+import Vocabulary from "../../../../../components/new_words/Vocabulary/Vocabulary"
 import Loading from "../loading"
 import { useSearchParams } from "next/navigation"
 const TOTAL_QUESTIONS = 11

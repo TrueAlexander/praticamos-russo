@@ -50,11 +50,8 @@ const AdminPage = () => {
           Para gestionar exercícios escolhe uma categoría:
         </p>
         <Button name='vocabulario' text='Vocabulário' disabled={false} onClick={handleClick} />
-        <br />
-        <Button name='verbos' text='Verbos' disabled={false} onClick={handleClick} />
-        <br />
+        <Button addStyle="my-4" name='verbos' text='Verbos' disabled={false} onClick={handleClick} />
         <Button name='casos' text='Casos' disabled={false} onClick={handleClick} />
-        <br />
       </div>
     )
   } 

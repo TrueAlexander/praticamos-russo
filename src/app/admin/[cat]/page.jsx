@@ -1,5 +1,5 @@
 "use client"
-import AdminQuestions from "@/components/AdminQuestions/AdminQuestions"
+import AdminQuestions from "@/components/admin/AdminQuestions/AdminQuestions"
 import Link from "next/link"
 import { useState, useEffect } from 'react'
 

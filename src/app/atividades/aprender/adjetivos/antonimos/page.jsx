@@ -8,10 +8,10 @@ import { useSession, signOut } from 'next-auth/react'
 import dataAdjectives from '../../../../../../dataAdjectives.json'
 //Components
 import Loading from "../loading"
-import Button from "@/components/Button/Button"
+import Button from "@/components/globals/Button/Button"
 import { useRouter } from "next/navigation"
-import ReadAdjectives from "@/components/ReadAdjectives/ReadAdjectives"
-import InteractAdjectives from "@/components/InteractAdjectives/InteractAdjectives"
+import Read from "@/components/adjectives/antonyms/Read/Read"
+import Interact from "@/components/adjectives/antonyms/Interact/Interact"
 
 
 const Antonimos = () => {
@@ -78,8 +78,8 @@ const Antonimos = () => {
           <p className='text-white font-bold text-[22px]'>Adjetivos - Antônimos</p>
           {/* <p className='text-[#9f50ac] text-[16px]'>Escute e repita:</p> */}
           {interact 
-            ? <InteractAdjectives adjectives={dataAdjectives} />
-            : <ReadAdjectives adjectives={dataAdjectives}/>
+            ? <Interact adjectives={dataAdjectives} />
+            : <Read adjectives={dataAdjectives}/>
           }
           <p className='text-[#9f50ac] pt-1 pb-1 text-[18px] '>
             ou

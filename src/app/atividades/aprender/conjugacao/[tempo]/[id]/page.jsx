@@ -9,11 +9,11 @@ import dataVerbsPresent from '../../../../../../../dataVerbsPresent.json'
 import dataVerbsPast from '../../../../../../../dataVerbsPast.json'
 //Components
 import Loading from "../loading"
-import Button from "@/components/Button/Button"
+import Button from "@/components/globals/Button/Button"
 import { useRouter } from "next/navigation"
 // import OnlyNameShow from '@/components/OnlyNameShow/OnlyNameShow'
-import ReadVerb from '@/components/ReadVerb/ReadVerb'
-import InteractVerb from "@/components/InteractVerb/InteractVerb"
+import ReadVerb from '@/components/verbs/ReadVerb/ReadVerb'
+import InteractVerb from "@/components/verbs/InteractVerb/InteractVerb"
 
 
 const VerbTense = ({params}) => {

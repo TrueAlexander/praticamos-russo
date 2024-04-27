@@ -8,9 +8,11 @@ import { useSession, signOut } from 'next-auth/react'
 import dataAdjectives from '../../../../../../dataAppAdjectives.json'
 //Components
 import Loading from "../loading"
-import Button from "@/components/Button/Button"
+import Button from "@/components/globals/Button/Button"
 import { useRouter } from "next/navigation"
-import ApplicateAdj from "@/components/ApplicateAdj/ApplicateAdj"
+import Interact from "@/components/adjectives/application/Interact/Interact"
+import Read from "@/components/adjectives/application/Read/Read"
+
 
 
 
@@ -72,12 +74,11 @@ const Aplicacao = () => {
             {!interact ? "Praticar" : "Aprender"}
           </button>
           <p className='text-white font-bold text-[22px]'>Adjetivos - Aplicação</p>
-          {/* <p className='text-[#9f50ac] text-[16px]'>Escute e repita:</p> */}
           {interact 
             ? 
-            "<InteractApplicateAdjectives adjectives={dataAdjectives} />"
+            <Interact adjectives={dataAdjectives} />
             : 
-            "<ReadApplicateAdjectives adjectives={dataAdjectives}/>"
+            <Read adjectives={dataAdjectives} />
           }
             
           <p className='text-[#9f50ac] pt-1 pb-1 text-[18px] '>

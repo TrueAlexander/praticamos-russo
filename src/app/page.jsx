@@ -3,10 +3,10 @@ import Image from 'next/image'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 //Components
-import Button from '@/components/Button/Button'
-import AuthModal from '@/components/AuthModal/AuthModal'
-import ButtonAuth from "@/components/ButtonAuth/ButtonAuth"
-import AdminLink from '@/components/AdminLink/AdminLink'
+import Button from '@/components/globals/Button/Button'
+import AuthModal from '@/components/globals/AuthModal/AuthModal'
+import ButtonAuth from "@/components/globals/ButtonAuth/ButtonAuth"
+import AdminLink from '@/components/globals/AdminLink/AdminLink'
 import { useSession, signOut } from 'next-auth/react' 
 import Loading from './loading'
 //Homepage Image

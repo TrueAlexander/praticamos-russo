@@ -31,6 +31,10 @@ audio {
   margin: 10px 0;
 }
 
+.placeholder-font::placeholder {
+  font-family: sans-serif;
+}
+
 @media only screen and (max-height: 670px) {
   .children {
     align-items: flex-start !important;

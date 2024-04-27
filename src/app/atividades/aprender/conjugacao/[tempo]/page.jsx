@@ -10,8 +10,7 @@ import dataVerbsPast from '../../../../../../dataVerbsPast.json'
 //Components
 import Loading from "../loading"
 import { useSearchParams } from "next/navigation"
-import Button from "@/components/Button/Button"
-import OnlyNameShow from '@/components/OnlyNameShow/OnlyNameShow'
+import Button from "@/components/globals/Button/Button"
 import { useRouter } from "next/navigation"
 
 

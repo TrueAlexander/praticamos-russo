@@ -1,7 +1,7 @@
 import Image from "next/image"
 import { Quicksand } from 'next/font/google'
 import Link from 'next/link'
-import AuthProvider from "@/components/AuthProvider/AuthProvider"
+import AuthProvider from "@/components/globals/AuthProvider/AuthProvider"
 //Logo
 import Logo from '@/assets/logo.png'
 import "./globals.css"

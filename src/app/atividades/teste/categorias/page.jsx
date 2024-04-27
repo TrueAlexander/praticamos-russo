@@ -3,9 +3,9 @@
 import { useRouter } from 'next/navigation'
 import { useSession } from 'next-auth/react'
 //Components
-import Button from '@/components/Button/Button'
+import Button from '@/components/globals/Button/Button'
 import Loading from '../loading'
-import OnlyNameShow from '@/components/OnlyNameShow/OnlyNameShow'
+import OnlyNameShow from '@/components/globals/OnlyNameShow/OnlyNameShow'
 
 const Categories = () => {
   const session = useSession()

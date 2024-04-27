@@ -3,8 +3,8 @@ import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
 import getResults from '@/utils/getResults'
 //Components
-import Button from '@/components/Button/Button'
-import ButtonAuth from "@/components/ButtonAuth/ButtonAuth"
+import Button from '@/components/globals/Button/Button'
+import ButtonAuth from "@/components/globals/ButtonAuth/ButtonAuth"
 import { useSession, signOut } from 'next-auth/react' 
 import Loading from './loading'
 

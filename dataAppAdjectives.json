@@ -1,16 +1,18 @@
 [
   {
     "id": 0,
-    "expression_pt": "escola velha",
-    "expression_ru": "старая школа",
-    "noun_ru": "школа",
-    "audio": "/sounds/adjectives_application/0.m4a"
+    "exp_pt": "escola velha",
+    "exp_ru": "ста́рая шко́ла",
+    "noun_ru": "шко́ла",
+    "audio": "/sounds/adjectives_application/0.m4a",
+    "answers": ["ста́рая", "старая"]
   },
   {
     "id": 1,
-    "expression_pt": "casa grande",
-    "expression_ru": "большой дом",
+    "exp_pt": "casa grande",
+    "exp_ru": "большо́й дом",
     "noun_ru": "дом",
-    "audio": "/sounds/adjectives_application/1.m4a"
+    "audio": "/sounds/adjectives_application/1.m4a",
+    "answers": ["большо́й", "большой"]
   }
 ]

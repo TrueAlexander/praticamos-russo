@@ -1,6 +1,6 @@
 "use client"
 
-import Button from "@/components/Button/Button"
+import Button from "@/components/globals/Button/Button"
 import { useRouter, useSearchParams } from "next/navigation"
 
 const VocabResultPage = ({params}) => {
