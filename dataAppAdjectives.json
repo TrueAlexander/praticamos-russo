@@ -14,5 +14,101 @@
     "noun_ru": "дом",
     "audio": "/sounds/adjectives_application/1.m4a",
     "answers": ["большо́й", "большой"]
+  },
+  {
+    "id": 2,
+    "exp_pt": "cabelos loiros",
+    "exp_ru": "све́тлые во́лосы",
+    "noun_ru": "во́лосы",
+    "audio": "/sounds/adjectives_application/2.m4a",
+    "answers": ["све́тлые", "светлые"]
+  },
+  {
+    "id": 3,
+    "exp_pt": "inverno frio",
+    "exp_ru": "холо́дная зима́",
+    "noun_ru": "зима́",
+    "audio": "/sounds/adjectives_application/3.m4a",
+    "answers": ["холо́дная", "холодная"]
+  },
+  {
+    "id": 4,
+    "exp_pt": "solução simples",
+    "exp_ru": "просто́е реше́ние",
+    "noun_ru": "реше́ние",
+    "audio": "/sounds/adjectives_application/4.m4a",
+    "answers": ["просто́е", "простое"]
+  },
+  {
+    "id": 5,
+    "exp_pt": "cidades pequenas",
+    "exp_ru": "ма́ленькие города́",
+    "noun_ru": "города́",
+    "audio": "/sounds/adjectives_application/5.m4a",
+    "answers": ["ма́ленькие", "маленькие"]
+  },
+  {
+    "id": 6,
+    "exp_pt": "pessoa ruim",
+    "exp_ru": "плохо́й челове́к",
+    "noun_ru": "челове́к",
+    "audio": "/sounds/adjectives_application/6.m4a",
+    "answers": ["плохо́й", "плохой"]
+  },
+  {
+    "id": 7,
+    "exp_pt": "noite escura",
+    "exp_ru": "тёмная ночь",
+    "noun_ru": "ночь",
+    "audio": "/sounds/adjectives_application/7.m4a",
+    "answers": ["тёмная", "темная"]
+  },
+  {
+    "id": 8,
+    "exp_pt": "prédio novo",
+    "exp_ru": "но́вое зда́ние",
+    "noun_ru": "зда́ние",
+    "audio": "/sounds/adjectives_application/8.m4a",
+    "answers": ["но́вое", "новое"]
+  },
+  {
+    "id": 9,
+    "exp_pt": "história entediante",
+    "exp_ru": "ску́чная исто́рия",
+    "noun_ru": "исто́рия",
+    "audio": "/sounds/adjectives_application/9.m4a",
+    "answers": ["ску́чная", "скучная"]
+  },
+  {
+    "id": 10,
+    "exp_pt": "saúde boa",
+    "exp_ru": "хоро́шее здоро́вье",
+    "noun_ru": "здоро́вье",
+    "audio": "/sounds/adjectives_application/10.m4a",
+    "answers": ["хоро́шее", "хорошее"]
+  },
+  {
+    "id": 11,
+    "exp_pt": "sopa quente",
+    "exp_ru": "горя́чий суп",
+    "noun_ru": "суп",
+    "audio": "/sounds/adjectives_application/11.m4a",
+    "answers": ["горя́чий", "горячий"]
+  },
+  {
+    "id": 12,
+    "exp_pt": "trabalho difícil",
+    "exp_ru": "сло́жная рабо́та",
+    "noun_ru": "рабо́та",
+    "audio": "/sounds/adjectives_application/12.m4a",
+    "answers": ["сло́жная", "сложная, трудная, тру́дная"]
+  },
+  {
+    "id": 13,
+    "exp_pt": "filmes interessantes",
+    "exp_ru": "интере́сные фи́льмы",
+    "noun_ru": "фи́льмы",
+    "audio": "/sounds/adjectives_application/13.m4a",
+    "answers": ["интере́сные", "интересные"]
   }
 ]

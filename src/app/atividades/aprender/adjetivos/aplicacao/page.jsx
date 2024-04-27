@@ -66,7 +66,7 @@ const Aplicacao = () => {
     )
   } else if (session.status === "authenticated") {
     return ( 
-      <div className='fixed z-[10000] top-0 bottom-0 overflow-y-auto bg-[#2b2737] text-center flex flex-col justify-center' >
+      <div className={`fixed z-[10000] top-0 bottom-0 overflow-y-auto bg-[#2b2737] text-center flex flex-col ${interact ? "justify-center py-0" :  "justify-left py-6"}`} >
           <button 
             className="text-white tracking-wider active:scale-95  h-[23px] min-w-[90px] rounded-[10px] bg-[#9f50ac] fixed top-1/2 transform -translate-y-1/2 right-0 lg:mr-[345px] md:mr-[200px] rotate-90 "
             onClick={handleInteract}

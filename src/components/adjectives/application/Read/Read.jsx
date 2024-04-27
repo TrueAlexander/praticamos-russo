@@ -13,7 +13,7 @@ const Read = ({adjectives}) => {
 
   return (
     <>
-      <p className='text-[#9f50ac]'>escute e repita as expressões:</p>
+      <p className='text-[#9f50ac] mb-5'>escute e repita as expressões:</p>
       {adjectives.map((item, index) => {
           return (
             <div key={index} className='py-[3px]'>
