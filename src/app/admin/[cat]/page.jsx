@@ -28,7 +28,7 @@ const CategoryAdminPage = ({params}) => {
     
     }
     getQuestionsByCategory(category)
-  }, [anchorUpdate])
+  }, [anchorUpdate, category])
 
   return (
     <div className="fixed z-[10000] top-0 bg-[#2b2737] pt-5 bottom-12 left-0 right-0  overflow-y-auto text-center">

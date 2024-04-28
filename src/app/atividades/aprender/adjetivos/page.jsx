@@ -30,7 +30,7 @@ export default function Adjetivos() {
       setNameShow("Visitante")
     } 
     if(session.status === "unauthenticated") router.push('/')
-  }, [session.status])
+  }, [session.status, router, session.data?.user?.name])
 
   
   if (isLoading) {

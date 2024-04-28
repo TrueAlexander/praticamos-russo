@@ -7,7 +7,7 @@ const Card = ({adjective, adjectives, answer, setAnswer, evaluation, setEvaluati
   
   useEffect(() => {
     answer === adjective.antonyms_ru.masc ? setEvaluation(true) : setEvaluation(false)
-  }, [answer])
+  }, [answer, adjective.antonyms_ru.masc, setEvaluation])
   
   const handlePlay = () => {
     const audio = document.getElementById("audio")

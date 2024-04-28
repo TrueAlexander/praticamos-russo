@@ -1,7 +1,6 @@
 'use client'
 import { IoClose } from "react-icons/io5"
 import { useRouter, useSearchParams } from "next/navigation"
-import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 import AskRecover from "@/components/globals/AskRecover/AskRecover"
 import PassSend from "@/components/globals/PassSend/PassSend"
@@ -17,7 +16,7 @@ const PasswordRecover = () => {
 
   useEffect(() => {
     if (mode === "pass") setModeAsk(false)
-  }, [])
+  }, [mode])
   
   return (
     <div 

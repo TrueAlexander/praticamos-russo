@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState,useCallback } from 'react'
 import AnswersVerb from './AnswersVerb/AnswersVerb'
 
 const InteractVerb = ({conjugations, pronouns}) => {
@@ -12,8 +12,9 @@ const InteractVerb = ({conjugations, pronouns}) => {
     const result = arrFromChosen.filter((elem, ind) => ind > 0 ? elem : "")
     //set an array with results of comparison
     const [evaluation, setEvaluation] = useState([])
+
     //compare result array from user with the corect one
-    const compare = () => {
+    const compare = useCallback(() => {
       const arrModel = conjugations.map(item => {
         return Object.values(item).map(i => {
           return i[1]
@@ -25,10 +26,12 @@ const InteractVerb = ({conjugations, pronouns}) => {
           return true
         } else return false
       }))
-    }
+    }, [conjugations, result])
+
     useEffect(() => {
-      if (checkResults) compare()
-    }, [checkResults])
+      if (checkResults) {
+        compare()
+      }}, [checkResults, compare])
 
     return (
       <>

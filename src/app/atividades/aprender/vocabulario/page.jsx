@@ -38,7 +38,7 @@ export default function Vocabulario() {
       setNameShow("Visitante")
     } 
     if(session.status === "unauthenticated") router.push('/')
-  }, [session.status])
+  }, [session.status, email, name, router, session.data?.user?.name])
 
   ////
   const renderCategories = (array) => {

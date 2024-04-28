@@ -31,7 +31,7 @@ const AdminPage = () => {
       }
     }
 
-  }, [session.status])
+  }, [session.status, router, session.data?.user.isAdmin])
 
   const handleClick = (e) => router.push(`/admin/${e.target.name}`)
 

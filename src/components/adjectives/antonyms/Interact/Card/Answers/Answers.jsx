@@ -14,7 +14,7 @@ const Answers = ({ setAnswer, answer, adjective, adjectives}) => {
     const optionsArr = shuffledThreeAntonyms.concat(currentAnt)
 
     setArray(shuffleArray(optionsArr))
-  }, [adjective])
+  }, [adjective, adjectives])
   
   const clickChoose = (e) => setAnswer(e.target.innerText)
   

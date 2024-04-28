@@ -29,7 +29,7 @@ export default function Aprender() {
       setNameShow("Visitante")
     } 
     if(session.status === "unauthenticated") router.push('/')
-  }, [session.status])
+  }, [session.status, router, session.data?.user?.name])
 
   ////
 

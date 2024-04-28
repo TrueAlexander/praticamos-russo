@@ -35,7 +35,7 @@ export default function Home() {
     } else {
       setNameShow("Visitante")
     }
-  }, [session.status])
+  }, [session.status, session.data?.user?.name])
 
   const handleClick = () => session.status === "authenticated" ? router.push('/atividades') : setShowModal(true)
 

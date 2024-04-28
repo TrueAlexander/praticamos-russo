@@ -36,7 +36,7 @@ export default function Teste() {
       setNameShow("Visitante")
     } 
     if(session.status === "unauthenticated") router.push('/')
-  }, [session.status])
+  }, [session.status, email, name, router, session.data?.user?.name])
 
   const handleClick = () => router.push('/atividades/teste/categorias')
 

@@ -54,7 +54,7 @@ const QuizPage = ({params}) => {
       }   
     }
     getQuestionsMongoDB(category)
-  }, [])
+  }, [category])
 
   const shuffledNewQuestions = shuffleArray(questions)
   // const questions = await getQuestions(TOTAL_QUESTIONS, Difficulty.EASY)

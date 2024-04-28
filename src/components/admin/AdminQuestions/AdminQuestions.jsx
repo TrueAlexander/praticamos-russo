@@ -33,7 +33,7 @@ const AdminQuestions =  ({category, questions, setAnchorUpdate, anchorUpdate}) =
         router.push('/')
       }
     }
-  }, [session.status])
+  }, [session.status, router, session.data?.user.isAdmin])
 
   //update questions list for render when it was changed
   useEffect(() => {

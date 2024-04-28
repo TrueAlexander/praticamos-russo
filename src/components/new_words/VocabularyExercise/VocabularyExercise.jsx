@@ -19,12 +19,12 @@ const VocabularyExercise = ({ question, currentQuestionIndex, answers, rightAnsw
     if (clickedAnswer === rightAnswer) {
       setDisabled(false)
     } else setDisabled(true)
-  }, [clickedAnswer])
+  }, [clickedAnswer, rightAnswer, setDisabled])
   
   useEffect(() => {
     setClickedAnswer(null)
     setDisabled(true)
-  }, [currentQuestionIndex])
+  }, [currentQuestionIndex, setDisabled])
 
   useEffect(() => {
     setAudio(question.audio)
@@ -34,7 +34,7 @@ const VocabularyExercise = ({ question, currentQuestionIndex, answers, rightAnsw
         audioRef.current.play()
     }
     setIsLoading(false)
-  }, [currentQuestionIndex])
+  }, [currentQuestionIndex, question.audio])
 
   if (isLoading) {
     return (

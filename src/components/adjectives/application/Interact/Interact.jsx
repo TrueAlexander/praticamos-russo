@@ -32,7 +32,7 @@ const Interact = ({adjectives}) => {
       } else if (answer && !adjectives[currentAdjIndex].answers.some(item => item === answer)) {
       setEvaluation("red")
     } else setEvaluation(null)
-  },[answer])
+  },[answer, adjectives, currentAdjIndex])
 
   return (
     <>

@@ -26,7 +26,7 @@ const Login = ({setShowModal, setModeLogin}) => {
       setShowModal(false)    
     }
     
-  }, [params])
+  }, [params, router, session.status, setShowModal])
   
   return (
     <div className="my-3 animate__animated animate__fadeIn">

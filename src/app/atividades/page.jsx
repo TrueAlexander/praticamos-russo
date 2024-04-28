@@ -24,7 +24,7 @@ export default function Atividades() {
       setNameShow("Visitante")
     } 
     if(session.status === "unauthenticated") router.push('/')
-  }, [session.status])
+  }, [session.status, router, session.data?.user?.name])
 
   const handleClick = (e) => e.target.innerText === "Teste" ? router.push('/atividades/teste') : router.push('/atividades/aprender')
   

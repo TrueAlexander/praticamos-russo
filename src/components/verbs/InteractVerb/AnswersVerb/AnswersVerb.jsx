@@ -14,7 +14,7 @@ const AnswersVerb = ({conjugations, setChosen, setCheckResults}) => {
 
   useEffect(() => {
     setArray(toRender)
-  }, [])
+  }, [toRender])
 
   const clickChoose = (e) => {
     e.target.classList.add('hidden')
