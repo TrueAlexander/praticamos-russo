@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Loading from "@/app/loading"
 import Card from "./Card/Card"
-import ModalFromTop from "@/components/globals/ModalFromTop/ModalFromTop"
+import ModalFromTop from "./ModalFromTop/ModalFromTop"
 import TrueModal from "./TrueModal/TrueModal"
 import FalseModal from "./FalseModal/FalseModal"
 
@@ -58,31 +58,18 @@ const Interact = ({adjectives}) => {
         {showModal && 
           <ModalFromTop 
             showModal={showModal}
+            setCurrentAdjIndex={setCurrentAdjIndex}
+            currentAdjIndex={currentAdjIndex}
             setShowModal={setShowModal}
-            children={evaluation === "green" ? 
-              <TrueModal
-                setCurrentAdjIndex={setCurrentAdjIndex}
-                currentAdjIndex={currentAdjIndex}
-                setShowModal={setShowModal}
-                answer={answer + " " + adjectives[currentAdjIndex].noun_ru}
-                correctAnswer={adjectives[currentAdjIndex].exp_ru}
-                setAnswer={setAnswer}
-                numberQuestions={numberQuestions}
-                result={result}
-                setIsLoading={setIsLoading}
-              /> 
-              : 
-              <FalseModal
-                setCurrentAdjIndex={setCurrentAdjIndex}
-                currentAdjIndex={currentAdjIndex}
-                setShowModal={setShowModal}
-                answer={answer + " " + adjectives[currentAdjIndex].noun_ru}
-                correctAnswer={adjectives[currentAdjIndex].exp_ru}
-                setAnswer={setAnswer}
-                numberQuestions={numberQuestions}
-                result={result}
-                setIsLoading={setIsLoading}
-              />}
+            answer={answer + " " + adjectives[currentAdjIndex].noun_ru}
+            correctAnswer={adjectives[currentAdjIndex].exp_ru}
+            setAnswer={setAnswer}
+            numberQuestions={numberQuestions}
+            result={result}
+            setIsLoading={setIsLoading}
+            evaluation={evaluation}
+
+           
         />}
       </div>
     }

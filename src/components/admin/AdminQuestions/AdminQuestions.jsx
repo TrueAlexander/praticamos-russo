@@ -1,5 +1,5 @@
 "use client"
-import Button from "../../Button/Button"
+import Button from '@/components/globals/Button/Button'
 import { useSession } from 'next-auth/react'
 import { useState, useEffect } from 'react'
 import Loading from "@/app/loading"
