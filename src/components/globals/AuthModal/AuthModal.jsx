@@ -18,7 +18,7 @@ const AuthModal = ({showModal, setShowModal, setIsLoading}) => {
 
   return (
     <div 
-      className={showModal ? "opacity-1 pointer-events-auto w-full h-full fixed top-0 left-0 bg-[#2b2737] show animate__animated animate__fadeInRight" : "opacity-0 pointer-events-none w-full h-full fixed top-0 left-0 bg-[#2b2737]"} 
+      className={showModal ? "opacity-1 z-20 pointer-events-auto w-full h-full fixed top-0 left-0 bg-[#2b2737] show animate__animated animate__fadeInRight" : "opacity-0 pointer-events-none w-full h-full fixed top-0 left-0 bg-[#2b2737]"} 
       onClick={ handleClose }
     >
       <div 
