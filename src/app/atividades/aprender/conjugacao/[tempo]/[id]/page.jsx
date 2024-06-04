@@ -32,7 +32,6 @@ const VerbTense = ({params}) => {
   const conjugations = verb.answers
 
   const audios = verb.audios || ""
-  console.log(audios)
   
   const pronouns = tense !== "passado" 
   ? [

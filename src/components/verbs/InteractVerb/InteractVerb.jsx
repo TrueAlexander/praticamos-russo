@@ -21,7 +21,6 @@ const InteractVerb = ({conjugations, pronouns}) => {
         })
       })
       setEvaluation(arrModel.map((el, index) => {
-        console.log(el[0])
         if (el[0] === result[index]) {
           return true
         } else return false
@@ -31,7 +30,7 @@ const InteractVerb = ({conjugations, pronouns}) => {
     useEffect(() => {
       if (checkResults) {
         compare()
-      }}, [checkResults, compare])
+      }}, [checkResults])
 
     return (
       <>

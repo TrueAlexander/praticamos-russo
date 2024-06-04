@@ -24,7 +24,6 @@ const VerbTense = ({params}) => {
   // const repeat = searchParams.get('rep')
   const tense = params.tempo
   const dataVerbs = tense === "passado" ? dataVerbsPast : dataVerbsPresent
-  console.log(dataVerbs)
 // Function to shuffle the cards for a given activity
 // function shuffleCards(activity) {
 //   const shuffledCards = [...activity.cards];
