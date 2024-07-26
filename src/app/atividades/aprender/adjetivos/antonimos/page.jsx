@@ -42,8 +42,22 @@ const Antonimos = () => {
     })
   }
 
-  const handleInteract = () => {
-    if (interact === true) {
+  const handleClick = () => {
+    if (!interact) {
+      confirmAlert({
+        message: (
+          <div style={{ textAlign: "center"}}>
+           Escolha o antônimo certo para o adjetivo e clique nele
+          </div>
+        ),
+        buttons: [
+          {
+            label: 'Ok',
+            onClick: () => setInteract(!interact)  
+          }
+        ]
+      })
+    } else {
       confirmAlert({
         message: `${name}, tem certeza de que deseja sair da atividade?`,
         buttons: [
@@ -53,11 +67,10 @@ const Antonimos = () => {
           },
           {
             label: 'Não',
-            // onClick: () => console.log('Click No')
           }
         ]
       })
-    } else setInteract(!interact)
+    }
   }
 
   if (session.status === "loading") {
@@ -71,7 +84,7 @@ const Antonimos = () => {
       <div className='fixed z-[10000] top-0 bottom-0 overflow-y-auto bg-[#2b2737] text-center flex flex-col justify-center' >
           {<button 
             className="text-white tracking-wider active:scale-95  h-[23px] min-w-[90px] rounded-[10px] bg-[#9f50ac] fixed top-1/2 transform -translate-y-1/2 right-0 lg:mr-[345px] md:mr-[200px] rotate-90 "
-            onClick={handleInteract}
+            onClick={handleClick}
           >
             {!interact ? "Praticar" : "Aprender"}
           </button>}

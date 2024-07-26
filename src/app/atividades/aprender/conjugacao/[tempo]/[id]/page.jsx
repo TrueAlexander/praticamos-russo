@@ -49,6 +49,25 @@ const VerbTense = ({params}) => {
     ["Они́", "Eles"],
   ] 
 
+  const handleClick = () => {
+    if (!interact) {
+      confirmAlert({
+        message: (
+          <div style={{ textAlign: "center"}}>
+            Clique nas formas de verbo: <p style={{ color: '#9f50ac', fontSize: 20, fontWeight: 700, marginTop: 10, marginBottom: 10 }}> {verb.infinitive} </p> para completar os exemplos de conjugação
+          </div>
+        ),
+        buttons: [
+          {
+            label: 'Ok',
+            onClick: () => setInteract(!interact)  
+          }
+        ]
+      })
+    } else {
+      setInteract(!interact)
+    }
+  }
 
   if (session.status === "loading") {
     return (
@@ -62,11 +81,10 @@ const VerbTense = ({params}) => {
           {/* <OnlyNameShow nameShow={nameShow}/> */}
           <button 
             className="text-white tracking-wider active:scale-95  h-[23px] min-w-[90px] rounded-[10px] bg-[#9f50ac] fixed top-1/2 transform -translate-y-1/2 right-0 lg:mr-[345px] md:mr-[200px] rotate-90 "
-            onClick={() => setInteract(!interact)}
+            onClick={handleClick}
           >
             {!interact ? "Praticar" : "Aprender"}
           </button>
-          {/* <p className='text-white font-bold text-[16px]'>Conjugação do verbo:</p> */}
           <p className='text-white p-1 text-[22px]'>{verb.infinitive}</p>
           {interact 
             ? <InteractVerb conjugations={conjugations} pronouns={pronouns} />

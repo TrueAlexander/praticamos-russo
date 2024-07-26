@@ -56,7 +56,7 @@ export default function RootLayout({children}) {
             <p 
               className="text-white mb-3 mt-1 text-[10px] -translate-x-1/2  fixed bottom-0 mx-auto left-1/2"
             >
-              Suporte técnico por <a href="https://wa.me/5521967261434" target="_blank" >e-Formaliza</a>
+              <a href="https://wa.me/5583993307656" target="_blank" title="Clique se precisar de ajuda">Fale conosco</a>
             </p>
           </main>  
         </AuthProvider>   

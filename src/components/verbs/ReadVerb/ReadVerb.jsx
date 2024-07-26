@@ -10,7 +10,7 @@ const ReadVerb = ({conjugations, pronouns, audios}) => {
 
   return (
     <>
-      <p className='text-[#9f50ac]'>leia as conjugações:</p>
+      <p className='text-[#9f50ac]'>escute e leia as conjugações:</p>
       {conjugations.map((item, index) => {
         const arrayAnswers = Object.values(item)
         return arrayAnswers.map((answer) => {
