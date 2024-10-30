@@ -9,7 +9,7 @@ import { useSession, signOut } from 'next-auth/react'
 import Loading from './loading'
 
 
-export default function Aprender() {
+export default function Casos() {
   const router = useRouter()
   const session = useSession()
 
@@ -46,39 +46,39 @@ export default function Aprender() {
         <div className='absolute top-0 left-0 right-0'>
           <ButtonAuth name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
         </div>  
-        <p className='text-white p-3 pt-6 font-bold text-[22px]'>Escolha o que quer aprender:</p>
+        <p className='text-white p-3 pt-6 font-bold text-[22px]'>Escolha um caso para praticar:</p>
         <p className='text-[#9f50ac] text-[18px] '>
           clique para começar 
         </p>
         <Button
-          text="Palavras novas"
+          text="Prepositivo"
           addStyle={"my-2"}
           disabled={false} 
-          onClick={() => router.push('/atividades/aprender/vocabulario')} 
+          onClick={() => router.push('/atividades/aprender/casos/prepositivo')} 
         />
         <Button
-          text="Conjugar verbos"
+          text="Genitivo"
           addStyle={"my-2"} 
           disabled={false} 
-          onClick={() => router.push('/atividades/aprender/conjugacao')} 
+          onClick={() => router.push('/atividades/aprender/casos/genitivo')} 
         />
         <Button
-          text="Adjetivos"
+          text="Dativo"
           addStyle={"my-2"} 
           disabled={false} 
-          onClick={() => router.push('/atividades/aprender/adjetivos')} 
+          onClick={() => router.push('/atividades/aprender/casos/dativo')} 
         />
         <Button
-          text="Casos indiretos"
+          text="Instrumental"
           addStyle={"my-2"} 
           disabled={false} 
-          onClick={() => router.push('/atividades/aprender/casos')} 
+          onClick={() => router.push('/atividades/aprender/casos/instrumental')} 
         />
         <Button
-          text="Audição"
+          text="Acusativo"
           addStyle={"my-2"} 
-          disabled={true} 
-          onClick={() => router.push('/atividades/aprender/conjugacao')} 
+          disabled={false} 
+          onClick={() => router.push('/atividades/aprender/casos/acusativo')} 
         />
         <p className='text-[#9f50ac] pb-1 text-[18px] '>
           ou
@@ -87,7 +87,7 @@ export default function Aprender() {
           text="Voltar" 
           learnt={false}
           disabled={false} 
-          onClick={() => router.push('/atividades')} 
+          onClick={() => router.push('/atividades/aprender')} 
         />
       </div>
     )
