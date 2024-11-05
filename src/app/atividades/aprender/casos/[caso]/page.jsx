@@ -63,7 +63,7 @@ export default function Caso({params}) {
           disabled={true} 
           onClick={() => router.push('/atividades/aprender/casos/genitivo')} 
         />
-        <CreateCaseBasic/>
+        {/* <CreateCaseBasic/> */}
         <p className='text-[#9f50ac] pb-1 text-[18px] '>
           ou
         </p>

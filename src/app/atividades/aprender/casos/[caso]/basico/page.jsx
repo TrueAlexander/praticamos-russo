@@ -4,7 +4,6 @@ import { useEffect, useState } from 'react'
 import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 import { shuffleArray } from "@/utils/arrayUtils"
-// import casesQuestions from "../../../../../../../dataCasesBasic.json"
 //Components
 import Button from '@/components/globals/Button/Button'
 import ButtonAuth from "@/components/globals/ButtonAuth/ButtonAuth"
@@ -103,7 +102,7 @@ export default function CasoBasico({params}) {
         {/* <p className='text-[#9f50ac] text-[18px] '>
           clique aqui 
         </p> */}
-        <QuizCases questions={shuffledQuestions} totalQuestions={TOTAL_QUESTIONS} caso={"case"}/>
+        <QuizCases questions={shuffledQuestions} totalQuestions={TOTAL_QUESTIONS} caso={params.caso}/>
         {/* <Button
           text="Básico"
           addStyle={"my-2"}

@@ -6,11 +6,11 @@ const CreateCaseBasic = () => {
 
     ///send POST request
     const newCase = {
-      case: "genitivo",
-      question: "... (Мари́я) нет сы́на.",
-      correct_answer: "У Мари́и",
-      answers: ["У Мари́и", "Мари́и", "Мари́е", "Мари́я"],
-      incorrect_answers: ["Мари́и", "Мари́е", "Мари́я"] 
+      case: "acusativo",
+      question: "Мой брат на за́втрак ест ... (хлеб) с сы́ром.",
+      correct_answer: "хлеб",
+      answers: ["хлеб", "хле́бом", "хле́ба", "с хле́бом"],
+      incorrect_answers: ["хле́бом", "хле́ба", "с хле́бом"] 
     }
     
     //А́ Е́ И́ О́ У́ Ы́ Э́ Ю́ Я́ а́ е́ и́ о́ у́ ы́ э́ ю́ я́
