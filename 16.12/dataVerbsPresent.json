@@ -1,0 +1,128 @@
+[
+  {
+    "id": 0,
+    "tense": "presente",
+    "infinitive": "viver / жи́ть",
+    "answers": [
+      {"eu": ["vivo", "живу́"]},
+      {"você": ["vive", "живёшь"]},
+      {"ele": ["vive", "живёт"]},
+      {"nós": ["vivemos", "живём"]},
+      {"vocês": ["vivem", "живёте"]},
+      {"eles": ["vivem", "живу́т"]} 
+    ],
+    "audios": [
+      "/sounds/verbs-present/0/eu.m4a",
+      "/sounds/verbs-present/0/voce.m4a",
+      "/sounds/verbs-present/0/ele.m4a",
+      "/sounds/verbs-present/0/nos.m4a",
+      "/sounds/verbs-present/0/voces.m4a",
+      "/sounds/verbs-present/0/eles.m4a" 
+    ]  
+  },
+  {
+    "id": 1,
+    "tense": "presente",
+    "infinitive": "pensar / ду́мать",
+    "answers": [
+      {"eu": ["penso", "ду́маю"]},
+      {"você": ["pensa", "ду́маешь"]},
+      {"ele": ["pensa", "ду́мает"]},
+      {"nós": ["pensamos", "ду́маем"]},
+      {"vocês": ["pensam", "ду́маете"]},
+      {"eles": ["pensam", "ду́мают"]}
+    ],
+    "audios": [
+      "/sounds/verbs-present/1/eu.m4a",
+      "/sounds/verbs-present/1/voce.m4a",
+      "/sounds/verbs-present/1/ele.m4a",
+      "/sounds/verbs-present/1/nos.m4a",
+      "/sounds/verbs-present/1/voces.m4a",
+      "/sounds/verbs-present/1/eles.m4a" 
+    ]  
+  },
+  {
+    "id": 2,
+    "tense": "presente",
+    "infinitive": "comer / есть",
+    "answers": [
+      {"eu": ["como", "ем"]},
+      {"você": ["comes", "ешь"]},
+      {"ele": ["come", "ест"]},
+      {"nós": ["comemos", "еди́м"]},
+      {"vocês": ["comen", "еди́те"]},
+      {"eles": ["comen", "едя́т"]}
+    ],
+    "audios": [
+      "/sounds/verbs-present/2/eu.m4a",
+      "/sounds/verbs-present/2/voce.m4a",
+      "/sounds/verbs-present/2/ele.m4a",
+      "/sounds/verbs-present/2/nos.m4a",
+      "/sounds/verbs-present/2/voces.m4a",
+      "/sounds/verbs-present/2/eles.m4a" 
+    ]  
+  },
+  {
+    "id": 3,
+    "tense": "presente",
+    "infinitive": "trabalhar / рабо́тать",
+    "answers": [
+      {"eu": ["trabalho", "рабо́таю"]},
+      {"você": ["trabalha", "рабо́таешь"]},
+      {"ele": ["trabalha", "рабо́тает"]},
+      {"nós": ["trabalhamos", "рабо́таем"]},
+      {"vocês": ["trabalham", "рабо́таете"]},
+      {"eles": ["trabalham", "рабо́тают"]}
+    ],
+    "audios": [
+      "/sounds/verbs-present/3/eu.m4a",
+      "/sounds/verbs-present/3/voce.m4a",
+      "/sounds/verbs-present/3/ele.m4a",
+      "/sounds/verbs-present/3/nos.m4a",
+      "/sounds/verbs-present/3/voces.m4a",
+      "/sounds/verbs-present/3/eles.m4a" 
+    ]  
+  },
+  {
+    "id": 4,
+    "tense": "presente",
+    "infinitive": "amar / люби́ть",
+    "answers": [
+      {"eu": ["amo", "люблю́"]},
+      {"você": ["ama", "лю́бишь"]},
+      {"ele": ["ama", "лю́бит"]},
+      {"nós": ["amamos", "лю́бим"]},
+      {"vocês": ["amam", "лю́бите"]},
+      {"eles": ["amam", "лю́бят"]}
+    ],
+    "audios": [
+      "/sounds/verbs-present/4/eu.m4a",
+      "/sounds/verbs-present/4/voce.m4a",
+      "/sounds/verbs-present/4/ele.m4a",
+      "/sounds/verbs-present/4/nos.m4a",
+      "/sounds/verbs-present/4/voces.m4a",
+      "/sounds/verbs-present/4/eles.m4a" 
+    ]  
+  },
+  {
+    "id": 5,
+    "tense": "presente",
+    "infinitive": "cantar / петь",
+    "answers": [
+      {"eu": ["canto", "пою́"]},
+      {"você": ["canta", "поёшь"]},
+      {"ele": ["canta", "поёт"]},
+      {"nós": ["cantamos", "поём"]},
+      {"vocês": ["cantam", "поёте"]},
+      {"eles": ["cantam", "пою́т"]}
+    ],
+    "audios": [
+      "/sounds/verbs-present/5/eu.m4a",
+      "/sounds/verbs-present/5/voce.m4a",
+      "/sounds/verbs-present/5/ele.m4a",
+      "/sounds/verbs-present/5/nos.m4a",
+      "/sounds/verbs-present/5/voces.m4a",
+      "/sounds/verbs-present/5/eles.m4a" 
+    ]  
+  }
+]
