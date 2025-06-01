@@ -1,7 +1,14 @@
 import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 
-const getResults = async (email, name) => {
+interface ResultItem {
+  casos?: number;
+  vocabulario?: number;
+  verbos?: number;
+  category?: any;
+}
+
+const getResults = async (email: string, name: string): Promise<ResultItem[] | undefined> => {
   
   try {
 
@@ -15,7 +22,7 @@ const getResults = async (email, name) => {
 
     if (res.status === 201) {
       const bestScores = await res.json()   
-      return bestScores.res
+      return bestScores.res as ResultItem[]
     }
     
   } catch (error) {

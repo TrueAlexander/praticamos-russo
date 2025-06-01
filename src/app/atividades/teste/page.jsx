@@ -12,6 +12,7 @@ export default function Teste() {
   const router = useRouter()
   const session = useSession()
   // const TOTAL_QUESTIONS = 10
+ 
 
   const [nameShow, setNameShow] = useState("Visitante")
   const [isLoading, setIsLoading] = useState(session.status === 'loading')

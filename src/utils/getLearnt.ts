@@ -1,11 +1,11 @@
 import { confirmAlert } from 'react-confirm-alert'
 import '@/utils/react-confirm-alert.css'
 
-const getBestScores = async (email, name) => {
+const getLearnt = async (email: string, name: string): Promise<string[] | undefined> => {
   
   try {
 
-    const res = await fetch("/api/get-results", {
+    const res = await fetch("/api/get-learnt", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -14,8 +14,8 @@ const getBestScores = async (email, name) => {
     })
 
     if (res.status === 201) {
-      const bestScores = await res.json()   
-      return bestScores.res
+      const learntArray = await res.json()   
+      return learntArray.res as string[]
     }
     
   } catch (error) {
@@ -32,4 +32,4 @@ const getBestScores = async (email, name) => {
   }
 }
 
-export default getBestScores
+export default getLearnt

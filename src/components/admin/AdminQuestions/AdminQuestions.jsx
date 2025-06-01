@@ -107,7 +107,7 @@ const AdminQuestions =  ({category, questions, setAnchorUpdate, anchorUpdate}) =
 
   const renderQuestions = (questionsList) => {
     return (
-      questionsList.map(item => {
+      questionsList?.map(item => {
         return (
           <div key={item._id} className="border border-[#9f50ac] rounded-md mb-5 py-1 pl-3 text-[14px] font-medium">
             <button 

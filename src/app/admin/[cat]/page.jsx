@@ -2,6 +2,7 @@
 import AdminQuestions from "@/components/admin/AdminQuestions/AdminQuestions"
 import Link from "next/link"
 import { useState, useEffect } from 'react'
+import getQuestionsByCategory from "@/utils/getQuestionsByCategory"
 
 const CategoryAdminPage = ({params}) => {
 
@@ -11,25 +12,14 @@ const CategoryAdminPage = ({params}) => {
   const [anchorUpdate, setAnchorUpdate] = useState(false)
   const [questions, setQuestions] = useState([])
 
-  useEffect(() => {
-    const getQuestionsByCategory = async (category) => {
-    
-      const endpointF = `/api/admin/${category}`
-      const res = await fetch(endpointF, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ category }),
-    })
+ useEffect(() => {
+  const fetchQuestions = async () => {
+    const result = await getQuestionsByCategory(category);
+    setQuestions(result)
+  }
 
-    const data = await res.json()
-    setQuestions(data.questions)
-    
-    }
-    getQuestionsByCategory(category)
-  }, [anchorUpdate, category])
-
+  fetchQuestions()
+}, [anchorUpdate, category])
   return (
     <div className="fixed z-[10000] top-0 bg-[#2b2737] pt-5 bottom-12 left-0 right-0  overflow-y-auto text-center">
       <Link href="/admin">

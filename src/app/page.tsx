@@ -12,15 +12,14 @@ import Loading from './loading'
 //Homepage Image
 import HomepageImage from '@/assets/home-pic.jpg'
 
-export default function Home() {
+export default function Home(): JSX.Element {
   const router = useRouter()
   const session = useSession()
   const params = useSearchParams()
 
-  const [showModal, setShowModal] = useState(params.get("error") || false)
-  const [nameShow, setNameShow] = useState("Visitante")
-  // const [isLoading, setIsLoading] = useState(session.status === 'loading')
-  const [isLoading, setIsLoading] = useState(true)
+  const [showModal, setShowModal] = useState<boolean>(!!params.get("error"))
+  const [nameShow, setNameShow] = useState<string>("Visitante")
+  const [isLoading, setIsLoading] = useState<boolean>(true)
  
 
   const name = session.data?.user?.name || null
@@ -40,10 +39,7 @@ export default function Home() {
   const handleClick = () => session.status === "authenticated" ? router.push('/atividades') : setShowModal(true)
 
   return (
-    <div 
-      // className='text-center flex flex-col justify-center'
-      className="text-center"
-    >
+    <div className="text-center">
       {isLoading 
         ? <Loading/>
         : <>

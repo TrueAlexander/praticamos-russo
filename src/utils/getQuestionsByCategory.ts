@@ -1,6 +1,7 @@
-const getQuestionsByCategory = async (category) => {
+import { Question } from "@/types/question"
 
-  // const endpointF = `${process.env.URL_BASE}/api/admin/${category}`
+const getQuestionsByCategory = async (category: string): Promise<Question[]> => {
+
   const endpointF = `/api/admin/${category}`
 
   const data = await (await fetch(endpointF, {
@@ -10,15 +11,10 @@ const getQuestionsByCategory = async (category) => {
     },
     body: JSON.stringify({ category }),
   })).json().then((response) => {
-    const result = response.questions
+    const result: Question[] = response.questions || []
     return result
   })
-  
-  if (data) {
-    return data
-  } else {
-    return []
-  }  
+   return data
 }
 
 export default getQuestionsByCategory

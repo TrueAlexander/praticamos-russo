@@ -1,7 +1,6 @@
 'use client'
-import { useRouter, useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 import { useEffect, useState } from 'react'
-// import getResults from '@/utils/getResults'
 //Components
 import Button from '@/components/globals/Button/Button'
 import ButtonAuth from "@/components/globals/ButtonAuth/ButtonAuth"

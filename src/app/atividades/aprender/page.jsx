@@ -51,6 +51,12 @@ export default function Aprender() {
           clique para começar 
         </p>
         <Button
+          text="Alfabeto/leitura"
+          addStyle={"my-2"}
+          disabled={false} 
+          onClick={() => router.push('/atividades/aprender/alfabeto')} 
+        />
+        <Button
           text="Palavras novas"
           addStyle={"my-2"}
           disabled={false} 
