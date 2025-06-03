@@ -94,6 +94,11 @@ const handler = NextAuth({
       },
     }),
   ],
+  //////////////////////
+    session: {
+    strategy: "jwt", // <-- ESSENCIAL para o middleware funcionar
+  },
+  ////////////////////////////
   pages: {
     error: "/",
   },
