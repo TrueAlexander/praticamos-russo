@@ -1,13 +1,11 @@
-import NextAuth from "next-auth"
 import CredentialsProvider from "next-auth/providers/credentials"
+import { type NextAuthOptions } from "next-auth"
 import User from "@/models/User"
 import connect from "@/utils/db"
 import bcrypt from "bcryptjs"
 import nodemailer from "nodemailer"
 import jwt from "jsonwebtoken"
 
-
-//mail sender details
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -16,42 +14,47 @@ const transporter = nodemailer.createTransport({
   }
 })
 
-const handler = NextAuth({
+export const authOptions: NextAuthOptions = {
   providers: [
     CredentialsProvider({
       id: "credentials",
       name: "Credentials",
-      async authorize(credentials) {
-        //Check if the user exists.
+      credentials: {
+        email: { label: "E-mail", type: "text", placeholder: "seuemail@exemplo.com" },
+        password: { label: "Senha", type: "password" },
+      },
+      async authorize(credentials: { email?: string; password?: string } | undefined) {
+        
+        if (!credentials?.email || !credentials?.password) {
+        throw new Error(encodeURIComponent("E-mail e senha obrigatórios."))
+        }
+
         await connect()
 
         try {
-          const user = await User.findOne({
-            email: credentials.email,
-          })
+          const user = await User.findOne({ email: credentials?.email })
 
           if (user) {
             const isPasswordCorrect = await bcrypt.compare(
-              credentials.password,
+              credentials!.password,
               user.password
             )
 
             if (isPasswordCorrect) {
-              /////
-              if(user.emailVerified) {
+              if (user.emailVerified) {
                 return user
               } else {
-                ///create token 
-              const token = jwt.sign({
-                _id: user._id,
-                email: user.email,
-                isAdmin: user.isAdmin
-                },
-                process.env.JWT_KEY,
-                {expiresIn: 60 * 60})
+                const token = jwt.sign(
+                  {
+                    _id: user._id,
+                    email: user.email,
+                    isAdmin: user.isAdmin,
+                  },
+                  process.env.JWT_KEY!,
+                  { expiresIn: 60 * 60 }
+                )
 
-              ///
-              const mailOptions = {
+                const mailOptions = {
                 from: ' "RUSSOLINGUO" <eformaliza@gmail.com>',
                 to: `${user.email}`,
                 subject: `RUSSOLINGUO. ${user.name}, por favor, verifique seu e-mail!`,
@@ -68,65 +71,58 @@ const handler = NextAuth({
                 </body>
                 `}
 
-              await new Promise((resolve, reject) => {
-                transporter.sendMail(mailOptions, (err, info) => {
-                  if (err) {
-                    console.error(err)
-                    reject(err)
-                  } else {
-                    resolve(info)
-                    console.log('Verification email is sent to your email account')
-                  }
+                await new Promise((resolve, reject) => {
+                  transporter.sendMail(mailOptions, (err, info) => {
+                    if (err) {
+                      console.error(err)
+                      reject(err)
+                    } else {
+                      resolve(info)
+                      console.log('Verification email sent')
+                    }
+                  })
                 })
-              })
-              throw new Error(encodeURIComponent("Usuário não ativado! Por favor, verifique o seu e-mail."))     
+
+                throw new Error(encodeURIComponent("Usuário não ativado! Por favor, verifique o seu e-mail."))
               }
             } else {
               throw new Error(encodeURIComponent("E-mail e/ou senha incorretos!"))
             }
           } else {
             throw new Error(encodeURIComponent("Usuário não encontrado!"))
-            
           }
-        } catch (err) {
-          throw new Error(err)
+        } catch (err: any) {
+          console.error("Erro no authorize:", err)
+          throw new Error(err.message || "Erro desconhecido")
         }
       },
     }),
   ],
-  //////////////////////
-    session: {
-    strategy: "jwt", // <-- ESSENCIAL para o middleware funcionar
+  session: {
+    strategy: "jwt",
   },
-  ////////////////////////////
   pages: {
     error: "/",
   },
   callbacks: {
-    jwt: async ({token, user, session}) => {
-        //pass in user isAdmin to token
-        if (user) {
-          return {
-            ...token,
-            isAdmin: user.isAdmin,
-          }
-        }
-        return token
-    },
-    session: async ({session, token, user}) => {
-        //pass in user isAdmin to session
+    jwt: async ({ token, user }) => {
+      if (user) {
         return {
-          ...session,
-          user: {
-            ...session.user,
-            isAdmin: token.isAdmin,
-          }
+          ...token,
+          isAdmin: user.isAdmin,
         }
-    }
-},
+      }
+      return token
+    },
+    session: async ({ session, token }) => {
+      return {
+        ...session,
+        user: {
+          ...session.user,
+          isAdmin: token.isAdmin,
+        }
+      }
+    },
+  },
   secret: process.env.NEXTAUTH_SECRET,
-  
-
-})
-
-export { handler as GET, handler as POST, handler as PUT }
+}

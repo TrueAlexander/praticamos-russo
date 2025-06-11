@@ -1,4 +1,4 @@
-import { Question } from "@/types/question"
+import { Question } from "../../types/question"
 
 const getQuestionsByCategory = async (category: string): Promise<Question[]> => {
 

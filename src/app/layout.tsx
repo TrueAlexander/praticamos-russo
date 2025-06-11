@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: 'Russolinguo | Praticamos russo | Aprendemos russo | Vocabulário, verbos, casos...',
     url: 'https://russolinguo.com/',
     siteName: 'Russolinguo | Praticamos russo',
-    images: 'https://i.ibb.co/Y33yVng/img-OGextra-Big.png',
+    images: ['https://i.ibb.co/Y33yVng/img-OGextra-Big.png'],
     type: 'website',
   },
 }

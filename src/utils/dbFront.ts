@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-import type { MongooseCache } from "@/types/global"
+import type { MongooseCache } from "../../types/global"
 
 const MONGO_URI = process.env.MONGO as string
 

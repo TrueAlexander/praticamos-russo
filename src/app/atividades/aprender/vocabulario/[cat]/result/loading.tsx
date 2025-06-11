@@ -1,12 +1,11 @@
-
-import Image from "next/image"
+import spinner from '@/assets/spinner.gif'
 
 const Loading = (): JSX.Element => {
   return (
     <div>
-       <Image 
+       <img 
           className="scale-50 mx-auto" 
-          src="/spinner.gif" 
+          src={spinner.src} 
           alt="loading"
           width={200}
           height={200}

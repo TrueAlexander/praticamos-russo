@@ -19,6 +19,16 @@ const Login = ({setShowModal, setModeLogin}) => {
         password,
       })       
   }
+
+   const handleCreateUserClick = () => {
+    // Remove the error param from URL by replacing URL without query string or with error removed
+    const url = new URL(window.location.href)
+    url.searchParams.delete("error")
+    router.replace(url.toString(), undefined, { scroll: false })
+
+    setModeLogin(false) // your existing logic
+  }
+
   useEffect(() => {
     setError(params.get("error"))
     if (session.status === 'authenticated') {
@@ -27,6 +37,7 @@ const Login = ({setShowModal, setModeLogin}) => {
     }
     
   }, [params, router, session.status, setShowModal])
+
   
   return (
     <div className="my-3 animate__animated animate__fadeIn">
@@ -64,19 +75,23 @@ const Login = ({setShowModal, setModeLogin}) => {
           Enviar
         </button>
       </form>
-      <p className='text-red-600 my-3 font-semibold'>{error && decodeURIComponent(error?.slice(6))}</p>
-      <Link href="/recover-access">
-        <p
-          title="Recuperar a senha" 
-          className="text-white text-[13px] underline cursor-pointer"
-        >
-          esqueceu a senha?</p>
-      </Link>
+      {/* <p className='text-red-600 my-3 font-semibold'>{error && decodeURIComponent(error?.slice(6))}</p> */}
+      <p className='text-red-600 my-3 font-semibold'>{error && decodeURIComponent(error)}</p>
+   
+      <p
+        onClick={() => router.push('/recover-access')}
+        className="text-white text-[13px] underline cursor-pointer"
+        title="Recuperar a senha"
+      >
+        esqueceu a senha?
+      </p>
+
+  
       <h3 className="text-[#9f50ac] py-4 text-[17px] font-bold">ou crie um perfil:</h3>
         <button 
           title="Criar Usuário" 
           className="text-white text-[13px] underline cursor-pointer"
-          onClick={() => setModeLogin(false)}
+          onClick={handleCreateUserClick}
         >
           criar usuário
         </button>

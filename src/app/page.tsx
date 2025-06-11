@@ -1,68 +1,18 @@
-'use client'
 import Image from 'next/image'
-import { useRouter, useSearchParams } from 'next/navigation'
-import { useEffect, useState } from 'react'
-//Components
-import Button from '@/components/globals/Button/Button'
-import AuthModal from '@/components/globals/AuthModal/AuthModal'
-import ButtonAuth from "@/components/globals/ButtonAuth/ButtonAuth"
-import AdminLink from '@/components/globals/AdminLink/AdminLink'
-import { useSession, signOut } from 'next-auth/react' 
-import Loading from './loading'
-//Homepage Image
+import ButtonStartWrapper from '@/components/globals/ButtonStartWrapper/ButtonStartWrapper'
 import HomepageImage from '@/assets/home-pic.jpg'
 
 export default function Home(): JSX.Element {
-  const router = useRouter()
-  const session = useSession()
-  const params = useSearchParams()
-
-  const [showModal, setShowModal] = useState<boolean>(!!params.get("error"))
-  const [nameShow, setNameShow] = useState<string>("Visitante")
-  const [isLoading, setIsLoading] = useState<boolean>(true)
- 
-
-  const name = session.data?.user?.name || null
-
-  useEffect(() => {
-    // setIsLoading(session.status === 'loading')
-    if (session.status !== 'loading') {
-      setIsLoading(false)
-    }
-    if (session.data?.user?.name) {
-      setNameShow(session.data?.user?.name)
-    } else {
-      setNameShow("Visitante")
-    }
-  }, [session.status, session.data?.user?.name])
-
-  const handleClick = () => session.status === "authenticated" ? router.push('/atividades') : setShowModal(true)
-
   return (
     <div className="text-center">
-      {isLoading 
-        ? <Loading/>
-        : <>
-            <ButtonAuth setShowModal={setShowModal} name={name} signOut={signOut} nameShow={nameShow} setIsLoading={setIsLoading}/>
-            <div 
-              // className='bg-green-300 var-content-class'
-              className=""
-            >
-              <p className='text-white p-4 font-bold uppercase tracking-widest text-[24px]'>Russolinguo</p>
-              <Image className='max-w-[400px] w-[80%] mx-auto rounded-[10px]' src={HomepageImage} alt='home-page' priority={false} placeholder="blur"/>
-              <p className='text-[#9f50ac] pt-4 pb-4 text-[18px] '>
-                Clique abaixo
-              </p>
-              <Button 
-                text={session.status === "authenticated" ? "Começar!" : "Entrar"} 
-                disabled={false} 
-                onClick={handleClick} 
-              />
-            </div>           
-            {showModal && <AuthModal showModal={showModal} setShowModal={setShowModal} setIsLoading={setIsLoading}/>}
-            {session.data?.user?.isAdmin && <AdminLink/>}
-          </>
-      }    
+      <div className="">
+        <p className='text-white p-4 font-bold uppercase tracking-widest text-[24px]'>Russolinguo</p>
+        <Image className='max-w-[400px] w-[80%] mx-auto rounded-[10px]' src={HomepageImage} alt='home-page' priority={false} placeholder="blur"/>
+        <p className='text-[#9f50ac] pt-4 pb-4 text-[18px] '>
+          Clique abaixo
+        </p>
+        <ButtonStartWrapper/>
+      </div>           
     </div>
   )
 }
