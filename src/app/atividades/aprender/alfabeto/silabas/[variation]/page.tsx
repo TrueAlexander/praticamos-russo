@@ -1,5 +1,8 @@
 import dbConnect from "@/utils/dbFront"
 import SyllableExerciseModel from "@/models/SyllableExercise"
+import Button from "@/components/globals/Button/Button"
+
+import { CgPlayButtonO } from "react-icons/cg"
 
 type Params = {
   params: { variation: string }
@@ -13,39 +16,85 @@ export default async function VariationPage({ params }: Params) {
       variation: params.variation,
     }).lean()
 
+   
+
     return (
-      <main className="p-6">
-        <h1 className="text-2xl font-bold mb-4">Variation: {params.variation}</h1>
-        {exercises.length === 0 ? (
-          <p>Nenhum exercício encontrado.</p>
+      <main className="text-center flex flex-col justify-center">
+        <h1 className="text-white p-3 pt-6 font-bold text-[22px]">Sílabas I (c + v)</h1>
+        {exercises.length === 0 ? ( 
+          <>
+            <p className="text-[#9f50ac] text-[18px] mt-4">Nenhum exercício encontrado&#128546;</p>
+            <p className="text-white text-[18px] my-4">Por favor, tente novamente mais tarde!</p>
+          </>
+
         ) : (
           <ul className="space-y-4">
             {exercises.map((exercise) => (
-              <li key={exercise._id.toString()} className="border p-4 rounded shadow">
-                <p className="text-lg font-medium">Слог: {exercise.syllable}</p>
-                <audio controls src={exercise.audioUrl} className="my-2" />
-                <div className="space-x-2 mt-2">
+              <li key={exercise._id.toString()} className="">
+                <p className="text-[#9f50ac] text-[18px]">Ouça e selecione a sílaba que ouviu:</p>
+
+                <div className='inline-block'>
+                  <div 
+                    // htmlFor="audio"
+                    // onClick={() => handlePlay(index + 1)}
+                    className='ml-3 inline-block hover:text-[#a050ac]  active:text-[#a050ac] text-lg'
+                  >
+                    <CgPlayButtonO />
+                  </div>
+                  <audio 
+                    // id={`audio${index + 1}`}
+                    controls 
+                    className="mx-auto hidden"
+                  >
+                    <source 
+                      src={exercise.audioUrl} 
+                      type="audio/mpeg" 
+                    />
+                    Your browser does not support the audio tag.
+                  </audio>
+                </div>  
+
+
+                <div className="text-center flex flex-col justify-center">
                   {exercise.options.map((option: string, i: number) => (
-                    <button
-                      key={i}
-                      className="bg-blue-500 text-white px-4 py-1 rounded hover:bg-blue-600"
-                    >
-                      {option}
-                    </button>
+                    <Button 
+                     key={i}
+                    addStyle={"my-2"} 
+                    text={option} 
+                    disabled={false} 
+                    // href='/atividades/aprender/alfabeto/silabas/cv'
+                    />
                   ))}
                 </div>
               </li>
             ))}
           </ul>
         )}
+        <p className='text-[#9f50ac] pb-1 text-[18px] '>
+          ou
+        </p>
+        <Button
+          text="Voltar" 
+          disabled={false} 
+          href='/atividades/aprender/alfabeto/silabas'
+        />
       </main>
     )
   } catch (error) {
     console.error("DB connection or query failed:", error)
     return (
-      <main className="p-6">
-        <h1 className="text-2xl font-bold mb-4">Erro ao carregar os exercícios</h1>
-        <p>Desculpe, não foi possível carregar os exercícios no momento. Por favor, tente novamente mais tarde.</p>
+      <main className="text-center flex flex-col justify-center">
+        <h1 className="text-white p-3 pt-6 font-bold text-[22px]">Erro ao carregar os exercícios...&#128546;</h1>
+        <p className="text-[#9f50ac] text-[18px]">Desculpe, não foi possível carregar os exercícios no momento... </p>
+        <p className="text-white text-[18px]">Por favor, tente novamente mais tarde</p>
+        <p className='text-[#9f50ac] pt-6 pb-1 text-[18px] '>
+         ou
+        </p>
+        <Button
+          text="Voltar" 
+          disabled={false} 
+          href='/atividades/aprender/alfabeto/silabas'
+        />
       </main>
     )
   }

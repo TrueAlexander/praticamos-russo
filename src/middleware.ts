@@ -1,13 +1,15 @@
 import { withAuth } from "next-auth/middleware"
 import { NextResponse } from "next/server"
 
+const PUBLIC_PATHS = ["/", "/recover-access", "/notice"] 
+
 export default withAuth(
   function middleware(req) {
     const { pathname } = req.nextUrl
 
     if (!req.nextauth.token) {
-      // Se já está tentando acessar "/", deixa passar para evitar loop
-      if (pathname === "/") {
+       // Permitir acesso às rotas públicas
+      if (PUBLIC_PATHS.includes(pathname)) {
         return NextResponse.next()
       }
       // Caso contrário, redireciona para "/"

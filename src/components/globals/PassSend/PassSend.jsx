@@ -1,8 +1,7 @@
-import { confirmAlert } from 'react-confirm-alert'
-import '@/utils/react-confirm-alert.css'
 import { useSearchParams, useRouter } from "next/navigation"
 import { useState } from "react"
 import Loading from "@/app/loading"
+import { ConfirmDialog } from '../ConfirmDialog/ConfirmDialog'
 
 const PassSend = () => {
 
@@ -18,17 +17,14 @@ const PassSend = () => {
     const pass2 = e.target[1].value
     console.log(pass1, pass2)
     if (pass1 !== pass2) {
-      confirmAlert({
-        message: "As senhas precisam ser iguais. Vamos tentar novamente!",
-        buttons: [
-          {
-            label: 'Ok',
-            onClick: () => {
-              e.target[0].value = ""
-              e.target[1].value = ""
-            }
-          }
-        ]
+      ConfirmDialog({
+        message: 'As senhas precisam ser iguais. Vamos tentar novamente!',
+        confirmLabel: 'Ok',
+        showCancelButton: false,
+        onConfirm: () => {
+          e.target[0].value = ""
+          e.target[1].value = ""
+        },
       }) 
     } else {
       setIsLoading(true)
@@ -46,34 +42,37 @@ const PassSend = () => {
         })
 
         if (res.status === 201) {
-          confirmAlert({
-            message: "Prezado Usuário, a senha foi alterada com sucesso! Por favor, faça o login com a nova senha!",
-            buttons: [
-              {
-                label: 'Ok',
-                onClick: () => {
-                  setIsLoading(false)
-                  router.push("/")
-                }
-              }
-            ]
-          })
+          ConfirmDialog({
+            message: 'Prezado Usuário, a senha foi alterada com sucesso! Por favor, faça o login com a nova senha!',
+            confirmLabel: 'Ok',
+            showCancelButton: false,
+            onConfirm: () => {
+              setIsLoading(false)
+              router.push("/")
+            },
+          }) 
         } else {
-          confirmAlert({
-            message: "Ocorreu um erro. Por favor, tente solicitar a recuperação de acesso novamente.",
-            buttons: [
-              {
-                label: 'Ok',
-                onClick: () => {
-                  setIsLoading(false)
-                  router.push("/recover-access")
-                }
-              }
-            ]
-          })  
+          ConfirmDialog({
+            message: 'Ocorreu um erro. Por favor, tente solicitar a recuperação de acesso novamente.',
+            confirmLabel: 'Ok',
+            showCancelButton: false,
+            onConfirm: () => {
+              setIsLoading(false)
+              router.push("/recover-access")
+            },
+          }) 
         }       
       } catch (err) {   
         console.log(err, "Ocorreu um erro no lado do servidor!")
+         ConfirmDialog({
+            message: 'Ocorreu um erro. Pedimos desculpas. Por favor, tente solicitar a recuperação de acesso mais tarde.',
+            confirmLabel: 'Ok',
+            showCancelButton: false,
+            onConfirm: () => {
+              setIsLoading(false)
+              router.push("/")
+            },
+          }) 
       }
     }
   }

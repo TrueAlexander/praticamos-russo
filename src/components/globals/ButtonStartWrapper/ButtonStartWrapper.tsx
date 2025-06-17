@@ -1,4 +1,3 @@
-// components/globals/Button/ButtonWrapper.tsx
 'use client'
 
 import { useSession } from 'next-auth/react'

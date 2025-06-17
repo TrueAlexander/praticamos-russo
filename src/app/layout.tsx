@@ -45,22 +45,29 @@ export default function RootLayout({children}: RootLayoutProps) {
         <AuthProvider>
           <main className={`${quicksand.variable} font-quicksand max-w-[380px] mx-auto flex flex-col relative justify-center items-center h-full`}>          
             <Link 
-              href='/' 
-              className=""
+              href="/" 
               title="Voltar"
-            >
+              >
               <div 
-                className="w-[90px] h-[90px] cursor-pointer rounded-[50%] bg-gradient-radial from-[#dcddd8] to-[#9f50ac] border-4 border-[#9f50ac] mx-auto mt-[45px]"
+                className="
+                  w-[90px] h-[90px] mx-auto mt-[45px]
+                  cursor-pointer rounded-full border-4 border-[#9f50ac]
+                  bg-gradient-radial from-[#dcddd8]/50 to-[#9f50ac]/60
+                  backdrop-blur-md
+                  shadow-[inset_2px_2px_6px_rgba(255,255,255,0.2),_4px_4px_12px_rgba(0,0,0,0.3)]
+                  transition-all duration-200 ease-in-out
+                  hover:brightness-110 active:scale-95
+                "
               >
                 <Image 
-                  className="" 
+                  className="w-full h-full object-cover rounded-full" 
                   src={Logo} 
                   alt="logo"
                   priority={false}
-                  // placeholder="blur"
                 />
               </div>    
             </Link>
+
             <div className="flex-grow flex items-center justify-center overflow-y-auto children pb-4">
               {children} 
             </div>                   

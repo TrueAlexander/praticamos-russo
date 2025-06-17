@@ -67,12 +67,18 @@ const Aplicacao = () => {
   } else if (session.status === "authenticated") {
     return ( 
       <div className={`fixed z-[10000] top-0 bottom-0 overflow-y-auto bg-[#2b2737] text-center flex flex-col ${interact ? "justify-center py-0" :  "justify-left py-6"}`} >
-          <button 
-            className="text-white tracking-wider active:scale-95  h-[23px] min-w-[90px] rounded-[10px] bg-[#9f50ac] fixed top-1/2 transform -translate-y-1/2 right-0 lg:mr-[345px] md:mr-[200px] rotate-90 "
-            onClick={handleInteract}
-          >
-            {!interact ? "Praticar" : "Aprender"}
-          </button>
+
+         <div className="fixed top-1/2 right-0 lg:mr-[345px] md:mr-[200px] z-50 transform -translate-y-1/2">
+            <div className="animate__animated animate__pulse animate__infinite">
+              <button
+                className="text-white tracking-wider active:scale-95 h-[23px] min-w-[90px] rounded-[10px] bg-[#9f50ac] rotate-90"
+                onClick={handleInteract}
+              >
+                {!interact ? "Praticar" : "Aprender"}
+              </button>
+            </div>
+          </div>
+
           <p className='text-white font-bold text-[22px]'>Adjetivos - Aplicação</p>
           {interact 
             ? 

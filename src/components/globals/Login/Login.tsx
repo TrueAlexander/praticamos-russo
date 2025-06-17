@@ -1,19 +1,28 @@
 "use client"
-import { useState, useEffect } from 'react'
+import { useState, useEffect, FormEvent, Dispatch, SetStateAction } from 'react'
 import { signIn, useSession } from 'next-auth/react'
 import { useSearchParams, useRouter } from 'next/navigation'
-import Link from 'next/link'
+import Button from '../Button/Button'
 
-const Login = ({setShowModal, setModeLogin}) => {
+interface LoginProps {
+  setShowModal: Dispatch<SetStateAction<boolean>>
+  setModeLogin: Dispatch<SetStateAction<boolean>>
+}
+
+const Login: React.FC<LoginProps> = ({setShowModal, setModeLogin}) => {
   const session = useSession()
   const router = useRouter()
   const params = useSearchParams()
-  const [error, setError] = useState(null)
+  const [error, setError] = useState<string | null>(null)
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const email = e.target[0].value
-    const password = e.target[1].value
+    
+    const form = e.currentTarget
+    // Acessar os inputs pelo name
+    const email = (form.elements.namedItem('email') as HTMLInputElement).value
+    const password = (form.elements.namedItem('password') as HTMLInputElement).value
+
     await signIn("credentials", {
         email,
         password,
@@ -24,9 +33,9 @@ const Login = ({setShowModal, setModeLogin}) => {
     // Remove the error param from URL by replacing URL without query string or with error removed
     const url = new URL(window.location.href)
     url.searchParams.delete("error")
-    router.replace(url.toString(), undefined, { scroll: false })
+    router.replace(url.toString())
 
-    setModeLogin(false) // your existing logic
+    setModeLogin(false) 
   }
 
   useEffect(() => {
@@ -67,13 +76,10 @@ const Login = ({setShowModal, setModeLogin}) => {
             required 
           />
         </div>
-        <button 
-          className="bg-[#9f50ac] select-none font-bold h-[30px] min-w-[100px] rounded-[10px] text-white mr-2 ml-2 mb-3 active:scale-95" 
+        <Button
           type="submit"
-          title='Entrar'
-        >
-          Enviar
-        </button>
+          text="Enviar"
+        />
       </form>
       {/* <p className='text-red-600 my-3 font-semibold'>{error && decodeURIComponent(error?.slice(6))}</p> */}
       <p className='text-red-600 my-3 font-semibold'>{error && decodeURIComponent(error)}</p>
@@ -84,8 +90,7 @@ const Login = ({setShowModal, setModeLogin}) => {
         title="Recuperar a senha"
       >
         esqueceu a senha?
-      </p>
-
+      </p>   
   
       <h3 className="text-[#9f50ac] py-4 text-[17px] font-bold">ou crie um perfil:</h3>
         <button 

@@ -1,13 +1,12 @@
 "use client"
 import { ImExit, ImEnter } from 'react-icons/im'
-import { confirmAlert } from 'react-confirm-alert'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { useEffect, useState } from 'react'
-import '@/utils/react-confirm-alert.css'
 import { useSession, signOut } from 'next-auth/react'
 import AdminLink from '@/components/globals/AdminLink/AdminLink' 
 import AuthModal from '@/components/globals/AuthModal/AuthModal'
 import Loading from '@/app/loading'
+import { ConfirmDialog } from '../ConfirmDialog/ConfirmDialog'
 
 type ButtonAuthProps = {
   showModal: boolean
@@ -16,11 +15,9 @@ type ButtonAuthProps = {
 
 const ButtonAuth = ({showModal, setShowModal}: ButtonAuthProps) => {
 
-  // const router = useRouter()
   const session = useSession()
   const params = useSearchParams()
 
-  
   const [nameShow, setNameShow] = useState<string>("")
   const [isLoading, setIsLoading] = useState<boolean>(true)
  
@@ -44,27 +41,20 @@ const ButtonAuth = ({showModal, setShowModal}: ButtonAuthProps) => {
   }
   }, [params])
 
-
-
   const handleClick = () => {
     if(!name) {
       setShowModal(true)
-    } else {     
-      confirmAlert({
-        message: `${nameShow}, tem certeza de que deseja sair?`,
-        buttons: [
-          {
-            label: 'Sim',
-            onClick: () => {
-              signOut() 
-              setIsLoading(true)      
-            }
-          },
-          {
-            label: 'Não',
-            // onClick: () => console.log('Click No')
-          }
-        ]
+    } else {   
+      ConfirmDialog({
+        name: nameShow,
+        message: 'tem certeza de que deseja sair?',
+        confirmLabel: 'Sim',
+        cancelLabel: 'Não',
+        showCancelButton: true,
+        onConfirm: () => {
+          signOut()
+          setIsLoading(true)
+        },
       })
     }
   }

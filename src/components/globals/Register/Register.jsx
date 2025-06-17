@@ -1,6 +1,6 @@
 "use client"
-import { confirmAlert } from 'react-confirm-alert'
-import '@/utils/react-confirm-alert.css'
+import Button from '../Button/Button'
+import { ConfirmDialog } from '../ConfirmDialog/ConfirmDialog'
 
 const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
 
@@ -26,18 +26,28 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
         }),
       })
       if (res.status === 201) {
-        confirmAlert({
-          message: `Prezado ${name}, seu usuário foi criado! Para ativá-lo, por favor, confira seu e-mail: ${email}!`,
-          buttons: [
-            {
-              label: 'Ok',
-              onClick: () => {
-                setShowModal(false)
-                setIsLoading(false)
-              }
-            }
-          ]
+        ConfirmDialog({
+          name: name,
+          message: `seu usuário foi criado! Para ativá-lo, por favor, confira seu e-mail: ${email}!`,
+          confirmLabel: 'Ok',
+          showCancelButton: false,
+          onConfirm: () => {
+            setShowModal(false)
+            setIsLoading(false)
+          },
         })
+        // confirmAlert({
+        //   message: `Prezado ${name}, seu usuário foi criado! Para ativá-lo, por favor, confira seu e-mail: ${email}!`,
+        //   buttons: [
+        //     {
+        //       label: 'Ok',
+        //       onClick: () => {
+        //         setShowModal(false)
+        //         setIsLoading(false)
+        //       }
+        //     }
+        //   ]
+        // })
       } else {
         confirmAlert({
           message: "Algo deu errado! Será que o usuário já existe? Faça login ou tente novamente.",
@@ -97,13 +107,10 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
             required 
           />
         </div>
-        <button 
-          className="bg-[#9f50ac] select-none font-bold h-[30px] min-w-[100px] rounded-[10px] text-white mr-2 ml-2" 
+        <Button
           type="submit"
-          title='Fazer cadastro'
-        >
-          Enviar
-        </button>
+          text="Enviar"
+        />
       </form>
       <h3 className="text-[#9f50ac] py-4 mt-2 text-[17px] font-bold">ou identifique-se:</h3>
         <button 
