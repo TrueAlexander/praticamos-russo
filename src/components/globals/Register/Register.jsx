@@ -124,4 +124,5 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
   )
 }
 
+
 export default Register
