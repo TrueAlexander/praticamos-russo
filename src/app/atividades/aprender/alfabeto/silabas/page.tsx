@@ -10,19 +10,20 @@ const Silabas = (): JSX.Element | null => {
       </p>
       <Button 
         addStyle={"my-2"} 
-        text="Sílabas I" 
+        text="I" 
         disabled={false} 
-        href='/atividades/aprender/alfabeto/silabas/cv'
+        href='/atividades/aprender/alfabeto/silabas/consoante+vogal'
       />
       <Button 
         addStyle={"my-2"} 
-        text="Sílabas II" 
+        text="II" 
         disabled={true} 
         href='/atividades/aprender/alfabeto/silabas/vc' 
       />
       <Button 
         addStyle={"my-2"} 
-        text="Sílabas III" 
+        // text="Sílabas III" 
+        text="III" 
         disabled={true} 
         href='/atividades/aprender/alfabeto/silabas/cvc'
       />

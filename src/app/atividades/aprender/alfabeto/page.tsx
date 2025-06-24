@@ -31,7 +31,7 @@ const Alfabeto = (): JSX.Element | null => {
         <div className='text-center flex flex-col justify-center' >
           <p className='text-white p-3 pt-6 font-bold text-[22px]'>Alfabeto / leitura</p>
           <p className='text-[#9f50ac] text-[18px] '>
-           escolha uma atividade: 
+           clique para começar: 
           </p>
           <Button 
             addStyle={"my-2"} 
@@ -39,13 +39,13 @@ const Alfabeto = (): JSX.Element | null => {
             disabled={false} 
             onClick={() => router.push('/atividades/aprender/alfabeto/silabas')} 
           />
-           <Button 
+           {/* <Button 
             addStyle={"my-2"} 
             text="Ler palavras" 
             disabled={true} 
             onClick={() => router.push('/atividades/aprender/alfabeto/silabas')} 
-          />
-          <p className='text-[#9f50ac] pb-1 text-[18px] '>
+          /> */}
+          <p className='text-[#9f50ac] mt-4 pb-1 text-[18px] '>
             ou
           </p>
           <Button

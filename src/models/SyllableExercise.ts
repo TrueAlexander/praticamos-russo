@@ -5,7 +5,7 @@ export interface ISyllableExercise extends Document {
   audioUrl: string
   options: string[]
   correctOption: string
-  variation?: "cv" | "vc" | "cvc"
+  variation: "consoante+vogal" | "vogal+consoante" | "consoante+vogal+consoante"
   createdAt?: Date
   updatedAt?: Date
 }
@@ -44,8 +44,8 @@ const syllableExerciseSchema = new Schema(
     },
     variation: {
       type: String,
-      enum: ["cv" , "vc" , "cvc"],
-      default: "cv",
+      enum: ["consoante+vogal" , "vogal+consoante" , "consoante+vogal+consoante"],
+      default: "consoante+vogal",
     },
   },
   { timestamps: true }
