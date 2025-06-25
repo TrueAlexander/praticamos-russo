@@ -15,7 +15,7 @@
 }
 
 img, svg, button, a {
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent !important;
 }
 
 audio::-webkit-media-controls-panel {

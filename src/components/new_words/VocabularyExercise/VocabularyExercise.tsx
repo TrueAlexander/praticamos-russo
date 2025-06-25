@@ -1,40 +1,53 @@
 "use client"
 
-import Image from "next/image"
 import VocabularyCard from "../VocabularyCard/VocabularyCard"
 import { useEffect, useState, useRef } from "react"
 import Loading from "@/app/loading"
 
+interface VocabularyExerciseProps {
+  question: {
+    audio: string
+  }
+  currentQuestionIndex: number
+  answers: any[]
+  rightAnswer: string
+  setDisabled: (disabled: boolean) => void
+}
 
-const VocabularyExercise = ({ question, currentQuestionIndex, answers, rightAnswer, setDisabled }) => {
+const VocabularyExercise = ({ 
+  question, 
+  currentQuestionIndex, 
+  answers, 
+  rightAnswer, 
+  setDisabled
+ }:VocabularyExerciseProps) => {
 
-  const [audio, setAudio] = useState(question.audio)
-  const audioRef = useRef()
-
-
+  const [clickedAnswer, setClickedAnswer] = useState<string | null>(null)
+  const [audioKey, setAudioKey] = useState(0)
+  const audioRef = useRef<HTMLAudioElement | null>(null)
   const [isLoading, setIsLoading] = useState(true)
-  const [clickedAnswer, setClickedAnswer] = useState(null)
 
+  //to disable the button before the right answer
   useEffect(() => {
-    if (clickedAnswer === rightAnswer) {
-      setDisabled(false)
-    } else setDisabled(true)
+    setDisabled(clickedAnswer !== rightAnswer)
   }, [clickedAnswer, rightAnswer, setDisabled])
-  
+
+  //when move to the next question
   useEffect(() => {
     setClickedAnswer(null)
     setDisabled(true)
-  }, [currentQuestionIndex, setDisabled])
-
-  useEffect(() => {
-    setAudio(question.audio)
-    if(audioRef.current) {
-        audioRef.current.pause()
-        audioRef.current.load()
-        audioRef.current.play()
-    }
+    setAudioKey(prev => prev + 1)
     setIsLoading(false)
-  }, [currentQuestionIndex, question.audio])
+  }, [currentQuestionIndex, setDisabled, question.audio])
+
+  // Autoplay (only after new render of <audio>)
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.play().catch(err => {
+        console.warn("Erro ao reproduzir áudio:", err)
+      })
+    }
+  }, [audioKey])
 
   if (isLoading) {
     return (
@@ -44,13 +57,16 @@ const VocabularyExercise = ({ question, currentQuestionIndex, answers, rightAnsw
     )
   } else {
     return (
-      <div 
-        // className="flex min-h-screen flex-col items-center justify-between p-24"
-      >
+      <div>
         <h3>Traduza e repita o que você está ouvindo:</h3>
         <div>
-          <audio ref={audioRef} controls className="mx-auto">
-            <source src={audio} type="audio/mpeg" />
+          <audio
+            key={audioKey} 
+            ref={audioRef} 
+            controls 
+            className="mx-auto"
+          >
+            <source src={question.audio} type="audio/mpeg" />
             Your browser does not support the audio tag.
           </audio>
         </div>
