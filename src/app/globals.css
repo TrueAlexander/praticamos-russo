@@ -13,6 +13,11 @@
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE/Edge */
 }
+
+img, svg, button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
 audio::-webkit-media-controls-panel {
   background-color: #a050acb7;
 }
