@@ -12,8 +12,7 @@ import Loading from "@/app/loading"
 interface Exercise {
   _id: string
   syllable: string
-  audioUrl?: string
-  // audioUrl: string
+  audioUrl: string
   options: string[]
   correctOption: string
   variation: string
@@ -94,7 +93,7 @@ const QuizSyllable: React.FC<QuizSyllableProps> = ({exercises, totalExercises, v
             </p>
             <SyllableCard 
               currentExerciseIndex={currentExerciseIndex}
-              exercise={exercises[currentExerciseIndex].syllable}
+              audioUrl={exercises[currentExerciseIndex].audioUrl}
               options={exercises[currentExerciseIndex].options}
               userAnswer={userAnswers[currentExerciseIndex]}
               correctOption={exercises[currentExerciseIndex].correctOption}

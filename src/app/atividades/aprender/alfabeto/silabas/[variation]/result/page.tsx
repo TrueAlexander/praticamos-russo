@@ -23,7 +23,10 @@ const SyllableResultPage: React.FC = () => {
 
   const handleClick = () => router.push('/atividades/aprender/alfabeto/silabas') 
 
-  if (!result || !total || !variation || !user) {
+  if ( isNaN(result) ||
+        isNaN(total) ||
+        variation === null ||
+        user === null) {
     return (
       <div className="text-white text-center flex flex-col justify-center">
         <p className="p-6 text-[20px] text-red-500">Parâmetros inválidos ou incompletos.</p>

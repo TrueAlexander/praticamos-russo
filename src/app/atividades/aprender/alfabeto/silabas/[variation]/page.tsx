@@ -14,6 +14,11 @@ export default async function VariationPage({ params }: Params) {
     const exercises = await SyllableExerciseModel.find({
       variation: decodeURIComponent(params.variation),
     }).lean()
+
+    const exercisesSafe = exercises.map(ex => ({
+      ...ex,
+      _id: ex._id.toString(), // Convert ObjectId to plain string
+    }))
    
 
     return (
@@ -30,8 +35,8 @@ export default async function VariationPage({ params }: Params) {
         ) : (
           <>
             <QuizSyllable 
-              exercises={exercises} 
-              totalExercises={2} 
+              exercises={exercisesSafe} 
+              totalExercises={10} 
               variation={params.variation}
             />
             {/* <ul className="space-y-4">
