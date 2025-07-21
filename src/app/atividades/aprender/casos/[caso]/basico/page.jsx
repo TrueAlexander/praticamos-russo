@@ -12,7 +12,7 @@ import Loading from './loading'
 import QuizCases from '@/components/cases/QuizCases/QuizCases'
 
 
-const TOTAL_QUESTIONS = 5
+const TOTAL_QUESTIONS = 10
 
 export default function CasoBasico({params}) {
   const router = useRouter()

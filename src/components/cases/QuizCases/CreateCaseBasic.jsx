@@ -7,10 +7,10 @@ const CreateCaseBasic = () => {
     ///send POST request
     const newCase = {
       case: "acusativo",
-      question: "Мой брат на за́втрак ест ... (хлеб) с сы́ром.",
-      correct_answer: "хлеб",
-      answers: ["хлеб", "хле́бом", "хле́ба", "с хле́бом"],
-      incorrect_answers: ["хле́бом", "хле́ба", "с хле́бом"] 
+      question: "Я не ви́жу ...(кот) под дивáном.",
+      correct_answer: "котá",
+      answers: ["котá", "кот", "коту́", "котóм"],
+      incorrect_answers: ["кот", "коту́", "котóм"] 
     }
     
     //А́ Е́ И́ О́ У́ Ы́ Э́ Ю́ Я́ а́ е́ и́ о́ у́ ы́ э́ ю́ я́
