@@ -17,32 +17,20 @@ const transporter = nodemailer.createTransport({
 export const POST = async (request) => {
 
   const {name, email, password, isAdmin, emailVerified} = await request.json() 
-  
+
+  await connect()
+
+  const hashedPassword = await bcrypt.hash(password, 5)
+
+  const newUser = new User({
+    name,
+    email,
+    password: hashedPassword,
+    isAdmin: isAdmin,
+    emailVerified: emailVerified
+  })
+
   try {
-
-    await connect()
-
-    ///////
-    const userExist = await User.find({email: email})
-
-    if (userExist) {
-      return new NextResponse("User already exists", {
-          status: 409,
-        })
-    }
-
-    //////
-
-    const hashedPassword = await bcrypt.hash(password, 5)
-
-    const newUser = new User({
-      name,
-      email,
-      password: hashedPassword,
-      isAdmin: isAdmin,
-      emailVerified: emailVerified
-    })
-
     const user = await newUser.save()
 
     ///create token 
@@ -63,7 +51,7 @@ export const POST = async (request) => {
       <body style="background:#2b2737;">
         <div style="font-family: arial;  font-size: 16px; text-align: center; color:white; background:#2b2737; padding: 30px 20px 80px;">
           <h2>RUSSOLINGUO</h2>
-          <p style="font-size: 18px; line-height: 35px;">Prezado(a) <span style="color:#9f50ac; font-size: 20px; font-weight: 600;">${user.name},</span> obrigado pelo cadastro no <a style="text-decoration:none; font-size: 20px; color: white; font-weight: bold;" href="${process.env.URL_BASE}">RUSSOLINGUO app</a></p>
+          <p style="font-size: 18px; line-height: 35px;">Prezado <span style="color:#9f50ac; font-size: 20px; font-weight: 600;">${user.name},</span> obrigado pelo cadastro no <a style="text-decoration:none; font-size: 20px; color: white; font-weight: bold;" href="${process.env.URL_BASE}">RUSSOLINGUO app</a></p>
           <p style="line-height: 25px;">Por favor, valide  seu e-mail para ativar seu perfil:</p>
           <a style="color:#9f50ac; font-weight: 600;" href="${process.env.URL_BASE}/api/auth/verify-email?token=${token}">Clique aqui!</a>
           <p style="font-size: 13px; margin-top: 30px; line-height: 18px;"> Caso você não seja ${user.name}, e não tenha se cadastrado no RUSSOLINGUO, por favor, ignore esta mensagem.

@@ -36,30 +36,36 @@ const Register = ({setShowModal, setModeLogin, setIsLoading}) => {
             setIsLoading(false)
           },
         })
-      } else if (res.status === 409) {
-        ConfirmDialog({
-          message: `Algo deu errado! Será que o usuário já existe? Faça login ou tente novamente.`,
-          confirmLabel: 'Ok',
-          showCancelButton: false,
-          onConfirm: () => {
-            setModeLogin(true)
-            setIsLoading(false)
-          },
-        })
+        // confirmAlert({
+        //   message: `Prezado ${name}, seu usuário foi criado! Para ativá-lo, por favor, confira seu e-mail: ${email}!`,
+        //   buttons: [
+        //     {
+        //       label: 'Ok',
+        //       onClick: () => {
+        //         setShowModal(false)
+        //         setIsLoading(false)
+        //       }
+        //     }
+        //   ]
+        // })
+      } else {
+        confirmAlert({
+          message: "Algo deu errado! Será que o usuário já existe? Faça login ou tente novamente.",
+          buttons: [
+            {
+              label: 'Ok',
+              onClick: () => {
+                setModeLogin(true)
+                setIsLoading(false)
+              }
+            }
+          ]
+        })  
       }
       
       
     } catch (err) {   
       console.log(err, "Ocorreu um erro do lado do servidor.")
-      ConfirmDialog({
-        message: `Algo deu errado. Tente novamente mais tarde.`,
-        confirmLabel: 'Ok',
-        showCancelButton: false,
-        onConfirm: () => {
-          setShowModal(false)
-          setIsLoading(false)
-        },
-      }) 
     }
   }
 

@@ -1,0 +1,104 @@
+[
+  {
+    "id": 0,
+    "tense": "passado",
+    "infinitive": "viver / жи́ть",
+    "answers": [
+      {"ele": ["viveu", "жил"]},
+      {"ela": ["viveu", "жила́"]},
+      {"isso": ["viveu", "жи́ло"]},
+      {"eles": ["viveram", "жи́ли"]} 
+    ],
+    "audios": [
+      "/sounds/verbs-past/0/ele.m4a",
+      "/sounds/verbs-past/0/ela.m4a",
+      "/sounds/verbs-past/0/isso.m4a",
+      "/sounds/verbs-past/0/eles.m4a" 
+    ]  
+  },
+  {
+    "id": 1,
+    "tense": "passado",
+    "infinitive": "pensar / ду́мать",
+    "answers": [
+      {"ele": ["pensou", "ду́мал"]},
+      {"ela": ["pensou", "ду́мала"]},
+      {"isso": ["pensou", "ду́мало"]},
+      {"eles": ["pensaram", "ду́мали"]}
+    ],
+    "audios": [
+      "/sounds/verbs-past/1/ele.m4a",
+      "/sounds/verbs-past/1/ela.m4a",
+      "/sounds/verbs-past/1/isso.m4a",
+      "/sounds/verbs-past/1/eles.m4a" 
+    ]  
+  },
+  {
+    "id": 2,
+    "tense": "passado",
+    "infinitive": "comer / есть",
+    "answers": [
+      {"ele": ["comeu", "ел"]},
+      {"ela": ["comeu", "е́ла"]},
+      {"isso": ["comeu", "е́ло"]},
+      {"eles": ["comeram", "е́ли"]}
+    ],
+    "audios": [
+      "/sounds/verbs-past/2/ele.m4a",
+      "/sounds/verbs-past/2/ela.m4a",
+      "/sounds/verbs-past/2/isso.m4a",
+      "/sounds/verbs-past/2/eles.m4a" 
+    ]  
+  },
+  {
+    "id": 3,
+    "tense": "passado",
+    "infinitive": "trabalhar / рабо́тать",
+    "answers": [
+      {"ele": ["trabalhou", "рабо́тал"]},
+      {"ela": ["trabalhou", "рабо́тала"]},
+      {"isso": ["trabalhou", "рабо́тало"]},
+      {"eles": ["trabalharam", "рабо́тали"]}
+    ],
+    "audios": [
+      "/sounds/verbs-past/3/ele.m4a",
+      "/sounds/verbs-past/3/ela.m4a",
+      "/sounds/verbs-past/3/isso.m4a",
+      "/sounds/verbs-past/3/eles.m4a" 
+    ]  
+  },
+  {
+    "id": 4,
+    "tense": "passado",
+    "infinitive": "amar / люби́ть",
+    "answers": [
+      {"ele": ["amou", "люби́л"]},
+      {"ela": ["amou", "люби́ла"]},
+      {"isso": ["amou", "люби́ло"]},
+      {"eles": ["amaram", "люби́ли"]}
+    ],
+    "audios": [
+      "/sounds/verbs-past/4/ele.m4a",
+      "/sounds/verbs-past/4/ela.m4a",
+      "/sounds/verbs-past/4/isso.m4a",
+      "/sounds/verbs-past/4/eles.m4a" 
+    ]  
+  },
+  {
+    "id": 5,
+    "tense": "passado",
+    "infinitive": "cantar / петь",
+    "answers": [
+      {"ele": ["cantou", "пел"]},
+      {"ela": ["cantou", "пе́ла"]},
+      {"isso": ["cantou", "пе́ло"]},
+      {"eles": ["cantaram", "пе́ли"]}
+    ],
+    "audios": [
+      "/sounds/verbs-past/5/ele.m4a",
+      "/sounds/verbs-past/5/ela.m4a",
+      "/sounds/verbs-past/5/isso.m4a",
+      "/sounds/verbs-past/5/eles.m4a" 
+    ]  
+  }
+]
