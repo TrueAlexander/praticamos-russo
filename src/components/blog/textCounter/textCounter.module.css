@@ -1,0 +1,15 @@
+.counter {
+  margin-bottom: 20px;
+  margin-top: -7px;
+  font-weight: 300;
+  font-size: 12px;
+  transition: color 0.2s ease;
+}
+
+.valid {
+  color: var(--text-color);
+}
+
+.invalid {
+  color: crimson;
+}

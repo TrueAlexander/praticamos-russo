@@ -1,0 +1,11 @@
+.button {
+  all: unset;
+  cursor: pointer; 
+  color: crimson;
+  font-size: 12px;
+  margin-top: 15px;
+}
+
+.responseBox {
+  margin-left: 45px;
+}

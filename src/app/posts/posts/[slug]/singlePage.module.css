@@ -1,0 +1,154 @@
+.detailsContainer {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: var(--softTextColor);
+  padding-bottom: 10px;
+  position: relative;
+  width: 100%;
+
+}
+
+.username {
+  font-size: 20px;
+  font-weight: 500;
+  color: crimson;
+}
+
+.title {
+  margin-top: 25px;
+  overflow-wrap: break-word; /* preferred over word-wrap */
+  word-break: break-word; /* adds stronger breaking */
+}
+
+.titleComment {
+  color: crimson;
+  font-weight: 400;
+}
+
+.date {
+  color: grey;
+}
+
+.infoContainer {
+  margin-top: 20px;
+}
+
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
+  margin: 0 auto 15px;            
+  overflow: hidden;
+  max-height: 80vh;      
+}
+
+.image {
+  object-fit: cover;
+  object-position: center;
+}
+
+.content {
+  font-size: 16px;
+  text-indent: 30px;
+  line-height: 24px;
+  font-weight: 400;
+  margin-bottom: 25px;
+  text-align: justify;
+  overflow-wrap: break-word; /* preferred over word-wrap */
+  word-break: break-word; /* adds stronger breaking */
+}
+
+.content h3 {
+  margin: 10px 0;
+}
+
+.content img {
+  max-width: 100%;
+  max-height: 90vh;
+  margin: 15px auto;
+  display: block;
+}
+
+.tagsContainer{
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  margin: 25px 0;
+  /* border: 1px solid yellow; */
+}
+
+.tagsContainer > * {
+  position: absolute;  /* Apply to all direct children */
+  left: 0;
+  max-width: 100% !important;
+  bottom: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .detailsContainer {
+    margin-top: 15px;
+  }
+
+  .infoContainer {
+    display: block;
+  }
+
+  .imageContainer { 
+    margin: 0 auto;
+    width: 100%;
+    margin-bottom: -10px;
+  }
+
+  .title {
+    margin: 10px 0 15px;
+  }
+
+  .username {
+    font-size: 14px;
+  }
+
+  .contentContainer {
+    margin-top: 25px;
+    padding: 10px 10px;
+
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .detailsContainer {
+    margin-top: 10px;
+  }
+
+  .imageContainer {
+    height: 350px;
+  } 
+}
+
+
+@media screen and (max-width: 500px) {
+
+  .imageContainer {
+    height: 300px;
+    margin-bottom: -15px;
+  }
+
+  
+}
+
+@media screen and (max-width: 430px) {
+
+  .imageContainer {
+    height: 235px;
+  }
+
+  .username { 
+
+    max-width: 20ch;  
+  }
+
+  
+}

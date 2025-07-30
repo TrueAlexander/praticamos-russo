@@ -25,7 +25,7 @@ export const POST = async (request) => {
     ///////
     const userExist = await User.find({email: email})
 
-    if (userExist) {
+    if (userExist.length > 0) {
       return new NextResponse("User already exists", {
           status: 409,
         })
