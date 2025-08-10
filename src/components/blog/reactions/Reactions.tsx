@@ -1,26 +1,20 @@
 "use client"
 import { useEffect, useState } from 'react'
-import styles from './reactions.module.css'
 import { FaRegHeart, FaHeart } from "react-icons/fa"
-import { FaRegEye } from "react-icons/fa"
 import { useSession } from 'next-auth/react'
-// import { ThemeContext } from "@/context/ThemeContext"
-// import { useContext } from 'react'
-import { confirmAlert } from 'react-confirm-alert'
-import '@/utils/react-confirm-alert.css'
-// import confirmAlertStyles from '@/utils/confirmAlert.module.css'
 
-const Reactions =  ({id}) => {
+interface ReactionsProps {
+  id?: string
+}
+
+const Reactions: React.FC<ReactionsProps> =  ({id}) => {
 
   const {data} = useSession()
 
   const [likes, setLikes] = useState(0)
-  const [views, setViews] = useState(0)
   const [likedBy, setLikedBy] = useState([])
   const [alreadyLiked, setAlreadyLiked] = useState(false)
 
-  // const {theme} = useContext(ThemeContext)
-  // const themeClass = theme === 'dark' ? confirmAlertStyles.darkConfirmAlert : confirmAlertStyles.lightConfirmAlert
 
   // const getReactions = async (id) => {
   //   let reactions = {likes: 0, views: 0}
@@ -120,14 +114,17 @@ const Reactions =  ({id}) => {
   // }
 
   return (
-    <div className={styles.container}>
-      <div 
-        className={styles.likes} 
-        title="curtidas" 
-        // onClick={handleLiked} 
-      >{!alreadyLiked ? <FaRegHeart /> : <FaHeart />}
-      <span className={styles.count}>{likes}</span></div>      
-      <div title="visualizações"><FaRegEye /><span className={styles.count}>{views}</span></div> 
+    <div className="flex gap-5 text-[23px] text-[#9f50ac] justify-end mb-2">
+      <div
+        title="curtidas"
+        // onClick={handleLiked}
+        className="flex items-center cursor-pointer hover:scale-110"
+      >
+        {!alreadyLiked ? <FaRegHeart /> : <FaHeart />}
+        <span className="ml-1 text-[16px] font-light leading-[18px] align-text-top ">
+          {likes}
+        </span>
+      </div>
     </div>
   )
 }

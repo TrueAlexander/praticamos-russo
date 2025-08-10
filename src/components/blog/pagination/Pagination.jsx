@@ -3,7 +3,7 @@ import styles from './pagination.module.css'
 import { useRouter } from 'next/navigation'
 import Button from '@/components/globals/Button/Button'
 
-const Pagination = ({page, hasPrev, hasNext, catSlug, author, tag}) => {
+const Pagination = ({page, hasPrev, hasNext, catSlug}) => {
 
   const router = useRouter()
 

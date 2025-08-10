@@ -1,7 +1,7 @@
 // import CardList from "@/components/blog/cardList/CardList"
 import CardList from "@/components/blog/cardList/CardList"
 // import InfoModal from "@/components/user/infoModal/infoModal"
-import ButtonAuth from "@/components/globals/ButtonAuth/ButtonAuth"
+import ButtonAuthWrapper from "@/components/globals/ButtonAuthWrapper/ButtonAuthWrapper"
 
 
 // export const metadata = {
@@ -30,28 +30,30 @@ import ButtonAuth from "@/components/globals/ButtonAuth/ButtonAuth"
 //   },
 // }
 
+interface BlogProps {
+  searchParams: {
+    page?: string
+    verified?: string
+  }
+}
 
-export default function Blog({searchParams}) {
 
-  const page = parseInt(searchParams.page) || 1
+export default function Blog({searchParams}: BlogProps) {
+
+  const page = parseInt(searchParams.page ?? "1", 10) || 1
+
   // const verified = searchParams.verified ? JSON.parse(searchParams.verified) : false
 
   return (
     <>
       <div className="absolute top-0 left-0 right-0" >
-        <ButtonAuth  />
+        <ButtonAuthWrapper/>
       </div>
-      <div 
-        // className="fixed z-[10000] top-0 bg-[#2b2737] pt-5 bottom-12 left-0 right-0  overflow-y-auto text-center"
-        className="fixed z-[10000] top-[140px] bg-[#2b2737] pt-5 bottom-12 overflow-y-auto text-center max-w-[900px]"
-      >
-
+      <div className="fixed z-[10000] top-[140px] bg-[#2b2737] pt-5 mx-8 bottom-12 overflow-y-auto text-center max-w-[1200px]">
         {/* <InfoModal info={verified}/> */}
 
-        <div 
-          // className={styles.content}
-        >
-          <CardList page={page} cat={null}/>
+        <div>
+          <CardList page={page} />
         </div>
       </div>
     </>
