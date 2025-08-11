@@ -2,6 +2,32 @@ import Image from 'next/image'
 import ButtonStartWrapper from '@/components/globals/ButtonStartWrapper/ButtonStartWrapper'
 import HomepageImage from '@/assets/home-pic.jpg'
 
+export const metadata = {
+  title: "Russolinguo | Praticamos russo | Aprendemos russo",
+  description: "Russolinguo | Praticamos russo | Aprendemos russo | Vocabulário, verbos, casos...",
+  openGraph: {
+    title: "Russolinguo | Praticamos russo | Aprendemos russo",
+    description: "Russolinguo | Praticamos russo | Aprendemos russo | Vocabulário, verbos, casos...",
+    url: "https://russolinguo.com/",
+    siteName: "Russolinguo",
+    type: "website",
+    images: [
+      {
+        url: "https://i.ibb.co/Y33yVng/img-OGextra-Big.png'", 
+        width: 1200,
+        height: 630,
+        alt: "Russolinguo homepage",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  alternates: {
+    canonical: "https://russolinguo.com/",
+  },
+}
+
 export default function Home(): JSX.Element {
   return (
     <div className="text-center">

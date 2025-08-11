@@ -3,32 +3,31 @@ import CardList from "@/components/blog/cardList/CardList"
 // import InfoModal from "@/components/user/infoModal/infoModal"
 import ButtonAuthWrapper from "@/components/globals/ButtonAuthWrapper/ButtonAuthWrapper"
 
-
-// export const metadata = {
-//   title: "MotoPost | Espaço de motociclistas",
-//   description: "Descubra o mundo das motos com notícias, viagens, estilo, oficina, e motopédia. Espaço para todos os motociclistas.",
-//   openGraph: {
-//     title: "MotoPost | Espaço de motociclistas",
-//     description: "Descubra o mundo das motos com notícias, viagens, estilo, oficina, e motopédia.",
-//     url: "https://motopost.com.br",
-//     siteName: "MotoPost",
-//     type: "website",
-//     images: [
-//       {
-//         url: "https://motopost.com.br/opengraph-image.jpg", 
-//         width: 1200,
-//         height: 630,
-//         alt: "MotoPost homepage",
-//       },
-//     ],
-//   },
-//   twitter: {
-//     card: "summary_large_image",
-//   },
-//   alternates: {
-//     canonical: "https://motopost.com.br",
-//   },
-// }
+export const metadata = {
+  title: "Blog",
+  description: "Blog da língua russa. Russolinguo | Praticamos russo | Aprendemos russo | Vocabulário, verbos, casos...",
+  openGraph: {
+    title: "Blog da língua russa | Russolinguo | Praticamos russo | Aprendemos russo",
+    description: "Russolinguo | Praticamos russo | Aprendemos russo | Vocabulário, verbos, casos...",
+    url: "https://russolinguo.com/posts",
+    siteName: "Russolinguo",
+    type: "website",
+    images: [
+      {
+        url: "https://i.ibb.co/Y33yVng/img-OGextra-Big.png'", 
+        width: 1200,
+        height: 630,
+        alt: "Russolinguo Blog",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+  },
+  alternates: {
+    canonical: "https://russolinguo.com/posts",
+  },
+}
 
 interface BlogProps {
   searchParams: {
@@ -36,7 +35,6 @@ interface BlogProps {
     verified?: string
   }
 }
-
 
 export default function Blog({searchParams}: BlogProps) {
 

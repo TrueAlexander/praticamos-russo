@@ -13,16 +13,25 @@ const quicksand = Quicksand({
 })
 
 export const metadata: Metadata = {
-  title: 'Russolinguo | Praticamos russo',
+  title: {
+    default: 'Russolinguo | Praticamos russo | Aprendemos russo',
+    template: "%s - Russolinguo | Praticamos russo | Aprendemos russo"
+  }, 
   description: 'Russolinguo | Praticamos russo | Aprendemos russo | Vocabulário, verbos, casos...',
-  openGraph: {
-    title: 'Russolinguo | Praticamos russo',
-    description: 'Russolinguo | Praticamos russo | Aprendemos russo | Vocabulário, verbos, casos...',
-    url: 'https://russolinguo.com/',
-    siteName: 'Russolinguo | Praticamos russo',
-    images: ['https://i.ibb.co/Y33yVng/img-OGextra-Big.png'],
-    type: 'website',
+  metadataBase: new URL('https://russolinguo.com/'),
+  twitter: {
+    card: "summary_large_image",
   },
+
+
+  // openGraph: {
+  //   title: 'Russolinguo | Praticamos russo',
+  //   description: 'Russolinguo | Praticamos russo | Aprendemos russo | Vocabulário, verbos, casos...',
+  //   url: 'https://russolinguo.com/',
+  //   siteName: 'Russolinguo | Praticamos russo',
+  //   images: ['https://i.ibb.co/Y33yVng/img-OGextra-Big.png'],
+  //   type: 'website',
+  // },
 }
 
 export function generateViewport(): Viewport {
